@@ -1,0 +1,279 @@
+/*内容安全*/
+@charset "utf-8";
+.leftbox,.rightbox{
+    width: 445px;
+}
+.sec_1{
+    height: 440px;
+    border-top: 1px solid #36598f;
+    border-bottom: 1px solid #325183;
+    background: rgba(25, 119, 248, .1);
+}
+.infobox{
+    margin-top: 4px;
+}
+.infobox span{
+    height: 45px;
+}
+.infobox .zn{
+    width: 160px;
+    background: rgba(106, 255, 215, .05);
+}
+.infobox .zd{
+    text-align: right;
+    margin-left: 3px;
+    font-family:'Aldrich';
+    font-size: 20px;
+    color: #ff5f5f;
+    background: rgba(106, 149, 255, .1);
+}
+.infobox2{
+    margin-top: 4px;
+}
+.infobox2 span{
+    box-sizing: border-box;
+}
+.infobox2 .n{
+    width: 100px;
+    margin-right: 4px;
+    padding-left: 20px;
+    background: rgba(106, 255, 215, .05);
+    line-height: 30px;
+}
+.infobox2 .n:nth-of-type(3){
+    margin-left: 4px;
+}
+.infobox2 .d{
+    padding-left: 20px;
+    background: rgba(106, 149, 255, .1);
+    line-height: 30px;
+    font-size: 20px;
+    color: #3afbff;
+    font-family:'Aldrich';
+}
+.bgjb{
+    background: -moz-linear-gradient(top, rgba(106, 149, 255, 0) 0%, rgba(106, 149, 255, .1) 100%);
+    background: -webkit-linear-gradient(top,  rgba(106, 149, 255, 0) 0%, rgba(106, 149, 255, .1) 100%);
+    background: -o-linear-gradient(top,  rgba(106, 149, 255,  0) 0%, rgba(106, 149, 255, .1) 100%);
+    background: -ms-linear-gradient(top,  rgba(106, 149, 255,  0) 0%, rgba(106, 149, 255, .1) 100%);
+    background: linear-gradient(to bottom, rgba(106, 149, 255,  0) 0%, rgba(106, 149, 255, .1) 100%);
+}
+.sec_2{
+    margin-top: 15px;
+    height: 210px;
+}
+.sec_2 .con >div{
+    width: 154px;
+    height: 75px;
+    padding-left: 12px;
+    background: rgba(106, 149, 255, .05);
+}
+.sec_2 .con .d{
+    font-family:'Aldrich';
+}
+.sec_3{
+    margin-top: 15px;
+}
+.tablist{
+    margin-top: 8px;
+}
+.tablist li{
+    height: 32px;
+    line-height: 32px;
+    margin-top: 3px;
+}
+.tablist li span{
+    box-sizing: border-box;
+}
+.tablist li span:first-child{
+    width: 110px;
+    padding-left: 8px;
+    overflow: hidden;
+    text-overflow:ellipsis;
+    white-space: nowrap;
+}
+.tablist li span:nth-child(2){
+    width: 140px;
+    overflow: hidden;
+    text-overflow:ellipsis;
+    white-space: nowrap;
+}
+.tablist li span:nth-child(3){
+    width: 70px;
+    text-align: center;
+}
+.tablist li:not(.tit) span:nth-child(3){
+    color: #ff5f5f;
+}
+.tablist li span:nth-child(4){
+    width: 110px;
+    padding-left: 10px;
+    font-family:'Aldrich';
+}
+.tablist li.tit{
+    border-bottom: 1px solid #3f5ca5;
+    background: none !important;
+}
+.tablist li:nth-child(odd){
+    background: rgba(106, 255, 215,  0.05);
+}
+.tablist li:nth-child(even){
+    background: rgba(106, 149, 255,  0.05);
+}
+.sec_4{
+    height: 326px;
+}
+.sec_4 >div .tit{
+    /*margin-top: 50px;*/
+}
+.sec_4 >div .ri01{
+    width: 70px;
+    height: 40px;
+    background: url(/image/cmiot-home-v3/img/nr1.png) no-repeat;
+    margin-bottom: 14px;
+    margin-left: 15px;
+}
+.sec_4 .legend {
+    margin: 20px 0;
+}
+.sec_4 .legend li {
+    margin-left: 45px;
+}
+.sec_4 .legend li:first-child {
+    margin-left: 0;
+}
+.sec_4 .legend li i {
+    display: inline-block;
+    width: 12px;
+    height: 12px;
+    margin-right: 7px;
+    border: 1px solid #7d879f;
+    box-sizing: border-box;
+}
+.sec_4 .legend li:first-child i {
+    background: #6c95ff;
+}
+.sec_4 .legend li:nth-child(2) i {
+    background: #d6e2e8;
+}
+.sec_4 .legend li:nth-child(3) i {
+    background: #ff7171;
+}
+.sec_5{
+    height: 326px;
+    margin-top: 15px;
+}
+.sec_5 .legend{
+    margin-right: 36px;
+}
+.sec_5 .legend .item{
+    width: 120px;
+    line-height: 26px;
+    border-bottom: 1px solid #4b5773;
+    margin-top: 40px;
+}
+.sec_5 .legend .item span:first-child{
+    color: #3afbff;
+    font-family:'Aldrich';
+}
+.sec_5 .legend .item span:last-child{
+    background: rgba(108, 149, 255, .1);
+}
+.sec_6{
+    margin-top: 15px;
+}
+.mapChina{
+    width: 912px;
+    height: 664px;
+    background: url(/image/cmiot-home-v3/img/mapbg.jpg) no-repeat;
+}
+.map_box .map_bg {
+    width: 100%;
+    height: 100%;
+    background: url(/image/cmiot-home-v3/img/chinamapbg.png) center no-repeat;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 1;
+}
+.map_box .nanhai {
+    width: 117px;
+    height: 123px;
+    background: url(/image/cmiot-home-v3/img/nanhai.png) center no-repeat;
+    position: absolute;
+    bottom: 96px;
+    right: 66px;
+    z-index: 2;
+}
+.map_box .mapt {
+    width: 97px;
+    height: 65px;
+    background: url(/image/cmiot-home-v3/img/mapt.png) 0 0 no-repeat;
+}
+.map_box .mapt span:first-child {
+    line-height: 33px;
+    margin-left: 42px;
+}
+.map_box .mapt span:nth-child(2) {
+    display: inline-block;
+    width: 100%;
+    line-height: 30px;
+    text-align: center;
+    font-family: 'Aldrich';
+    color: #3afbff;
+}
+.smchart{
+    width: 76px;
+    height: 76px;
+    background: url(/image/cmiot-home-v3/img/nr.png) center no-repeat;
+    margin-right: 8px;
+    margin-top: 4px;
+}
+.smchart >img{
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    z-index: 1;
+}
+.smchart ~ div>span:first-child{
+    border-bottom: 1px solid #535d75;
+    font-family:'Aldrich';
+}
+.centerbox .sec_c1 .legend {
+    color: #feffff;
+    top: 10px;
+    right: 27px;
+}
+.sec_c1{
+    margin-top: 18px;
+    height: 270px;
+}
+.centerbox .sec_c1 .legend li {
+    margin-left: 30px;
+}
+.centerbox .sec_c1 .legend li:first-child {
+    margin-left: 0;
+}
+.centerbox .sec_c1 .legend li i {
+    display: inline-block;
+    width: 12px;
+    height: 12px;
+    margin-left: 7px;
+    border: 1px solid #fff;
+    box-sizing: border-box;
+}
+.centerbox .sec_c1 .legend li:first-child i {
+    background: #2184ff;
+}
+.centerbox .sec_c1 .legend li:nth-child(2) i {
+    background: #d14850;
+}
+.centerbox .sec_c1 .legend li:nth-child(3) i {
+    background: #58a54e;
+}
+.centerbox .sec_c1 .legend li:nth-child(4) i {
+    background: #ff8f71;
+}
+.centerbox .sec_c1 .legend li:nth-child(5) i {
+    background: #70dcff;
+}

@@ -1,0 +1,293 @@
+@charset "utf-8";
+@font-face {
+    font-family:'Aldrich';
+    src: url(/font/Aldrich-Regular.ttf);
+}
+@font-face {
+    font-family:'OPPOSans-B';
+    src: url(/font/OPPOSans-B.ttf);
+}
+@font-face {
+    font-family:'OPPOSans-M';
+    src: url(/font/OPPOSans-M.ttf);
+}
+@font-face {
+    font-family:'OPPOSans-R';
+    src: url(/font/OPPOSans-R.ttf);
+}
+@font-face {
+    font-family:'Mont-R';
+    src: url(/font/Montserrat-Regular.ttf);
+}
+.container{
+    width: 1920px;
+    height: 1080px;
+    margin: 0 auto;
+    background: url('/image/common-v6/img/bg.jpg') no-repeat center;
+    background-size: cover;
+    position: relative;
+    overflow: hidden;
+    color: #fff;
+    font-size: 14px;
+}
+.main-container{
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    top: 100px;
+}
+a,span{
+    box-sizing: border-box;
+}
+header{
+    height: 87px;
+    background: url('/image/cmiot-home-v3/img/gongye/head.png') no-repeat center;
+}
+
+header .timebox{
+    width: 230px;
+    height: 41px;
+    color: #fff;
+    font-family:'OPPOSans-M';
+    background: url(/image/cmiot-home-v3/img/timebox.png) no-repeat;
+    top: 33px;
+    left: 36px;
+}
+header .adminbox{
+    /*top: 30px;
+    right: 40px;*/
+    top: 43px;
+    right: 26px;
+}
+
+.tagbox{
+    padding: 20px;
+    z-index: 1;
+}
+.tagbox >div{
+    width: 295px;
+    height: 62px;
+    background: url(/image/cmiot-home-v3/img/gongye/top.png) no-repeat;
+    padding: 0 28px;
+}
+.tagbox >div .n{
+    font-size: 20px;
+}
+.tagbox >div .d{
+    font-size: 24px;
+    color: #43d9ff;
+    font-family: 'Aldrich';
+}
+.main{
+    padding: 0 20px 20px 20px;
+}
+.subhead{
+    font-size: 20px;
+    height: 20px;
+    line-height: 20px;
+    position: relative;
+    padding-left: 20px;
+    font-family:'OPPOSans-M';
+    font-weight: 500;
+}
+.subhead::before{
+    content: '';
+    display: block;
+    width: 4px;
+    height: 20px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background: #6a95ff;
+}
+.subhead a.del{
+    width: 78px;
+    height: 28px;
+    border: 1px solid #3461d2;
+    background: rgba(9,45,136,.3);
+    font-size: 14px;
+    color: #feffff;
+    right: 0px;
+    top: -5px;
+    font-family:'OPPOSans-R';
+}
+.search-box{
+    height: 30px;
+    background: rgba(106, 149, 255, .1);
+    margin: 15px 0 0 0;
+}
+@keyframes rotate1{
+    0%{-webkit-transform:rotate(0deg);}
+    100%{-webkit-transform:rotate(360deg);}
+}
+.mt20{
+    margin-top: 20px;
+}
+/*地图图例*/
+.maplegend{
+    position: absolute;
+    bottom: 30px;
+    left: 30px;
+    width: 218px;
+    height: 105px;
+    background: url(/image/cmiot-home-v3/img/gongye/mapleg.png) no-repeat;
+}
+.maplegend .t{
+    height: 30px;
+    line-height: 30px;
+    padding: 10px 20px 0 20px;
+    color: #fff;
+}
+.maplegend .b{
+    margin-top: 2px;
+    height: 60px;
+    overflow: hidden;
+}
+.maplegend .b p{
+    border: 1px solid #2d4785;
+    width: 184px;
+    height: 10px;
+    color: #fff;
+    margin: 20px auto;
+}
+.maplegend .b p span{
+    position: relative;
+    flex: 1;
+    border: 1px solid #96a3c3;
+}
+.maplegend .b p span i{
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    font-family:'Aldrich';
+}
+.maplegend .b p span:first-child{
+    background: #2d4886;
+}
+.maplegend .b p span:nth-child(2){
+    background: #0f425f;
+    border-left: 1px solid #96a3c3;
+}
+.maplegend .b p span:nth-child(3){
+    background: #680c22;
+    border-left: 1px solid #96a3c3;
+}
+.mapselect{
+    position: absolute;
+    left: 34px;
+    top: 34px;
+    z-index: 9;
+}
+.mapselect .con{
+    width: 166px;
+    height: 30px;
+    position: relative;
+}
+.mapselect .con span{
+    width: 140px;
+    height: 30px;
+    line-height: 30px;
+    background: rgba(23, 41, 108, .9);
+    padding-left: 11px;
+    box-sizing: border-box;
+}
+.mapselect .con span::before{
+    content: '';
+    display: block;
+    width: 2px;
+    height: 30px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background: #597fdf;
+}
+.mapselect .con a{
+    width: 25px;
+    height: 30px;
+    background: #455791;
+}
+.mapselect .list li a{
+    width: 140px;
+    height: 30px;
+    line-height: 30px;
+    background: rgba(23, 41, 108, .9);
+    padding-left: 11px;
+    box-sizing: border-box;
+    color: #fff;
+    border-top: 1px solid rgba(18, 3, 51, 0.767);
+}
+/*定义滚动条高宽及背景 高宽分别对应横竖滚动条的尺寸*/
+.yjbox ::-webkit-scrollbar,.yjcztopbox::-webkit-scrollbar
+{
+	width: 6px;
+	height: 6px;
+	background-color: #1f849a;
+}
+
+/*定义滚动条轨道 内阴影+圆角*/
+.yjbox ::-webkit-scrollbar-track,.yjcztopbox::-webkit-scrollbar-track
+{
+	-webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
+	border-radius: 3px;
+	background-color: #0e4759;
+}
+
+/*定义滑块 内阴影+圆角*/
+.yjbox ::-webkit-scrollbar-thumb,.yjcztopbox::-webkit-scrollbar-thumb
+{
+	border-radius: 10px;
+	-webkit-box-shadow: inset 0 0 6px rgba(0,0,0,.3);
+	background-color: #1f849a;
+}
+
+.a-left{
+    right: 0;
+    top: 50%;
+    transform: translateY(-50%);
+}
+.a-down{
+    top: 0;
+    opacity: 1;
+    /*top: -4px;
+    opacity: 0.6;*/
+    left: 50%;
+    transform: translateX(-50%);
+    &:hover {
+        opacity: 1;
+    }
+}
+.a-right{
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
+}
+.a-up {
+    top: -13px;
+    opacity: 0.6;
+    left: 50%;
+    transform: translateX(-50%);
+    &:hover {
+        opacity: 1;
+    }
+}
+
+.radio-check{
+    position: absolute;
+    top: 0;
+    right: 0;
+    z-index: 3;
+    /deep/ {
+        .el-radio-button__orig-radio:checked+.el-radio-button__inner {
+            color: #FFF;
+            background-color: #4a9ff759;
+            border-color: #409EFF;
+        }
+
+        .el-radio-button__inner {
+            background: #fff0;
+            border: 1px solid #dcdfe666;
+            color: #adadad;
+        }
+    }
+}

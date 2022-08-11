@@ -1,0 +1,164 @@
+@charset "utf-8";
+body,h1,h2,h3,h4,h5,h6,hr,p,dl,dt,dd,ul,ol,li,pre,fieldset,button,input,textarea,th,td,div {
+	margin:0;
+	padding:0;
+}
+body,button,input,select,textarea {
+	font-family: Tahoma,Helvetica,Arial,"\5FAE\8F6F\96C5\9ED1",sans-serif;
+}
+html,body {
+    height: 100%;
+    width: 100%;
+}
+address,cite,dfn,em,var,i {
+	font-style:normal;
+}
+ul,ol {
+	list-style:none;
+}
+a {
+	text-decoration:none;
+}
+a:hover {
+	text-decoration:none;
+}
+fieldset,img {
+	border:none;
+}
+button,input,select,textarea {
+	outline:none;
+	font-size:100%;
+}
+table {
+	border-collapse:collapse;
+	border-spacing:0;
+}
+hr {
+	border:none;
+	height:1px;
+}
+div,main,aside,section,li,span,header,p{
+    box-sizing: border-box;
+}
+
+/* 清除浮动 */
+.f-l {
+    float: left; /*左浮动*/
+}
+.f-r {
+    float: right; /*右浮动*/
+}
+.clear::after {  /*清除浮动*/
+    content: '';
+    display: block;
+    clear: both;
+}
+
+/*字号*/
+.f-14 {
+    font-size: 14px;
+}
+.f-16 {
+    font-size: 16px;
+}
+.f-18 {
+    font-size: 18px;
+}
+.f-20 {
+    font-size: 20px;
+}
+.f-22 {
+    font-size: 22px;
+}
+.f-24 {
+    font-size: 24px;
+}
+
+/*鼠标*/
+.cursor {  /*鼠标手势*/
+    cursor: pointer;
+}
+.overlay{ /*只可见*/
+    pointer-events: none
+}
+
+/*定位*/
+.pr{
+    position: relative;/*相对定位*/
+}
+.pa{
+    position: absolute;/*绝对定位*/
+}
+
+/*flex布局，简写*/
+.fr{
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: row;
+    flex-direction: row;
+    /*主轴为水平方向，起点在左端*/
+}
+.fc{
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    /*主轴为垂直方向，起点在上沿*/
+}
+.ac{
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    /*交叉轴中点对齐*/
+}
+.jc{
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    /*主轴上居中对齐*/
+}
+.ja{
+    justify-content: space-around;/*每个项目两侧的间隔相等*/
+}
+.jw{
+    justify-content: space-between;/*两端对齐，项目之间的间隔都相等*/
+}
+.je{
+    justify-content: flex-end;/*主轴上右对齐*/
+}
+.ae{
+    align-items: flex-end;/*交叉轴终点对齐*/
+}
+.f1{
+    -webkit-box-flex: 1;
+    -ms-flex: 1;
+    flex: 1;
+    /*占满剩余空间*/
+}
+.jvc{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    /*上下左右居中对齐*/
+}
+.fw{
+    flex-wrap: wrap;/*换行*/
+}
+@font-face {
+    font-family:'OPPOSans-B';
+    src: url('/font/OPPOSans-B.ttf');
+}
+@font-face {
+    font-family:'OPPOSans-R';
+    src: url('/font/OPPOSans-R.ttf');
+}
+@font-face {
+    font-family:'Ubuntu-R';
+    src: url('/font/Ubuntu-Regular.ttf');
+}

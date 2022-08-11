@@ -1,0 +1,454 @@
+/*内容安全*/
+@charset "utf-8";
+.leftbox {
+    width: 445px;
+    margin-right: 20px;
+}
+.rightbox_t_r {
+    margin-left: 20px;
+}
+.bgjb{
+    background: -moz-linear-gradient(top, rgba(106, 149, 255, 0) 0%, rgba(106, 149, 255, .1) 100%);
+    background: -webkit-linear-gradient(top,  rgba(106, 149, 255, 0) 0%, rgba(106, 149, 255, .1) 100%);
+    background: -o-linear-gradient(top,  rgba(106, 149, 255,  0) 0%, rgba(106, 149, 255, .1) 100%);
+    background: -ms-linear-gradient(top,  rgba(106, 149, 255,  0) 0%, rgba(106, 149, 255, .1) 100%);
+    background: linear-gradient(to bottom, rgba(106, 149, 255,  0) 0%, rgba(106, 149, 255, .1) 100%);
+}
+.sec_1 .er_sel {
+    width: 109px;
+    height: 28px;
+    color: #fff;
+    padding-left: 8px;
+    border: 1px solid #324f95;
+    box-sizing: border-box;
+    background-color: rgba(106, 149, 255, 0.2);
+    top: 6px;
+    right: 12px;
+}
+.sec_1 .er_sel option {
+    background-color: #122959;
+}
+.sec_1 ul {
+    width: 100%;
+    margin-top: 5px;
+}
+.sec_1 ul li {
+    width: 144px;
+    height: 97px;
+    padding: 0 15px;
+    margin-top: 5px;
+    margin-right: 6px;
+    box-sizing: border-box;
+    background: rgba(21, 255, 252, 0.051);
+}
+.sec_1 ul li:before,
+.sec_1 ul li:after {
+    content: '';
+    width: 100%;
+    position: absolute;
+    left: 0;
+}
+.sec_1 ul li:before {
+    height: 3px;
+    top: 0;
+}
+.sec_1 ul li:after {
+    height: 1px;
+    bottom: 0;
+}
+.sec_1 ul li>div:first-child {
+    width: 100%;
+    height: 55px;
+    margin-bottom: 5px;
+    padding-left: 5px;
+    box-sizing: border-box;
+    position: relative;
+}
+.sec_1 ul li>div:first-child:before {
+    content: '';
+    width: 3px;
+    height: 3px;
+    position: absolute;
+    top: 19px;
+    left: -5px;
+}
+.sec_1 ul li span {
+    display: inline-block;
+    font-family: 'Aldrich';
+}
+.sec_1 ul li .n,
+.sec_1 ul li .num {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+.sec_1 ul li .n {
+    margin-top: 10px;
+    margin-bottom: 2px;
+}
+.sec_1 ul li:nth-child(3n) {
+    margin-right: 0;
+}
+.sec_1 ul li:nth-child(odd)>div:first-child {
+    border-bottom: 1px solid #083a58;
+}
+.sec_1 ul li:nth-child(odd) .num {
+    color: #15fffc;
+}
+.sec_1 ul li:nth-child(odd)>div:first-child:before,
+.sec_1 ul li:nth-child(odd):before,
+.sec_1 ul li:nth-child(odd):after {
+    background: #0e778f;
+}
+.sec_1 ul li:nth-child(even)>div:first-child {
+    border-bottom: 1px solid #1a3166;
+}
+.sec_1 ul li:nth-child(even) .num {
+    color: #6b94ff;
+}
+.sec_1 ul li:nth-child(even)>div:first-child:before,
+.sec_1 ul li:nth-child(even):before,
+.sec_1 ul li:nth-child(even):after {
+    background: #2f4a8c;
+}
+.sec_1 ul li .pct {
+    width: 100%;
+}
+.sec_1 ul li .pct>div {
+    /*width: 50px;*/
+    flex: 1;
+}
+.sec_1 ul li .pct>div>span:first-child {
+    font-size: 12px;
+    color: #a4a9b1;
+}
+.sec_1 ul li .pct>div>span:nth-child(2) {
+    display: flex;
+    font-size: 12px;
+    font-family: 'Aldrich';
+    color: #fff;
+    padding-right: 7px;
+    box-sizing: border-box;
+}
+.sec_1 ul li .pct>div span:nth-child(2) i {
+    display: inline-block;
+    width: 7px;
+    height: 5px;
+    margin-top: -2px;
+    background-image: url(/image/cmiot-home-v3/img/basic_assets/inc_or_dec.png);
+    background-repeat: no-repeat;
+}
+.sec_1 ul li .pct>div span:nth-child(2) i.t1 {
+    background-position: 0 0;
+}
+.sec_1 ul li .pct>div span:nth-child(2) i.t2 {
+    background-position: 0 -5px;
+}
+.sec_2{
+    margin-top: 15px;
+}
+.sec_3{
+    margin-top: 15px;
+}
+.sec_3 .sub_tab {
+    width: 100%;
+    height: 40px;
+    background: #0f2048;
+}
+.sec_3 .sub_tab a {
+    display: inline-block;
+    height: 40px;
+    line-height: 40px;
+    color: #babcc4;
+    padding: 0 20px;
+    position: relative;
+}
+.sec_3 .sub_tab a.on {
+    font-weight: bold;
+    color: #fff;
+    background-image: -webkit-linear-gradient(top, rgba(33,148,255,0.5) 0%, rgba(33,148,255,0.01176) 100%);
+    background-image: -o-linear-gradient(top, rgba(33,148,255,0.5) 0%, rgba(33,148,255,0.01176) 100%);
+    background-image: linear-gradient(to top, rgba(33,148,255,0.5) 0%, rgba(33,148,255,0.01176) 100%);
+}
+.sec_3 .sub_tab a.on:after {
+    content: '';
+    width: 100%;
+    height: 3px;
+    background: #2184ff;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+}
+.sec_3 .chart_tab {
+    top: 50px;
+    left: 5px;
+    z-index: 2;
+}
+.sec_3 .chart_tab a {
+    display: inline-block;
+    width: 80px;
+    height: 23px;
+    line-height: 20px;
+    text-align: center;
+    color: #8e929d;
+    margin-left: 10px;
+    border-radius: 3px;
+    border: 1px solid #263d73;
+    box-sizing: border-box;
+    background: rgba(34, 66, 157, 0.502);
+}
+.sec_3 .chart_tab a.on {
+    color: #fff;
+    border: 1px solid #6c95ff;
+    background: rgba(34, 66, 157, 0.502);
+}
+.sec_4 .caveat {
+    width: 100%;
+    height: 53px;
+    padding: 0 15px;
+    box-sizing: border-box;
+    background: url(/image/cmiot-home-v3/img/basic_assets/caveat.png) center/100% 100% no-repeat;
+}
+.sec_4 .caveat img {
+    margin-right: 15px;
+}
+.sec_4 .caveat span {
+    width: 0;
+    font-size: 14px;
+    color: #ff6464;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+.sec_4 .cont {
+    background: url(/image/cmiot-home-v3/img/business_security/sec_4.png) center bottom no-repeat;
+}
+.sec_4 .list_head {
+    width: 100%;
+    height: 35px;
+    margin-top: 10px;
+    border-bottom: 1px solid #4364b3;
+    box-sizing: border-box;
+    background: rgba(106, 149, 255, 0.102);
+}
+.sec_4 ul {
+    width: 100%;
+    color: #fff;
+}
+.sec_4 ul li {
+    height: 30px;
+    margin-top: 5px;
+}
+.sec_4 .list_head span,
+.sec_4 ul li span {
+    display: inline-block;
+    text-align: center;
+}
+.sec_4 ul li:nth-child(odd) {
+    background: rgba(106, 149, 255, 0.051)
+}
+.sec_4 ul li:nth-child(even) {
+    background: rgba(106, 255, 215, 0.051)
+}
+.sec_4 .list_head span:first-child,
+.sec_4 ul li span:first-child {
+    width: 60px;
+}
+.sec_4 .list_head span:nth-child(2),
+.sec_4 ul li span:nth-child(2) {
+    width: 100px;
+}
+.sec_4 .list_head span:nth-child(4),
+.sec_4 ul li span:nth-child(4) {
+    width: 60px;
+}
+.sec_4 ul li span:nth-child(3) {
+    color: #ff5f5f;
+    padding: 0 15px;
+    box-sizing: border-box;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    width: 180px;
+}
+.sec_4 ul li span:nth-child(4) a {
+    font-size: 14px;
+    color: #ffffff;
+    text-decoration: underline;
+}
+.sec_5 {
+    margin-top: 15px;
+}
+.sec_5 .chart_tab {
+    top: 50px;
+    left: 5px;
+    z-index: 2;
+}
+.sec_5 .chart_tab a {
+    display: inline-block;
+    width: 80px;
+    height: 23px;
+    line-height: 20px;
+    text-align: center;
+    color: #8e929d;
+    margin-left: 10px;
+    border-radius: 3px;
+    border: 1px solid #263d73;
+    box-sizing: border-box;
+    background: rgba(34, 66, 157, 0.502);
+}
+.sec_5 .chart_tab a.on {
+    color: #fff;
+    border: 1px solid #6c95ff;
+    background: rgba(34, 66, 157, 0.502);
+}
+
+.map_box{
+    width: 912px;
+    height: 615px;
+    background: url(/image/cmiot-home-v3/img/mapbg.jpg) center/100% 100% no-repeat;
+}
+.map_box .map {
+    width: 100%;
+    height: 100%;
+    z-index: 2;
+}
+.map_box .mapt_er {
+    width: 256px;
+    height: 256px;
+    padding: 5px 4px 11px 9px;
+    background: url(/image/cmiot-home-v3/img/basic_assets/mapt_er.png) 0 0 no-repeat;
+}
+.map_box .mapt_er .n {
+    width: 90px;
+    height: 26px;
+    line-height: 26px;
+    text-align: center;
+    margin-top: 9px;
+    margin-left: 41px;
+}
+.map_box .mapt_er .list {
+    margin-top: 19px;
+}
+.map_box .mapt_er .list li {
+    padding-left: 35px;
+    padding-right: 15px;
+    margin-top: 9px;
+    box-sizing: border-box;
+}
+.map_box .mapt_er .list li span:first-child {
+    color: #9da4b6;
+}
+.map_box .mapt_er .list li span:nth-child(2) {
+    font-family: 'Aldrich';
+    color: #fff;
+}
+.map_box .mapt_add {
+    width: 173px;
+    height: 106px;
+    padding: 5px 4px 11px 9px;
+    background: url(/image/cmiot-home-v3/img/basic_assets/mapt_add.png) 0 0 no-repeat;
+}
+.map_box .mapt_add .n {
+    width: 90px;
+    height: 26px;
+    line-height: 26px;
+    text-align: center;
+    margin-top: 10px;
+    margin-left: 25px;
+}
+.map_box .mapt_add .list {
+    margin-top: 20px;
+}
+.map_box .mapt_add .list li {
+    padding-left: 35px;
+    padding-right: 15px;
+    margin-top: 11px;
+    box-sizing: border-box;
+}
+.map_box .mapt_add .list li span:first-child {
+    color: #9da4b6;
+}
+.map_box .mapt_add .list li span:nth-child(2) {
+    font-family: 'Aldrich';
+    color: #fff;
+}
+.map_box .mapChina_bg {
+    width: 100%;
+    height: 100%;
+    background: url(/image/cmiot-home-v3/img/chinamapbg.png) center no-repeat;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 1;
+}
+.map_box .nanhai {
+    width: 117px;
+    height: 123px;
+    background: url(/image/cmiot-home-v3/img/nanhai.png) center no-repeat;
+    position: absolute;
+    bottom: 96px;
+    right: 66px;
+    z-index: 1;
+}
+.sec_c1{
+    margin-top: 18px;
+}
+.sec_c1 .sub_tab {
+    width: 100%;
+    height: 40px;
+    background: #0f2048;
+}
+.sec_c1 .sub_tab a {
+    display: inline-block;
+    height: 40px;
+    line-height: 40px;
+    color: #babcc4;
+    padding: 0 20px;
+    position: relative;
+}
+.sec_c1 .sub_tab a.on {
+    font-weight: bold;
+    color: #fff;
+    background-image: -webkit-linear-gradient(top, rgba(33,148,255,0.5) 0%, rgba(33,148,255,0.01176) 100%);
+    background-image: -o-linear-gradient(top, rgba(33,148,255,0.5) 0%, rgba(33,148,255,0.01176) 100%);
+    background-image: linear-gradient(to top, rgba(33,148,255,0.5) 0%, rgba(33,148,255,0.01176) 100%);
+}
+.sec_c1 .sub_tab a.on:after {
+    content: '';
+    width: 100%;
+    height: 3px;
+    background: #2184ff;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+}
+.sec_c1 .legend {
+    color: #feffff;
+    top: 10px;
+    right: 27px;
+}
+.sec_c1 .legend li {
+    margin-left: 30px;
+}
+.sec_c1 .legend li:first-child {
+    margin-left: 0;
+}
+.sec_c1 .legend li i {
+    display: inline-block;
+    width: 12px;
+    height: 12px;
+    margin-left: 7px;
+    border: 1px solid #fff;
+    box-sizing: border-box;
+}
+
+.sec_c1 .legend li:first-child i {
+    background: #2184ff;
+}
+.sec_c1 .legend li:nth-child(2) i {
+    background: #70dcff;
+}
+.sec_c1 .legend li:nth-child(3) i {
+    background: #d14850;
+}

@@ -1,0 +1,11 @@
+/**
+   编写业务方面全局定义样式（由于会全局使用，请慎用）
+ */
+.search-form .el-input{
+  width: 220px;
+}
+.el-dialog .editDialogContainer{
+  overflow: auto;
+  margin: -15px;
+  padding: 15px;
+}

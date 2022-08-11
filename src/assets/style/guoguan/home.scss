@@ -1,0 +1,374 @@
+*{
+	margin: 0;
+	padding: 0;
+}
+/*html,body{
+	width: 100%;
+	height: 100%;
+	background: url(/image/guoguan/home/bg.png) 0 0 no-repeat;
+}*/
+.guoguan-home{
+	position: fixed;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	top: 0;
+	overflow: auto;
+	background: url(/image/guoguan/home/bg.png) 0 0 no-repeat;
+}
+.container{
+	width: 1903px;
+	min-height: 100%;
+	/*background: url(/image/guoguan/home/bg.png) 0 0 no-repeat;*/
+	margin: 0 auto;
+	/*float: left;*/
+	/*overflow: hidden;*/
+}
+.main{
+	width: 98%;
+	margin: 0 auto;
+	position: relative;
+}
+section{
+	width: 493px;
+	margin-top: 25px;
+}
+section h2{
+	height: 45px;
+	line-height: 45px;
+	padding-left: 35px;
+	font-size: 18px;
+	color: #e8bc3f;
+	background: url(/image/guoguan/home/border_h2.png) 0 0 no-repeat;
+}
+/******title_y******/
+.title_y{
+	width: 632px;
+	height: 68px;
+	background: url(/image/guoguan/home/title.png) 0 0 no-repeat;
+	position: absolute;
+	top: 30px;
+	left: 615px;
+}
+/******congtent_left******/
+.content_left{
+	position: absolute;
+	top: 0;
+	left: 0;
+}
+.content_left section:first-child .comContent{
+	height: 280px;
+	background: url(/image/guoguan/home/border_content1.png) 0 0 no-repeat;
+	display: flex;
+	justify-content: space-around;
+}
+.content_left section:first-child .comContent .stsl{
+	width: 137px;
+	height: 236px;
+	background: url(/image/guoguan/home/stsl.png) 0 0 no-repeat;
+	margin-top: 20px;
+}
+.content_left section:nth-child(2) h2 span{
+	font-size: 20px;
+	float: right;
+	margin-right: 40px;
+}
+.content_left section:nth-child(2) .comContent{
+	height: 630px;
+	background: url(/image/guoguan/home/border_content2.png) 0 0 no-repeat;
+	position: relative;
+}
+/******stsl******/
+.stsl{
+
+}
+.stsl span{
+	color: #c4d6f9;
+	text-align: center;
+	display: block;
+}
+.stsl span:nth-child(odd){
+	font-size: 30px;
+	height: 50px;
+	line-height: 50px;
+}
+.stsl span:nth-child(even){
+	font-size: 16px;
+	height: 30px;
+	line-height: 30px;
+	margin: 20px 0 35px 0;
+}
+/******graph1******/
+.graph1{
+	width: 437px;
+	height: 520px;
+	background: url(/image/guoguan/home/zjl.png) 0 0 no-repeat;
+	position: absolute;
+	top: 45px;
+	left: 30px;
+}
+.graph1 div{
+	width: 110px;
+	height: 50px;
+	line-height: 50px;
+	font-size: 16px;
+	color: #fff;
+	text-align: center;
+	position: absolute;
+}
+.graph1 div:first-child{
+	width: 130px;
+	height: 65px;
+	line-height: 65px;
+	top: 36px;
+	left: 0px;
+}
+.graph1 div:nth-child(2){
+	line-height: 25px;
+	top: 0px;
+	left: 213px;
+}
+.graph1 div:nth-child(3){
+	top: 147px;
+	left: 264px;
+}
+.graph1 div:nth-child(4){
+	top: 147px;
+	left: 117px;
+}
+.graph1 div:nth-child(5){
+	line-height: 25px;
+	top: 288px;
+	left: 77px;
+}
+.graph1 div:nth-child(6){
+	top: 288px;
+	left: 224px;
+}
+.graph1 div:nth-child(7){
+	top: 436px;
+	left: 263px;
+}
+.graph1 div:nth-child(8){
+	top: 436px;
+	left: 114px;
+}
+/******congtent_middle******/
+.content_middle{
+	position: absolute;
+	top: 815px;
+	left: 510px;
+}
+.content_middle .comContent{
+	width: 845px;
+	height: 235px;
+	background: url(/image/guoguan/home/border_content3.png) 0 0 no-repeat;
+	overflow: hidden;
+}
+/******middle_tab******/
+.middle_tab{
+	padding: 10px 10px 0 10px;
+}
+.middle_tab li{
+	font-size: 16px;
+	display: flex;
+	justify-content: space-around;
+}
+.middle_tab li:first-child{
+	height: 40px;
+	line-height: 40px;
+	color: #afaba9;
+	border-bottom: 1px solid #52505a;
+}
+.middle_tab li:nth-child(n+2){
+	height: 45px;
+	line-height: 45px;
+	color: #e1d1c8;
+	border-top: 1px solid #52505a;
+}
+.middle_tab li:nth-child(even){
+	background-color: #342f2f;
+}
+.middle_tab li span:first-child{
+	width: 40px;
+	text-align: center;
+}
+.middle_tab li span:nth-child(2){
+	width: 130px;
+}
+.middle_tab li span:nth-child(3){
+	width: 130px;
+}
+.middle_tab li span:nth-child(4){
+	width: 160px;
+}
+.middle_tab li span:nth-child(5){
+	width: 90px;
+}
+.middle_tab li span:nth-child(6){
+	width: 175px;
+}
+.middle_tab li span:nth-child(7){
+	width: 160px;
+}
+/******congtent_right******/
+.content_right{
+	position: absolute;
+	top: 0;
+	right: 0;
+}
+.content_right section .comContent{
+	height: 280px;
+	background: url(/image/guoguan/home/border_content1.png) 0 0 no-repeat;
+}
+.content_right section:nth-child(3) .comContent{
+	position: relative;
+}
+/******right_tab******/
+.right_tab{
+	padding: 10px 10px 0 10px;
+}
+.right_tab li{
+	font-size: 16px;
+	display: flex;
+	justify-content: space-around;
+}
+.right_tab li:first-child{
+	height: 45px;
+	line-height: 45px;
+	color: #afaba9;
+	border-bottom: 1px solid #52505a;
+}
+.right_tab li:nth-child(n+2){
+	height: 40px;
+	line-height: 40px;
+	color: #e1d1c8;
+	border-top: 1px solid #52505a;
+}
+/*.right_tab li:nth-child(even){
+	background-color: #342f2f;
+}*/
+.right_tab li span:first-child{
+	width: 40px;
+	text-align: center;
+}
+.right_tab li span:nth-child(2){
+	width: 120px;
+}
+.right_tab li span:nth-child(3){
+	width: 45px;
+}
+.right_tab li span:nth-child(4){
+	width: 70px;
+}
+.right_tab li span:nth-child(5){
+	width: 85px;
+}
+.right_tab li span:nth-child(6){
+	width: 85px;
+}
+/******graph2******/
+.graph2{
+	width: 466px;
+	height: 264px;
+	background: url(/image/guoguan/home/dygj.png) 0 0 no-repeat;
+	position: absolute;
+	top: 10px;
+	left: 10px;
+}
+.graph2>div{
+	font-size: 16px;
+	color: #fff;
+	text-align: center;
+	position: absolute;
+	/*border: 1px solid red;*/
+}
+.graph2 .type1{
+	width: 144px;
+	height: 24px;
+	color: #f9c861;
+}
+.graph2 .type2{
+	width: 144px;
+	height: 44px;
+	color: #a1bffd;
+}
+.graph2 .type3{
+	width: 89px;
+	height: 24px;
+	color: #d8c9c0;
+}
+.dygj_left{
+	float: left;
+}
+.dygj_right{
+	float: right;
+}
+.item_y{
+	width: 60px;
+}
+.ip_y{
+	width: 80px;
+}
+.time_y{
+	width: 100px;
+}
+.target_y{
+	width: 80px;
+}
+.graph2>div:first-child{
+	width: 72px;
+	height: 44px;
+	position: absolute;
+	top: 116px;
+	left: 0px;
+}
+.graph2>div:nth-child(2){
+	top: 12px;
+	left: 101px;
+}
+.graph2>div:nth-child(3){
+	top: 51px;
+	left: 101px;
+}
+.graph2>div:nth-child(4){
+	top: 90px;
+	left: 101px;
+}
+.graph2>div:nth-child(5){
+	top: 143px;
+	left: 101px;
+}
+.graph2>div:nth-child(6){
+	top: 201px;
+	left: 101px;
+}
+.graph2>div:nth-child(7){
+	top: 240px;
+	left: 101px;
+}
+.graph2>div:nth-child(8){
+	top: 0px;
+	left: 271px;
+}
+.graph2>div:nth-child(9){
+	top: 30px;
+	left: 271px;
+}
+.graph2>div:nth-child(10){
+	width: 194px;
+	height: 44px;
+	color: #d8c9c0;
+	top: 90px;
+	left: 271px;
+}
+.graph2>div:nth-child(11){
+	top: 240px;
+	left: 271px;
+}
+
+// vue嵌入微调
+.ip_y > span{
+	display: block;
+	margin: 3px;
+}

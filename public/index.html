@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <!--<meta name="viewport" content="width=device-width,initial-scale=1.0">-->
+    <meta name="viewport" content="width=device-width,height=device-height,initial-scale=1.0,maximum-scale=1.0,user-scalable=no">
+    <!--<link rel="icon" href="<%= BASE_URL %>icon.ico">-->
+    <link rel="bookmark"  type="image/x-icon"  href="<%= BASE_URL %>favicon.ico"/>
+    <link rel="shortcut icon"  href="<%= BASE_URL %>favicon.ico">
+    <link rel="icon"  href="<%= BASE_URL %>favicon.ico">
+    <title><%= VUE_APP_TITLE %></title>
+    <link rel="stylesheet" type="text/css" href="<%= BASE_URL %>css/index.css">
+    <!--gxb-project引用 - BEGIN-->
+    <link rel="stylesheet" id="theme-css">
+    <link rel="stylesheet" href="<%= BASE_URL %>themes/default/index.css">
+    <!--gxb-project引用 - END-->
+    <!--<script src="./script/ua-parser.min.js"></script>
+    <script src="./script/ua.js"></script>-->
+    <script src="<%= BASE_URL %>script/defaultAppFlag.js"></script>
+    <script src="<%= BASE_URL %>script/appFlag.js"></script>
+    <% if (process.env.NODE_ENV === 'production' ) { %>
+    <script>
+      // document.write("<script src=\"http://10.10.188.9:18206/config.js?t=" + Date.now()+ "\">" + "<\/script>")
+      document.write("<script src=\"<%= BASE_URL %>script/config-online.js?t=" + Date.now()+ "\">" + "<\/script>")
+    </script>
+    <% } else { %>
+    <script>
+      document.write("<script src=\"<%= BASE_URL %>script/config.js?t=" + Date.now()+ "\">" + "<\/script>")
+    </script>
+    <% } %>
+    <script src="<%= BASE_URL %>ckeditor/ckeditor.js"></script>
+    <!-- JSON Editor -->
+    <script src="<%= BASE_URL %>script/jsoneditor.js"></script>
+  </head>
+  <body>
+    <noscript>
+      <strong>We're sorry but the project doesn't work properly without JavaScript enabled. Please enable it to continue.</strong>
+    </noscript>
+    <div id="app">
+      <div class="d2-app-loading-group">
+        <div class="d2-app-loading-grid">
+          <div class="d2-app-loading d2-app-loading1"></div>
+          <div class="d2-app-loading d2-app-loading2"></div>
+          <div class="d2-app-loading d2-app-loading3"></div>
+          <div class="d2-app-loading d2-app-loading4"></div>
+          <div class="d2-app-loading d2-app-loading5"></div>
+          <div class="d2-app-loading d2-app-loading6"></div>
+          <div class="d2-app-loading d2-app-loading7"></div>
+          <div class="d2-app-loading d2-app-loading8"></div>
+          <div class="d2-app-loading d2-app-loading9"></div>
+        </div>
+        <div class="d2-app-loading-title">加载中</div>
+        <!--<div class="d2-app-loading-sub-title">初次加载会比较慢，请耐心等待</div>-->
+        <!--<div class="d2-app-loading-sub-info">如果很久很久都没有加载成功，请清空缓存重新加载页面</div>-->
+      </div>
+    </div>
+    <!-- built files will be auto injected -->
+  </body>
+</html>

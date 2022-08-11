@@ -1,0 +1,194 @@
+// 字体不要使用/deep/穿透
+// 公共样式
+@font-face {
+  font-family: 'Material Icons';
+  font-style: normal;
+  font-weight: 400;
+  src: url('/font/material-icons-outline.woff2') format('woff2');
+}
+
+.gxb-container {
+  // 公共样式
+  /*@font-face {
+    font-family: 'Material Icons';
+    font-style: normal;
+    font-weight: 400;
+    src: url('/gxb/fonts/material-icons-outline.woff2') format('woff2');
+  }*/
+  .box {
+    border: 8px solid transparent;
+    border-image: var(--box-border-img);
+    background: var(--box-bg-color);
+  }
+
+  .side-panel {
+    height: 100%;
+    border: 1px solid #3b61c6;
+    position: absolute;
+    background-color: rgba(0, 0, 0, 0.2);
+    width: 25%;
+    max-width: 470px;
+    top: 0;
+    min-width: 380px;
+
+    &.left {
+      left: 0;
+    }
+
+    &.right {
+      right: 0;
+    }
+
+    &.bottom {
+      bottom: 0;
+      height: 320px;
+      top: initial;
+      left: 25.5%;
+      max-width: 49%;
+      width: 100%;
+    }
+  }
+
+  .panel-toggle-btn {
+    position: absolute;
+    top: 50%;
+    width: 10px;
+    height: 55px;
+    margin-top: -27px;
+    background: url('/gxb/imgs/panel-togger.svg') center / contain no-repeat;
+    opacity: 0.7;
+
+    &:hover {
+      opacity: 1;
+    }
+
+    &.left {
+      right: 0;
+    }
+
+    &.right {
+      left: 0;
+      transform: scale(-1);
+    }
+
+    &.bottom {
+      top: 0;
+      transform: rotate(-90deg);
+      margin-top: -24px;
+      margin-left: -5px;
+      left: 50%;
+    }
+  }
+
+  .m-icon {
+    transition: color .2s;
+    user-select: none;
+    font-family: Material Icons;
+    font-style: normal;
+    vertical-align: text-top;
+  }
+
+  .checkbox {
+    width: 18px;
+    height: 18px;
+    box-sizing: border-box;
+    border: 2px solid var(--checkbox-border-color);
+    cursor: pointer;
+
+    input {
+      display: block;
+      width: 8px;
+      height: 8px;
+      background: transparent;
+      margin: 3px;
+      pointer-events: none;
+    }
+
+    input:checked {
+      background: var(--checkbox-border-color)
+    }
+  }
+
+  .wl-icon {
+    border: 1px solid rgba(#fff, 0.3);
+    background: radial-gradient(rgba(0, 140, 255, 0.5), rgba(0, 140, 255, 0));
+  }
+
+  .h2 {
+    border-left: 5px solid #6a95ff;
+    height: 22px;
+    font-size: 18px;
+    padding-left: 15px;
+  }
+
+  .bb {
+    border-bottom: 1px solid rgba(#fff, 0.1);
+  }
+
+  .br {
+    border-right: 1px solid rgba(#fff, 0.1);
+  }
+
+  .bg-a {
+    background-color: rgba(#6a95ff, 0.12);
+  }
+
+  .bg-blur {
+    backdrop-filter: blur(10px);
+  }
+
+  .info-window:after {
+    content: '';
+    display: block;
+    width: 3px;
+    height: 30px;
+    position: absolute;
+    left: 50%;
+    top: 88%;
+    background: #fff;
+    background: linear-gradient(to bottom, rgba(255, 255, 255, 0.5), rgba(255, 255, 255, 0.3));
+  }
+
+  .sw-btn {
+    background: rgba(#fff, 0.3);
+  }
+
+  .sw-btn.on {
+    opacity: 0.5;
+    pointer-events: none;
+  }
+
+  .sm-btn {
+    color: #2f4df3;
+    border: 1px solid #364edd;
+    padding: 2px 5px;
+    border-radius: 3px;
+  }
+
+  .sm-btn.on {
+    color: #fff;
+    background: rgba(#2845e8, 0.3);
+  }
+
+  // 几种表格样式
+  .table1 {
+    th, td {
+      background: rgba(#6a95ff, 0.05);
+      border: 2px solid rgba(#000, 0.5);
+      padding: 5px 10px;
+    }
+
+    tr:nth-child(even) {
+      th, td {
+        background: rgba(#6a95ff, 0.1);
+      }
+    }
+  }
+
+  .table2 {
+    tr:nth-child(even) {
+      background-color: rgba(#6a95ff, 0.1);
+    }
+  }
+
+}

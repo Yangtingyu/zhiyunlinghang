@@ -1,0 +1,75 @@
+  .list02{
+    font-size: 36px;
+    color: rgba(198, 222, 255, .85);
+    li{
+      height: 100px;
+      border-top: 2px solid rgba(37, 237, 255, .25);
+      border-bottom: 2px solid rgba(37, 237, 255, .25);
+      margin-top: 4px;
+      .xh{width: 100px;height: 100px;}
+      .d{font-size: 42px;}
+      .bar{height: 11px; margin-top: 5px;
+        span{top: 2px;left: 2px;display: inline-block; height: 7px; }
+      }
+      &:nth-child(odd){
+        background: rgba(8, 245, 237, .03);
+        .xh{background: rgba(8, 245, 237, .08);}
+        .bar{background: #083650;
+          span{background: -webkit-linear-gradient(left, #007c66 0%,#6fe1d7 100%);}
+        }
+      }
+      &:nth-child(even){
+        background: rgba(8, 192, 245, .03);color: rgba(170, 226, 232, .85);
+        .xh{background: rgba(8, 164, 245, .08);}
+        .bar{background: #082d50;
+          span{background: -webkit-linear-gradient(left, #015c7d 0%,#68bedd 100%);}
+        }
+      }
+      .sk{width: 16px; height: 16px; padding: 2px; background: #25edff; border: 2px solid #25edff; background-clip: zzzzzzzzzzzzzzzzzz-box;margin-right: 16px;}
+    }
+  }
+  .list01{
+    font-size: 36px;
+    // color: #bcf9ff;
+    li{
+      height: 87px;
+      border-top: 2px solid rgba(114, 156, 190, .4);
+      border-left: 4px solid rgba(114, 156, 190, .4);
+      margin-top: 10px;
+      &:nth-child(odd){background: rgba(11, 108, 129, .1);color: #bcf9ff;}
+      &:nth-child(even){background: rgba(114, 171, 190, .2);color: #c6deff;}
+      .xh{width: 110px; text-align: center;}
+      .t{ width: 700px;overflow: hidden; text-overflow:ellipsis; white-space: nowrap;}
+      .d{font-size: 42px; text-align: right; padding-right: 26px;}
+    }
+    
+  }
+  .subhead-d{
+    font-size: 50px;
+    color: #fff;
+    padding-right: 26px;
+  }
+  .subhead-a{
+    a{ 
+      width: 78px;height: 78px;
+      &.active{border: 1px solid #3aa7b7;}
+    }
+  }
+  .subhead-img{
+    padding-right: 26px;
+  }
+  //滚动条
+  .gun::-webkit-scrollbar {
+    /*滚动条整体样式*/
+    width : 10px;  /*高宽分别对应横竖滚动条的尺寸*/
+    height: 1px;
+    }
+  .gun::-webkit-scrollbar-thumb {
+    /*滚动条里面小方块*/
+    background-color: #095367;
+    }
+  .gun::-webkit-scrollbar-track {
+    /*滚动条里面轨道*/
+    box-shadow   : inset 0 0 5px rgba(0, 0, 0, 0.2);
+    background   : #073649;
+    }

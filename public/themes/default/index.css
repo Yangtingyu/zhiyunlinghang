@@ -1,0 +1,51 @@
+:root {
+    /* 全局配置-----------------------------------------------start----------------------------------------------- */
+    /* body字体颜色 */
+    --body-font-color: #fff;
+    /* body背景色 */
+    --body-bg-color: #0c183b;
+    /* 滚动条背景色 */
+    --scroll-bg-color: rgba(0, 0, 0, 0.12);
+    /* 复选框边框颜色 */
+    --checkbox-border-color: #2845e8;
+    /* 图标颜色 例如 c-blue  c-f等*/
+    --c-blue: #43c5ff;
+    --c-f-color: #fff;
+    --c-yellow-color: #e2e264;
+    --c-red-color: #f76161;
+    --c-green-color: #45e99c;
+    --c-fuchsia-color: #e745e7;
+    /* .box边框颜色 .box */
+    --box-border-img: url("/gxb/imgs/box-border.png") 8;
+    /* .box背景颜色 .box */
+    --box-bg-color: rgba(0, 17, 62, 0.7);
+    /* 全局配置-----------------------------------------------end----------------------------------------------- */
+
+    /* 顶部标题-----------------------------------------------start----------------------------------------------- */
+    /* 左侧标题box-shadow */
+    --topBar-box-shadow: inset 0 0 40px rgba(42, 102, 255, 0.5);
+    /* 左侧标题border-color */
+    --topBar-border-color: #3362d5;
+    /* 标题颜色 */
+    --topBar-title-bg-color: linear-gradient(#fff, #ccc);
+    /* 顶部标题-----------------------------------------------end----------------------------------------------- */
+
+    /* 菜单-----------------------------------------------start----------------------------------------------- */
+    /* 按钮背景 */
+    --menu-btn-bg-color: rgba(55, 76, 181, 0.6);
+    /* 按钮左侧方形背景 */
+    --menu-btn-befor-bg-color: #253dc4;
+    /* 按钮边框 */
+    --menu-btn-border-color: #2845e8;
+    /* 按钮盒子阴影 */
+    --menu-btn-box-shadow: inset 0 0 3px #000;
+    /* 按钮选中边框和按钮左侧方形背景颜色 */
+    --menu-active-btn-bg-color: #23aeff;
+    /* 按钮选中边框和按钮左侧方形背景颜色 */
+    --menu-active-btn-bg-color: #23aeff;
+    /* 菜单-----------------------------------------------end----------------------------------------------- */
+
+    /* 首页 */
+    /* 读题工具栏边框图片 */
+    --home-toolbar-border-img: url("/gxb/imgs/toolbar-bg.svg") center / contain no-repeat;
+}

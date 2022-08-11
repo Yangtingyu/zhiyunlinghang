@@ -1,0 +1,99 @@
+/*数字液晶字体*/
+@font-face {
+  font-family: "DS-DIGIB";
+  src: url(/font/DS-DIGIB-2.ttf);
+}
+.top-title{
+  width: 100%;
+  height: 71px;
+  line-height: 71px;
+  background: url("/image/cvis/bg_title.png") no-repeat;
+  .title-name{
+    font-size: 28px;
+    font-family:"Microsoft YaHei",微软雅黑;
+    font-weight: bold;
+    text-align: center;
+    letter-spacing: 10px;
+    // 渐变色字体
+    background-image: linear-gradient(#fff, #ccc);
+    background-clip: text;
+    -webkit-background-clip: text;
+    color: transparent;
+  }
+}
+.left{
+  width: 417px;
+  .left-1{
+    width: 369px;
+    height: 180px;
+    background: url("/image/cvis/bg_assets_count.png") no-repeat;
+    padding-left: 156px;
+    padding-top: 76px;
+    .name{
+      font-size: 18px;
+      color: #84D8FF;
+    }
+    .value{
+      font-family: "DS-DIGIB";
+      font-size: 36px;
+      font-weight: bold;
+      color: #31DDFF;
+      margin-top: 10px;
+      position: relative;
+      padding: 4px;
+      span{
+        border: 1px solid rgba(60, 236, 229, 0.2);
+        margin-right: 4px;
+        width: 25px;
+        padding: 6px 2px;
+        display: inline-block;
+      }
+      &::before {
+        position: absolute;
+        top: 0;
+        left: 0;
+        content: "";
+        width: 10px;
+        height: 10px;
+        border-top: 1px solid rgba(49, 221, 255, 0.6);
+        border-left: 1px solid rgba(49, 221, 255, 0.6);
+      }
+      &::after {
+        position: absolute;
+        top: 0;
+        right: 0;
+        content: "";
+        width: 10px;
+        height: 10px;
+        border-top: 1px solid rgba(49, 221, 255, 0.6);
+        border-right: 1px solid rgba(49, 221, 255, 0.6);
+      }
+      .footer{
+        position: absolute;
+        left: 0;
+        bottom: 0;
+        width: 100%;
+        &::before {
+          position: absolute;
+          bottom: 0;
+          left: 0;
+          content: "";
+          width: 10px;
+          height: 10px;
+          border-bottom: 1px solid rgba(49, 221, 255, 0.6);
+          border-left: 1px solid rgba(49, 221, 255, 0.6);
+        }
+        &::after {
+          position: absolute;
+          bottom: 0;
+          right: 0;
+          content: "";
+          width: 10px;
+          height: 10px;
+          border-bottom: 1px solid rgba(49, 221, 255, 0.6);
+          border-right: 1px solid rgba(49, 221, 255, 0.6);
+        }
+      }
+    }
+  }
+}

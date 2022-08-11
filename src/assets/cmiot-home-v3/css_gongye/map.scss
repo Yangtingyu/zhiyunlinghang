@@ -1,0 +1,227 @@
+@font-face {
+	font-family: 'Aldrich';
+	src: url(/font/Aldrich-Regular.ttf);
+}
+.china_map {
+	width: 885px;
+	height: 730px;
+	left: 50%;
+	transform: translateX(-50%);
+	z-index: 2;
+	top: -40px;
+}
+.china_map #china_map {
+	top: 0;
+	left: 0;
+	z-index: 2;
+}
+.china_map .map_bg {
+	width: 100%;
+	height: 100%;
+	background: url(/image/cmiot-home-v3/img/gongye/china_map.png) center no-repeat;
+}
+.china_map .nanhai {
+	width: 79px;
+	height: 112px;
+	background: url(/image/cmiot-home-v3/img/gongye/nnahai.png) center no-repeat;
+	bottom: 40px;
+	right: 105px;
+}
+.china_map /deep/ .map_tooltip {
+	width: 300px;
+	height: 221px;
+	padding: 1px;
+	background: url(/image/cmiot-home-v3/img/gongye/map_tooltip.png) center/100% 100% no-repeat;
+}
+.china_map /deep/ .map_tooltip .time {
+	width: 100%;
+	height: 30px;
+	line-height: 30px;
+	font-family: 'Aldrich';
+	color: #fff;
+	padding-left: 25px;
+}
+.china_map /deep/ .map_tooltip .tip_tit {
+	color: #55e5ff;
+	margin-top: 10px;
+	margin-left: 45px;
+}
+.china_map /deep/ .map_tooltip .list {
+	margin:0;
+	padding:0;
+	margin-top: 5px;
+	margin-left: 50px;
+	list-style:none;
+}
+.china_map /deep/ .map_tooltip .list li {
+	line-height: 25px;
+	margin:0;
+	padding:0;
+}
+.china_map /deep/ .map_tooltip .list li span {
+	display: inline-block;
+    width: 52px;
+	color: #fff;
+    // border: 1px solid #ccc;
+    text-align: center;
+}
+/*.china_map /deep/ .map_tooltip .list li span:first-child {
+	width: 50px;
+}
+.china_map /deep/ .map_tooltip .list li span:nth-child(1) {
+	width: 50px;
+	text-align: center;
+}
+.china_map /deep/ .map_tooltip .list li span:nth-child(2) {
+	width: 50px;
+	text-align: center;
+}
+.china_map /deep/ .map_tooltip .list li span:nth-child(3) {
+  width: 50px;
+  text-align: center;
+}*/
+
+
+.world_map {
+	width: 1200px;
+	height: 540px;
+	left: 50%;
+	transform: translateX(-50%);
+	z-index: 2;
+}
+.world_map #world_map {
+	top: 20px;
+	left: 0;
+	z-index: 2;
+}
+.world_map .map_bg {
+	margin-top: 20px;
+	width: 100%;
+	height: 100%;
+	background: url(/image/cmiot-home-v3/img/gongye/world_map.png) center no-repeat;
+	background-size:1200px 540px;
+}
+.world_map /deep/ .lines_tooltip {
+	width: 160px;
+	height: 44px;
+	font-family: 'Aldrich';
+	color: #fff;
+	background: url(/image/cmiot-home-v3/img/gongye/lines_tooltip.png) center/100% 100% no-repeat;
+
+	&.fr{
+		display: -webkit-box;
+		display: -ms-flexbox;
+		display: flex;
+		-webkit-box-orient: horizontal;
+		-webkit-box-direction: normal;
+		-ms-flex-direction: row;
+		flex-direction: row;
+	}
+	&.ac{
+		-webkit-box-align: center;
+		-ms-flex-align: center;
+		align-items: center;
+	}
+	&.jc{
+		-webkit-box-pack: center;
+		-ms-flex-pack: center;
+		justify-content: center;
+	}
+	&.f-14 {
+		font-size: 14px;
+	}
+}
+
+.world_map /deep/ .map_tooltip {
+	width: 300px;
+	height: 221px;
+	padding: 1px;
+	background: url(/image/cmiot-home-v3/img/gongye/map_tooltip.png) center/100% 100% no-repeat;
+}
+.world_map /deep/ .map_tooltip .time {
+	width: 100%;
+	height: 30px;
+	line-height: 30px;
+	font-family: 'Aldrich';
+	color: #fff;
+	padding-left: 25px;
+}
+.world_map /deep/ .map_tooltip .tip_tit {
+	color: #55e5ff;
+	margin-top: 10px;
+	margin-left: 45px;
+}
+.world_map /deep/ .map_tooltip .list {
+	margin:0;
+	padding:0;
+	margin-top: 5px;
+	margin-left: 50px;
+	list-style:none;
+}
+.world_map /deep/ .map_tooltip .list li {
+	line-height: 25px;
+	margin:0;
+	padding:0;
+}
+.world_map /deep/ .map_tooltip .list li span {
+	display: inline-block;
+	width: 52px;
+	color: #fff;
+	// border: 1px solid #ccc;
+	text-align: center;
+}
+
+.JS_map {
+	width: 885px;
+	height: 730px;
+	/*border: 1px solid red;*/
+}
+.JS_map #JS_map {
+	top: 0;
+	left: 0;
+	z-index: 2;
+}
+.JS_map .map_bg {
+	width: 100%;
+	height: 100%;
+	background: url(/image/cmiot-home-v3/img/gongye/JS_map.png) center no-repeat;
+}
+
+.JS_map /deep/ .map_tooltip {
+	width: 300px;
+	height: 221px;
+	padding: 1px;
+	background: url(/image/cmiot-home-v3/img/gongye/map_tooltip.png) center/100% 100% no-repeat;
+}
+.JS_map /deep/ .map_tooltip .time {
+	width: 100%;
+	height: 30px;
+	line-height: 30px;
+	font-family: 'Aldrich';
+	color: #fff;
+	padding-left: 25px;
+}
+.JS_map /deep/ .map_tooltip .tip_tit {
+	color: #55e5ff;
+	margin-top: 10px;
+	margin-left: 45px;
+}
+.JS_map /deep/ .map_tooltip .list {
+	margin:0;
+	padding:0;
+	margin-top: 5px;
+	margin-left: 50px;
+	list-style:none;
+}
+.JS_map /deep/ .map_tooltip .list li {
+	line-height: 25px;
+	margin:0;
+	padding:0;
+}
+.JS_map /deep/ .map_tooltip .list li span {
+	display: inline-block;
+	width: 52px;
+	color: #fff;
+	// border: 1px solid #ccc;
+	text-align: center;
+}

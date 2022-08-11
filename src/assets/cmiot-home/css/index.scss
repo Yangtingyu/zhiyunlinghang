@@ -1,0 +1,1140 @@
+@charset "utf-8";
+html, body{width: 100%; height: 100%;}
+div{box-sizing: border-box;}
+@font-face {
+    font-family: 'STHeiti-Light';
+    //src: url('~@/assets/cmiot-home/font/STHeiti-Light.ttc');
+    //src: url('~@/assets/cmiot-home/font/STHeiti-Light.ttc');
+}
+@font-face {
+    font-family: 'Digital';
+    src: url('/font/Digital-7Mono.TTF');
+}
+
+.container{
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  top: 0;
+  background: url(/image/cmiot-home/bg.png) center / cover;;
+}
+
+#main{
+  position: fixed;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  top: 0;
+  width: 1920px;
+  height: 1080px;
+  overflow: hidden;
+  //background: url('/image/caiot/home/home_bg.png') #040a37;
+  background-size: 100% 100%;
+  transform-origin: left top;
+  -webkit-transform-origin: left top;
+}
+
+.main{
+	position: absolute;
+	left: 0;
+	top: 0;
+	width: 1920px;
+	height: 1080px;
+	overflow: hidden;
+	//background: url('/image/cmiot-home/bg.png');
+	background-size: 100% 100%;
+	transform-origin: left top;
+	-webkit-transform-origin: left top;
+}
+.fc{
+	background: linear-gradient(to bottom, #f7ebb4, #e8bf44);
+    -webkit-background-clip: text;
+    color: transparent;
+}
+.config{
+	width: 85px;
+	height: 28px;
+	line-height: 28px;
+	font-size: 14px;
+	color: #bdfaff;
+	border: 1px solid #2aacff;
+	border-radius: 5px;
+	padding-left: 35px;
+	background: url(/image/cmiot-home/config.png) 10px 7px no-repeat #115091;
+	cursor: pointer;
+	position: absolute;
+	bottom: 115px;
+	left: 52px;
+}
+/*头部样式 + 左侧时间显示 + 右侧提示*/
+header{
+	width: 100%;
+	height: 100px;
+}
+.gz{
+	background: url(/image/cmiot-home/title1-3.png) 0 0 no-repeat;
+}
+.zd{
+	background: url(/image/cmiot-home/title1-2.png) 0 0 no-repeat;
+}
+.yw,.wk,.zc{
+	background: url(/image/cmiot-home/title1-3.png) 0 0 no-repeat;
+}
+header h1{
+	font-size: 38px;
+	text-align: center;
+	color: rgb( 243, 212, 103 );
+	line-height: 70px;
+}
+header .date{
+	background: url('/image/cmiot-home/h_left.png') no-repeat;
+	width: 440px;
+	height: 48px;
+	position: absolute;
+	top: 45px;
+	left: 50%;
+	margin-left: -780px;
+}
+header .time{
+	position: absolute;
+	left: 82px;
+	z-index: 2;
+}
+header .time p{
+	text-align: center;
+	font-size: 28px;
+	color: #9dd9ff;
+	font-size: 36px;
+	font-family: Digital;
+	display: inline;
+
+}
+header .time p.timeYear span{
+	font-size: 28px;
+	vertical-align: middle;
+	margin: auto 5px;
+}
+header .cue{
+	background: url('/image/cmiot-home/h_right.png') no-repeat;
+	width: 440px;
+	height: 48px;
+	position: absolute;
+	top: 45px;
+	right: 50%;
+	margin-right: -780px;
+}
+header .cue p{
+	height: 48px;
+	line-height: 48px;
+	text-align: center;
+	font-size: 20px;
+	color: #ff4a32;
+}
+header .home{
+	width: 28px;
+	height: 22px;
+	position: absolute;
+	top: 45px;
+	right: 30px;
+	cursor: pointer;
+	background: url(/image/cmiot-home/home.png) 0 0 no-repeat;
+}
+main .leftbox,main .rightbox,main .centerbox{
+	position: absolute;
+	top: 140px;
+	/*height: 910px;*/
+}
+main .leftbox{
+	width: 530px;
+	left: 0;
+}
+main .rightbox{
+	width: 530px;
+	right: 0;
+}
+main .centerbox{
+	width: 820px;
+	left: 550px;
+}
+/*共用样式*/
+.leftbox{
+	box-sizing: border-box;
+	padding-left: 20px;
+}
+.rightbox{
+	box-sizing: border-box;
+	padding-right: 20px;
+}
+.topbox{
+ 	display: flex;
+ 	justify-content: space-around;
+ }
+ .middlebox{
+	display: flex;
+	justify-content: space-between;
+	padding: 0 20px;
+}
+.bottombox{
+	display: flex;
+	justify-content: space-between;
+	padding: 0 20px;
+}
+.rightbox section:first-child,.leftbox section:first-child,.centerbox section:first-child{
+	margin-top: 0;
+}
+section h2{
+	background: url('/image/cmiot-home/title3.png') no-repeat;
+	/*width: 508px;*/
+	height: 44px;
+	line-height: 44px;
+	font-size: 24px;
+	box-sizing: border-box;
+	padding-left: 60px;
+	color: #aceaff;
+}
+section .t-h2{
+	/*background: url('/image/cmiot-home/title2.png') no-repeat;*/
+	width: 508px;
+	height: 44px;
+	line-height: 44px;
+	font-size: 24px;
+	font-weight: 600;
+	box-sizing: border-box;
+	color: #6ea7cc;
+}
+section .t-h2>div{
+	cursor: pointer;
+}
+section .t-h2 .t-h2Active{
+	color: #aceaff;
+}
+section .t-h2 > div{
+	float: left;
+	/*width: 290px;*/
+	text-align: center;
+}
+section .t-h2 > div{
+	/*margin-left: 40px;*/
+	margin-left: 65px;
+}
+section .t-h2 > div img{
+	margin-left: 10px;
+	vertical-align: middle;
+	cursor: pointer;
+}
+section .t-h2 > div .t-select{
+    background: rgba(7, 93, 165, .8);
+    border-left: 1px solid #228cc1;
+    border-right: 1px solid #228cc1;
+    display: none;
+    position: absolute;
+    z-index: 999;
+    width: 290px;
+}
+section .t-h2 > div .t-select a{
+    display: block;
+    color: #bdfaff;
+    font-size: 16px;
+    line-height: 32px;
+    border-bottom: 1px solid #228cc1;
+}
+section{
+	margin-top: 20px;
+	position: relative;
+}
+.leftbox section,.centerbox,.rightbox section,.topbox section,.middlebox section,.bottombox section{
+	background:linear-gradient(rgba(5,51,112,0.5), rgba(40,115,171,0.5));
+}
+/******共用表格样式******/
+.ultab1 li{
+	display: flex;
+	justify-content: space-around;
+	text-align: center;
+	color: #9ed8e8;
+	border-bottom: 1px solid #2592e1;
+}
+.ultab2 li{
+	display: flex;
+	justify-content: space-around;
+	text-align: center;
+	color: #bdfaff;
+	border-bottom: 1px solid #2592e1;
+}
+
+.ultab1 li:last-child,.ultab2 li:last-child{
+	border-bottom: none;
+}
+.ultab1 li:first-child{
+	/*background-color: rgba(33,121,197,0.4);*/
+	background: linear-gradient(to right, rgba(58,220,255,0.05098) 0%, rgba(58,220,255,0.2) 50%, rgba(58,220,255,0.05098) 100%);
+	font-weight: 600;
+}
+/*中间选项卡共用样式*/
+.ghmap h3{
+	font-size: 24px;
+}
+.ghmap h3 img{
+	vertical-align: middle;
+}
+.ghmap h3 img:first-child{
+	margin-right: 15px;
+}
+.ghmap h3 img:last-child{
+	margin-left: 15px;
+}
+.ghmap .titletab{
+	display: flex;
+	justify-content: space-around;
+}
+.ghmap .titletab a{
+	display: inline-block;
+	width: 178px;
+	height: 45px;
+	text-align: center;
+	line-height: 45px;
+	border: 1px solid #056cad;
+	font-size: 24px;
+	color: #aceaff;
+	font-weight: 600;
+	box-sizing: border-box;
+}
+.ghmap .titletab a.active{
+	cursor: pointer;
+	background: url('/image/cmiot-home/choose.png') no-repeat;
+	border: 1px solid transparent;
+}
+.ghmap h3{
+	text-align: center;
+	font-size: 20px;
+	color: #34ccff;
+	margin: 22px auto;
+}
+/********物联网安全态势感知平台***********/
+/*态势感知表格*/
+.gz_content{
+	margin-bottom: 20px;
+}
+.gz_content .ultab1 li,.gz_content .ultab2 li{
+	height: 40px;
+	line-height: 40px;
+	font-size: 14px;
+	border-image: linear-gradient(to right, rgba(255,255,255,0), rgba(32,129,205,1), rgba(255,255,255,0)) 30 60 90;
+}
+.gz_content .ultab1 li:first-child{
+	height: 40px;
+	line-height: 40px;
+}
+.gz_content .ultab1 li span:first-child,.gz_content .ultab2 li span:first-child{
+	width: 120px;
+}
+.gz_content .ultab1 li span:nth-child(2),.gz_content .ultab2 li span:nth-child(2){
+	width: 90px;
+}
+.gz_content .ultab1 li span:nth-child(3),.gz_content .ultab2 li span:nth-child(3){
+	width: 130px;
+}
+.gz_content .ultab1 li span:nth-child(4),.gz_content .ultab2 li span:nth-child(4){
+	width: 100px;
+}
+.gz_content .ultab1 li span:nth-child(5),.gz_content .ultab2 li span:nth-child(5){
+	width: 100px;
+}
+/*右下tab切换*/
+.gz_tab{
+	height: 85px;
+	display: flex;
+	justify-content: space-around;
+	align-items: center;
+}
+.gz_tab a{
+	width: 150px;
+	height: 31px;
+	line-height: 31px;
+	text-align: center;
+	font-size: 14px;
+	color: #5dbae4;
+	border: 1px solid #03a2ed;
+}
+.gz_tab .active{
+	color: #aceaff;
+	background: url(/image/cmiot-home/choose2.png) 0 0 no-repeat;
+	border: 1px solid transparent;
+}
+/********物联网卡安全态势***********/
+ /***顶部样式***/
+.topbox .yctj h2{
+	width: auto;
+	padding: 0;
+	text-align: center;
+	background: url(/image/cmiot-home/yctj.png) 17px 20px no-repeat;
+ }
+ .topbox .yctj{
+	background: transparent;
+}
+/***中部样式***/
+
+.middlebox section h2{
+	width: auto;
+}
+.wk_content .ultab1 li{
+	height: 48px;
+	line-height: 48px;
+	font-size: 16px;
+}
+.wk_content .ultab1 li:frst-child{
+	height: 45px;
+	line-height: 45px;
+}
+.wk_content .ultab1 li span:first-child{
+	width: 140px;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	white-space: nowrap;
+}
+.wk_content .ultab1 li span:nth-child(2){
+	width: 90px;
+}
+
+.zdyh .zdyh_tab {
+	width: 100%;
+	margin-top: 5px;
+}
+
+.zdyh .zdyh_tab li {
+	font-size: 16px;
+	color: #bdfaff;
+	border-bottom: 1px solid #2592e1;
+}
+
+.zdyh .zdyh_tab li:first-child {
+	font-weight: bold;
+	background: linear-gradient(to right, rgba(58,220,255,0.05098) 0%, rgba(58,220,255,0.2) 50%, rgba(58,220,255,0.05098) 100%);
+}
+
+.zdyh .zdyh_tab li:last-child {
+	border: none;
+}
+
+.zdyh .zdyh_tab li span {
+	display: inline-block;
+	height: 48px;
+	line-height: 48px;
+	text-align: center;
+}
+
+.zdyh .zdyh_tab li span:first-child {
+	width: 185px;
+}
+
+.zdyh .zdyh_tab li span:nth-child(2) {
+	width: 115px;
+}
+
+.zdyh .zdyh_tab li span:nth-child(3) {
+	width: 115px;
+}
+
+.zdyh .zdyh_tab li span:nth-child(4) {
+	width: 115px;
+}
+
+.zdyh .zdyh_tab li span:nth-child(5) {
+	width: 140px;
+}
+
+/***底部样式***/
+.hyblCon{
+	padding: 55px 55px 0 55px;
+	height: 250px;
+}
+.hyblCon .left{
+	width: 144px;
+}
+.hyblCon .left p:first-child{
+	font-size: 26px;
+	color: #bdfaff;
+	position: relative;
+	text-align: center;
+	line-height: 32px;
+}
+.hyblCon .left p:first-child span{
+	display: inline-block;
+	width: 8px;
+	height: 32px;
+	border: 1px solid #bdfaff;
+	border-right: 0;
+	position: absolute;
+}
+.hyblCon .left p:first-child span:last-child{
+	display: inline-block;
+	border: 1px solid #bdfaff;
+	border-left: 0;
+}
+.hyblCon .left p:first-child span:first-child{
+	top: 0;
+	left: 10px;
+}
+.hyblCon .left p:first-child span:last-child{
+	top: 0;
+	right: 10px;
+}
+.hyblCon .left div{
+	width: 106px;
+	height: 106px;
+	margin: 15px auto;
+}
+.hyblCon .left p:nth-of-type(2){
+	background: url('/image/cmiot-home/hybl.png') 0 0 no-repeat;
+	width: 144px;
+	height: 47px;
+	font-size: 18px;
+	color: #bdfaff;
+	text-align: center;
+	line-height: 35px;
+}
+.hyblCon .left:nth-child(2) p:first-child{
+	color: #bdfaff;
+}
+.hyblCon .left:nth-child(2) p:first-child span{
+	border: 1px solid #b1dbfe;
+	border-right: 0;
+}
+.hyblCon .left:nth-child(2) p:first-child span:last-child{
+	border: 1px solid #b1dbfe;
+	border-left: 0;
+}
+.hyblCon .left:nth-child(3) p:first-child{
+	color: #bdfaff;
+}
+.hyblCon .left:nth-child(3) p:first-child span{
+	border: 1px solid #b1dbfe;
+	border-right: 0;
+}
+.hyblCon .left:nth-child(3) p:first-child span:last-child{
+	border: 1px solid #b1dbfe;
+	border-left: 0;
+}
+
+/********资产安全态势***********/
+/***顶部样式***/
+.topbox .zql{
+	color: #aceaff;
+	background: transparent;
+}
+.zql h2{
+	width: auto;
+	padding: 0;
+	text-align: center;
+}
+.topbox>img{
+	display: inline-block;
+	height: 120px;
+}
+/*.zql_left{
+	float: left;
+}
+.zql_left span{
+	display: inline-block;
+	margin-top: 35px;
+}
+.zql_left span:first-child{
+	font-size: 20px;
+}
+.zql_left span:nth-child(2){
+	font-size: 26px;
+	margin-left: 35px;
+}
+.zql_left img{
+	display: block;
+	margin-top: 20px;
+}*/
+.zql_right{
+	float: right;
+	width: 140px;
+	height: 150px;
+	margin-right: 10px;
+	background: url(/image/cmiot-home/project_y.png) 7px 0 no-repeat;
+}
+.zql_right span{
+	display: block;
+	text-align: center;
+}
+.zql_right span:first-child{
+	font-size: 30px;
+	font-weight: 600;
+	margin-top: 40px;
+}
+.zql_right span:nth-child(2){
+	font-size: 17px;
+	margin-top: 20px;
+}
+/***中部样式***/
+/***底部样式***/
+/*表格*/
+.zc_content .ultab1{
+	margin-top: 20px;
+}
+.zc_content .ultab1 li{
+	height: 50px;
+	line-height: 50px;
+	font-size: 16px;
+	border: none;
+	/*border-image: linear-gradient(to right, rgba(255,255,255,0), rgba(32,129,205,1), rgba(255,255,255,0)) 30 60 90;*/
+}
+.zc_content .ultab1 li:first-child{
+	font-size: 18px;
+	border-image: linear-gradient(to right, rgba(255,255,255,0), rgba(32,129,205,1), rgba(255,255,255,0)) 30 60 90;
+
+}
+.zc_content .ultab1 li span:first-child{
+	width: 130px;
+}
+.zc_content .ultab1 li span:nth-child(2){
+	width: 100px;
+}
+.zc_content .ultab1 li span:nth-child(3){
+	width: 130px;
+}
+/********物联网终端安全态势***********/
+/*终端选项卡样式*/
+.zd_tab .titletab{
+	justify-content: center;
+}
+.zd_tab .titletab img{
+	vertical-align: middle;
+	padding-right: 10px;
+}
+.zd_tab .titletab a{
+	margin: 0 30px;
+}
+/*底部表格*/
+.zd_content{
+	margin-bottom: 20px;
+}
+.zd_content .ultab1 li{
+	height: 40px;
+	line-height: 40px;
+	font-size: 14px;
+	border-image: linear-gradient(to right, rgba(255,255,255,0), rgba(32,129,205,1), rgba(255,255,255,0)) 30 60 90;
+}
+.zd_content .ultab1 li:first-child{
+	height: 40px;
+	line-height: 40px;
+}
+.zd_content .ultab1 li span:first-child{
+	width: 130px;
+}
+.zd_content .ultab1 li span:nth-child(2){
+	width: 150px;
+}
+.zd_content .ultab1 li span:nth-child(3){
+	width: 80px;
+}
+.zd_content .ultab1 li span:nth-child(4){
+	width: 180px;
+}
+/********业务安全态势***********/
+/*左右表格*/
+.yw_content .ultab2 li{
+	height: 60px;
+	line-height: 60px;
+	font-size: 22px;
+}
+.yw_content .ultab2 li:first-child{
+	height: 55px;
+	line-height: 55px;
+}
+.yw_content .ultab2 li span:first-child{
+	width: 180px;
+}
+.yw_content .ultab2 li span:nth-child(2){
+	width: 140px;
+}
+.yw_content .ultab2 li span:nth-child(3){
+	width: 65px;
+}
+/*中间表格*/
+.yw_content{
+	margin-bottom: 20px;
+}
+.yw_content .ultab1 li{
+	height: 40px;
+	line-height: 40px;
+	font-size: 14px;
+	border-image: linear-gradient(to right, rgba(255,255,255,0), rgba(32,129,205,1), rgba(255,255,255,0)) 30 60 90;
+}
+.yw_content .ultab1 li:first-child{
+	height: 40px;
+	line-height: 40px;
+}
+.yw_content .ultab1 li span:first-child{
+	width: 90px;
+}
+.yw_content .ultab1 li span:nth-child(2){
+	width: 120px;
+}
+.yw_content .ultab1 li span:nth-child(3){
+	width: 90px;
+}
+.yw_content .ultab1 li span:nth-child(4){
+	width: 80px;
+}
+.yw_content .ultab1 li span:nth-child(5){
+	width: 180px;
+}
+/*******ul进度条*******/
+.vendortop5{
+	padding-left: 25px;
+}
+.vendortop5 li span{
+	display: inline-block;
+}
+.vendortop5 li{
+	margin: 20px 0 55px 0;
+	position: relative;
+	width: 435px;
+}
+.vendortop5 li .num{
+	width: 22px;
+	height: 22px;
+	border-radius: 50%;
+	color: #fff;
+	line-height: 22px;
+	text-align: center;
+	background-color: #ff420f;
+}
+.vendortop5 li .title{
+	color: #31ccff;
+	/*width: 60px;*/
+	margin-left: 10px;
+	font-size: 16px;
+}
+.vendortop5 li .quickbox{
+	border: 1px solid #ff420f;
+	width: 430px;
+	height: 22px;
+	/*margin-left: 10px;*/
+	border-radius: 8px;
+	position: absolute;
+	top: 30px;
+	left: 0;
+}
+.vendortop5 li .quickbox .quick{
+	width: 80%;
+	height: 18px;
+	background-color: #ff420f;
+	border-radius: 8px;
+	margin: 2px auto auto 2px;
+}
+.vendortop5 li .sum{
+	color: #ff420f;
+	font-size: 24px;
+	margin-left: 10px;
+	position: absolute;
+	right: 0;
+}
+.vendortop5 li:nth-child(2) .num{
+	background-color: #fd8923;
+}
+.vendortop5 li:nth-child(2) .title{
+	color: #fd8923;
+}
+.vendortop5 li:nth-child(2) .quickbox{
+	border: 1px solid #fd8923;
+}
+.vendortop5 li:nth-child(2) .quickbox .quick{
+	background-color: #fd8923;
+}
+.vendortop5 li:nth-child(2) .sum{
+	color: #fd8923;
+}
+.vendortop5 li:nth-child(3) .num{
+	background-color: #fbc31a;
+}
+.vendortop5 li:nth-child(3) .title{
+	color: #fbc31a;
+}
+.vendortop5 li:nth-child(3) .quickbox{
+	border: 1px solid #fbc31a;
+}
+.vendortop5 li:nth-child(3) .quickbox .quick{
+	background-color: #fbc31a;
+}
+.vendortop5 li:nth-child(3) .sum{
+	color: #fbc31a;
+}
+.vendortop5 li:nth-child(4) .num{
+	background-color: #14dfee;
+}
+.vendortop5 li:nth-child(4) .title{
+	color: #14dfee;
+}
+.vendortop5 li:nth-child(4) .quickbox{
+	border: 1px solid #14dfee;
+}
+.vendortop5 li:nth-child(4) .quickbox .quick{
+	background-color: #14dfee;
+}
+.vendortop5 li:nth-child(4) .sum{
+	color: #14dfee;
+}
+.vendortop5 li:nth-child(5) .num{
+	background-color: #03a9f4;
+}
+.vendortop5 li:nth-child(5) .title{
+	color: #03a9f4;
+}
+.vendortop5 li:nth-child(5) .quickbox{
+	border: 1px solid #03a9f4;
+}
+.vendortop5 li:nth-child(5) .quickbox .quick{
+	background-color: #03a9f4;
+}
+.vendortop5 li:nth-child(5) .sum{
+	color: #03a9f4;
+}
+/********1112中移物联网一体化安全态势感知平台***********/
+/*左一样式*/
+.wlwgz .selectBox {
+	position: absolute;
+	z-index: 999;
+}
+
+.wlwgz .selectBox .sel_date {
+	font-size: 14px;
+	color: #31ccff;
+	margin-top: 10px;
+	margin-left: 40px;
+	display: flex;
+	justify-content: flex-start;
+	align-items: center;
+}
+
+.wlwgz .selectBox .sel_date div {
+	width: 183px;
+	height: 30px;
+	line-height: 30px;
+	padding-left: 45px;
+	border: 1px solid #109ac7;
+	box-sizing: border-box;
+	background: url(/image/cmiot-home/date.png) 10px center no-repeat;
+}
+
+.wlwgz .selectBox .sel_date span {
+	margin: 0 10px;
+}
+/*.exponent ul{
+	display: flex;
+	justify-content: space-around;
+	padding-top: 15px;
+}
+.exponent ul li{
+	width: 160px;
+	height: 30px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+.exponent ul li span:nth-of-type(1){
+	font-size: 18px;
+	color: #31ccff;
+	font-weight: 600;
+}
+.exponent ul li span:nth-of-type(2){
+	font-size: 32px;
+	color: #ff480b;
+	font-family: Digital;
+}
+.exponent ul li img{
+	margin: 0 5px;
+}*/
+/*.leftbox section,.rightbox section{
+	position: relative;
+}*/
+/*.cyc_y{
+	width: 170px;
+	color: #aceaff;
+	font-size: 20px;
+	position: absolute;
+	top: 10px;
+	right: 0;
+}
+.cyc_y select{
+	width: 100px;
+	color: #aceaff;
+	border: none;
+	background: transparent;
+	outline: none;
+	font-size: 20px;
+}
+.cyc_y select option{
+	font-size: 14px;
+	background-color: #073b7f;
+}*/
+/*地图上方*/
+/*.centerbox .center_top{
+	width: 500px;
+	display: flex;
+	justify-content: space-around;
+	position: absolute;
+	top: 70px;
+	left: 40px;
+}
+.centerbox .center_top li{
+	width: 100px;
+	padding-left: 30px;
+	font-size: 16px;
+}
+.centerbox .center_top li:first-child{
+	background: url(/image/cmiot-home/center_top.png) 10px 2px no-repeat;
+}
+.centerbox .center_top li:nth-child(2){
+	background: url(/image/cmiot-home/center_top.png) -85px 2px no-repeat;
+}
+.centerbox .center_top li:nth-child(3){
+	background: url(/image/cmiot-home/center_top.png) -200px 2px no-repeat;
+}
+.centerbox .center_top li:nth-child(4){
+	background: url(/image/cmiot-home/center_top.png) -315px 2px no-repeat;
+}
+.centerbox .center_top li:nth-child(5){
+	background: url(/image/cmiot-home/center_top.png) -430px 2px no-repeat;
+}
+.ghmap{
+	position: relative;
+}*/
+/*1112表格*/
+/*.gz_1112 .ultab1 li{
+	height: 40px;
+	display: flex;
+	align-items: center;
+	font-size: 14px;
+	line-height: 20px;
+}
+.gz_1112 .ultab1 li:first-child{
+	height: 45px;
+}
+.gz_1112 .ultab1 li:nth-child(2) span:first-child,
+.gz_1112 .ultab1 li:nth-child(3) span:first-child,
+.gz_1112 .ultab1 li:nth-child(4) span:first-child,
+.gz_1112 .ultab1 li:nth-child(5) span:first-child{
+	font-size: 12px;
+}
+.gz_1112 .ultab1 li span:first-child{
+	width: 130px;
+}
+.gz_1112 .ultab1 li span:nth-child(2){
+	width: 90px;
+}
+.gz_1112 .ultab1 li span:nth-child(3){
+	width: 55px;
+}
+.gz_1112 .ultab1 li span:nth-child(4){
+	width: 50px;
+}
+.gz_1112 .ultab1 li span:nth-child(5){
+	width: 90px;
+}
+.gz_1112 .ultab1 li span:nth-child(6){
+	width: 40px;
+}
+.gz_1112 .ultab1 li span:nth-child(7){
+	width: 65px;
+}
+.gz_1112 .ultab1 li span:nth-child(8){
+	width: 65px;
+}
+.gz_1112 .ultab1 li span:nth-child(9){
+	width: 40px;
+}*/
+/*右下样式*/
+.zc_top,.zc_bottom{
+	height: 190px;
+	width: 485px;
+	margin: 0 auto;
+	display: flex;
+	justify-content: space-around;
+}
+.zc_top>div,.zc_bottom>div{
+	background: transparent;
+	margin-top: 20px;
+}
+.zc_top>div h3,.zc_bottom>div h3{
+	font-size: 16px;
+	color: #aceaff;
+	padding: 0 0 0 15px;
+}
+
+/********内容安全态势***********/
+/*左一滚动*/
+.nraq .nr_scroll {
+	overflow-y: scroll;
+}
+
+
+.nraq .nr_scroll::-webkit-scrollbar {
+	width: 7px;
+}
+
+/* 滚动槽 */
+.nraq .nr_scroll::-webkit-scrollbar-track {
+	-webkit-box-shadow: inset 0 0 6px rgba(33,68,124,1);
+	border-radius: 10px;
+	background: #0d69ab;
+	margin: 40px 0 25px 0;
+}
+
+/* 滚动条滑块 */
+.nraq .nr_scroll::-webkit-scrollbar-thumb {
+	border-radius: 10px;
+	background: #059be5;
+	-webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.5);
+}
+
+.nraq .nr_scroll::-webkit-scrollbar-thumb:window-inactive {
+	background: #3e99ee;
+}
+
+
+
+.nraqts-container {
+	overflow-y: scroll;
+}
+
+.nraqts-container::-webkit-scrollbar {
+	width: 7px;
+}
+.nraqts-container::-webkit-scrollbar-track {
+	-webkit-box-shadow: inset 0 0 6px rgba(33,68,124,1);
+	border-radius: 10px;
+	background: #0d69ab;
+	margin: 140px 0 25px 0;
+}
+.nraqts-container::-webkit-scrollbar-thumb {
+	border-radius: 10px;
+	background: #059be5;
+	-webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.5);
+}
+.nraqts-container::-webkit-scrollbar-thumb:window-inactive {
+	background: #3e99ee;
+}
+/*.矩形_939 {
+  background-color: rgb(189, 250, 255);
+  opacity: 0.2;
+  position: absolute;
+  left: 491px;
+  top: 367px;
+  width: 16px;
+  height: 73px;
+  z-index: 584;
+}*/
+
+/*iframe*/
+.map_json {
+	width: 820px;
+	height: 530px;
+	margin: 10px auto 0 auto;
+}
+
+
+/*地图上方选择框*/
+.map_sel {
+	width: 100%;
+	position: absolute;
+	top: 10px;
+	left: 0;
+	display: flex;
+	justify-content: center;
+}
+
+.map_sel select {
+	width: 260px;
+	height: 30px;
+	line-height: 30px;
+	font-size: 14px;
+	color: #bdfaff;
+	padding-left: 10px;
+	background-color: #054b8e;
+	background-image: url(/image/cmiot-home/arrow.png);
+	background-position: 240px center;
+	background-repeat: no-repeat;
+	appearance:none;
+	-moz-appearance:none;
+	-webkit-appearance:none;
+	border: none;
+	box-sizing: border-box;
+}
+
+.map_sel .date {
+	width: 300px;
+	height: 30px;
+	line-height: 30px;
+	font-size: 14px;
+	color: #bdfaff;
+	padding-left: 40px;
+	background-color: #054b8e;
+	background-image: url(/image/cmiot-home/date.png);
+	background-position: 10px center;
+	background-repeat: no-repeat;
+	box-sizing: border-box;
+	margin-left: 25px;
+}
+
+/*地图图例*/
+.centerbox .legend {
+	position: absolute;
+}
+
+.centerbox .legend div {
+	font-size: 14px;
+	color: #bdfaff;
+	margin-bottom: 20px;
+}
+
+.centerbox .legend div .block {
+	display: inline-block;
+	width: 20px;
+	height: 13px;
+	border-radius: 5px;
+	margin-right: 5px;
+}
+
+.centerbox .legend div:first-child .block {
+	background: #ff420f;
+}
+
+.centerbox .legend div:nth-child(2) .block {
+	background: #fbc31a;
+}
+
+.centerbox .legend div:nth-child(3) .block {
+	background: #14dfee;
+}
+
+/*表格*/
+.nr_content{
+	margin-bottom: 20px;
+}
+.nr_content .ultab1 li{
+	height: 40px;
+	line-height: 40px;
+	font-size: 14px;
+	border-image: linear-gradient(to right, rgba(255,255,255,0), rgba(32,129,205,1), rgba(255,255,255,0)) 30 60 90;
+}
+.nr_content .ultab1 li:first-child{
+	height: 40px;
+	line-height: 40px;
+}
+.nr_content .ultab1 li span:first-child{
+	width: 110px;
+}
+.nr_content .ultab1 li span:nth-child(2){
+	width: 350px;
+}
+.nr_content .ultab1 li span:nth-child(3){
+	width: 85px;
+}
+.nr_content .ultab1 li span:nth-child(4){
+	width: 110px;
+}

@@ -1,0 +1,298 @@
+/*内容安全*/
+@charset "utf-8";
+.leftbox,.rightbox{
+  width: 445px;
+}
+.bgjb{
+  background: -moz-linear-gradient(top, rgba(106, 149, 255, 0) 0%, rgba(106, 149, 255, .1) 100%);
+  background: -webkit-linear-gradient(top,  rgba(106, 149, 255, 0) 0%, rgba(106, 149, 255, .1) 100%);
+  background: -o-linear-gradient(top,  rgba(106, 149, 255,  0) 0%, rgba(106, 149, 255, .1) 100%);
+  background: -ms-linear-gradient(top,  rgba(106, 149, 255,  0) 0%, rgba(106, 149, 255, .1) 100%);
+  background: linear-gradient(to bottom, rgba(106, 149, 255,  0) 0%, rgba(106, 149, 255, .1) 100%);
+}
+.sec_1{
+
+}
+.sec_2{
+  margin-top: 15px;
+}
+.sec_3{
+  margin-top: 15px;
+}
+.sec_3 .con .d {
+  font-family:'Aldrich';
+}
+.sec_3 .smchart{
+  background: url(/image/cmiot-home-v3/img/nr.png) center no-repeat;
+}
+.sec_3 .smchart ~ div>span:first-child{
+  border-bottom: 1px solid #535d75;
+  font-family:'Aldrich';
+}
+.sec_3 .cont .num {
+  width: 140px;
+  padding: 0 5px;
+  box-sizing: border-box;
+}
+.sec_3 .cont .num span {
+  display: inline-block;
+  width: 100%;
+}
+.sec_4 {
+  background: url(/image/cmiot-home-v3/img/iot_security/sec_4.png) 0 bottom no-repeat;
+}
+.sec_4 .item {
+  height: 46px;
+  margin-top: 4px;
+}
+.sec_4 .item .index {
+  width: 45px;
+  font-family: 'Aldrich';
+}
+.sec_4 .item .name {
+  width: 168px;
+}
+.sec_4 .item .bar {
+  width: 113px;
+  height: 8px;
+  background-color: rgba(0, 72, 211, 0.2);
+  border-left: 2px solid #254aa7;
+  border-right: 2px solid #254aa7;
+  padding: 0 3px;
+  margin-right: 26px;
+}
+.sec_4 .item .bar i {
+  background: linear-gradient(90deg, #254aa7, #6c95ff);
+}
+.sec_4 .item .num {
+  width: 68px;
+  height: 20px;
+  line-height: 20px;
+  text-align: center;
+  font-family: 'Aldrich';
+  background-color: rgba(108, 149, 255, 0.1);
+  border: 1px solid #6c95ff;
+  color: #6c95ff;
+  border-radius: 3px;
+}
+.sec_4 .item:nth-child(even) {
+  background-color: rgba(106, 149, 255, 0.04);
+}
+.sec_4 .item:nth-child(odd) {
+  background-color: rgba(106, 255, 215, 0.05);
+}
+.sec_5{
+  margin-top: 15px;
+}
+.sec_5 .box {
+  background: url("/image/cmiot-home-v3/img/iot_security/dish_bg.png") no-repeat center 148px;
+  transform-style: preserve-3d;
+  perspective: 2000px;
+  perspective-origin: center top;
+}
+.sec_5 .box .text {
+  font-size: 20px;
+  top: 135px;
+  left: 173px;
+}
+.sec_5 .box .ground {
+  width: 100%;
+  top: 164px;
+  transform-style: preserve-3d;
+  animation: rotate linear 10s infinite;
+}
+.sec_5 .box .ground .item {
+  padding: 8px 16px;
+  border: 1px solid;
+  animation: rotate linear 10s reverse infinite;
+}
+.sec_5 .box .ground .item .corner {
+  width: 6px;
+  height: 6px;
+}
+.sec_5 .box .ground .item .corner.lt {
+  left: -1px;
+  top: -1px;
+  border-left: 1px solid;
+  border-top: 1px solid;
+}
+.sec_5 .box .ground .item .corner.rt {
+  right: -1px;
+  top: -1px;
+  border-right: 1px solid;
+  border-top: 1px solid;
+}
+.sec_5 .box .ground .item .corner.rb {
+  right: -1px;
+  bottom: -1px;
+  border-right: 1px solid;
+  border-bottom: 1px solid;
+}
+.sec_5 .box .ground .item .corner.lb {
+  left: -1px;
+  bottom: -1px;
+  border-left: 1px solid;
+  border-bottom: 1px solid;
+}
+.sec_5 .box .ground .item .line {
+  top: 100%;
+  border-left: 1px dashed;
+}
+.sec_5 .box .ground .item.blue {
+  background-color: rgba(106, 149, 255, 0.1);
+  border-color: #114cac;
+}
+.sec_5 .box .ground .item.blue .corner {
+  border-color: #6a95ff;
+}
+.sec_5 .box .ground .item.blue .line {
+  border-image: linear-gradient(180deg, rgba(17, 76, 172, 0.5), rgba(17, 76, 172, 0)) 0 0 0 4;
+}
+.sec_5 .box .ground .item.green {
+  background-color: rgba(0, 210, 228, 0.1);
+  border-color: #01778b;
+}
+.sec_5 .box .ground .item.green .corner {
+  border-color: #23d3e3;
+}
+.sec_5 .box .ground .item.green .line {
+  border-image: linear-gradient(180deg, rgba(1, 119, 139, 0.5), rgba(1, 119, 139, 0)) 0 0 0 4;
+}
+.sec_5 .box .ground .item.yellow {
+  left: 38px;
+  top: 35px;
+  background-color: rgba(255, 234, 136, 0.1);
+  border-color: #b39300;
+}
+.sec_5 .box .ground .item.yellow .corner {
+  border-color: #fff0b2;
+}
+.sec_5 .box .ground .item.yellow .line {
+  border-style: dashed;
+  border-image: linear-gradient(0, rgba(179, 147, 0, 0.5), rgba(179, 147, 0, 0)) 0 0 0 4;
+  height: 35px;
+  top: unset;
+  bottom: 95%;
+}
+@keyframes rotate {
+  0% {
+    transform: rotateY(0deg);
+  }
+  100% {
+    transform: rotateY(360deg);
+  }
+}
+.sec_6{
+  margin-top: 15px;
+}
+.sec_6 >div .ri01{
+  width: 70px;
+  height: 40px;
+  background: url(/image/cmiot-home-v3/img/nr1.png) no-repeat;
+  margin-bottom: 14px;
+  margin-left: 15px;
+}
+.sec_6 .legend {
+  margin: 20px 0;
+}
+.sec_6 .legend li {
+  margin-left: 45px;
+}
+.sec_6 .legend li:first-child {
+  margin-left: 0;
+}
+.sec_6 .legend li i {
+  display: inline-block;
+  width: 12px;
+  height: 12px;
+  margin-right: 7px;
+  border: 1px solid #7d879f;
+  box-sizing: border-box;
+}
+.sec_6 .legend li:first-child i {
+  background: #6c95ff;
+}
+.sec_6 .legend li:nth-child(2) i {
+  background: #d6e2e8;
+}
+.sec_6 .legend li:nth-child(3) i {
+  background: #ff7171;
+}
+
+.centerbox {
+  margin: 0 20px;
+}
+.infobox {
+  width: 254px;
+  height: 96px;
+  color: #fff;
+  padding: 7px;
+  box-sizing: border-box;
+  background: url(/image/cmiot-home-v3/img/iot_security/center_infobox_bg.png) 0 0 no-repeat;
+  top: 21px;
+  left: 16px;
+  z-index: 99;
+}
+.infobox .text {
+  height: 39px;
+  line-height: 39px;
+}
+.infobox .num {
+  height: 44px;
+  line-height: 44px;
+  font-size: 28px;
+  font-family: 'Aldrich';
+}
+.sec_c1{
+  width: 912px;
+  height: 305px;
+  border-bottom: 2px solid rgba(106, 149, 255, 0.2);
+  bottom: 0;
+  left: 0;
+}
+.sec_c1 .sub_tab {
+  width: 100%;
+  height: 40px;
+  background: rgba(19, 38, 80, 0.702);
+}
+.sec_c1 .sub_tab a {
+  display: inline-block;
+  height: 40px;
+  line-height: 40px;
+  color: #babcc4;
+  padding: 0 20px;
+  position: relative;
+}
+.sec_c1 .sub_tab a.on {
+  font-weight: bold;
+  color: #fff;
+  background-image: -webkit-linear-gradient(top, rgba(33,148,255,0.5) 0%, rgba(33,148,255,0.01176) 100%);
+  background-image: -o-linear-gradient(top, rgba(33,148,255,0.5) 0%, rgba(33,148,255,0.01176) 100%);
+  background-image: linear-gradient(to top, rgba(33,148,255,0.5) 0%, rgba(33,148,255,0.01176) 100%);
+}
+.sec_c1 .sub_tab a.on:after {
+  content: '';
+  width: 100%;
+  height: 3px;
+  background: #2184ff;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+}
+.sec_c1 table {
+  table-layout: fixed;
+  color: #fff;
+  margin-top: 20px;
+}
+.sec_c1 table th,
+.sec_c1 table td {
+  height: 40px;
+  text-align: center;
+  font-size: 14px;
+}
+.sec_c1 table thead {
+  background-color: rgba(106, 149, 255, 0.3);
+}
+.sec_c1 table tbody tr:nth-child(even) {
+  background-color: rgba(106, 149, 255, 0.1);
+}

@@ -1,0 +1,2657 @@
+html,
+body {
+    height: 100%;
+}
+
+body {
+    font-family: 'Microsoft Yahei';
+    font-size: 16px;
+    min-width: 1200px;
+    color: #333;
+}
+
+
+/* * 1200px宽居中盒子  */
+
+.sec_mbox {
+    width: 1200px;
+    margin: 0 auto;
+}
+
+.sec_wrap {
+    min-height: 100%;
+}
+
+.sec_main {
+    overflow: hidden;
+    padding-bottom: 602px;
+}
+
+.sec_wave {
+    width: 100%;
+    height: 269px;
+    margin-top: -602px;
+    background: url(/image/anva/secWave.png) no-repeat center;
+}
+
+.sec_center {
+    text-align: center;
+}
+
+.layui-form.sec_form {
+    padding: 30px;
+}
+
+.layui-btn.sec_btn {
+    margin-top: -5px;
+}
+
+div.secpageBox {
+    margin-bottom: 20px;
+}
+
+div.sec_table {
+    padding: 0 250px 20px 250px;
+}
+
+p.sec_text {
+    font-size: 18px;
+    line-height: 38px;
+    height: 38px;
+    color: #333;
+}
+
+div.sec_upload {
+    padding-top: 6px;
+}
+
+.layui-anim.layui-icon {
+    padding-top: 3px;
+}
+
+
+/* 头部 */
+
+.sec_header {
+    background: #e7fefc;
+    background: -webkit-linear-gradient(to top, #dbfefa, #f2fefe);
+    /* Safari 5.1 - 6.0 */
+    background: -o-linear-gradient(to top, #dbfefa, #f2fefe);
+    /* Opera 11.1 - 12.0 */
+    background: -moz-linear-gradient(to top, #dbfefa, #f2fefe);
+    /* Firefox 3.6 - 15 */
+    background: linear-gradient(to top, #dbfefa, #f2fefe);
+    /* 标准的语法 */
+}
+
+.sec_header .sec_LogoL {
+    width: 546px;
+    height: 116px;
+    margin-left: 30px;
+    background: url(/image/anva/logoL.png) no-repeat left center;
+}
+
+.sec_header .sec_LogoR {
+    width: 300px;
+    height: 116px;
+    margin-right: 32px;
+    background: url(/image/anva/logoR.png) no-repeat center 45px;
+}
+
+
+/* 导航 */
+
+.sec_nav {
+    position: static;
+    z-index: 9999;
+    top: 0;
+    left: 0;
+    width: 100%;
+    list-style: none;
+    background: #28ab99;
+}
+
+.sec_nav .sec_nav-box .sec_nav-boxl {
+    width: 820px;
+    margin-bottom: 0;
+    padding-left: 0;
+}
+
+.sec_nav .sec_nav-box .sec_nav-boxl li {
+    font-size: 14px;
+    line-height: 50px;
+    float: left;
+    height: 50px;
+    list-style: none;
+}
+
+.sec_nav .sec_nav-box .sec_nav-boxl li.dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+.sec_nav .sec_nav-box .sec_nav-boxl li.dropdown:hover div.dropdown-content {
+    display: block;
+}
+
+.sec_nav .sec_nav-box .sec_nav-boxl li.dropdown .dropdown-content {
+    position: absolute;
+    z-index: 9999;
+    top: 50px;
+    left: 0;
+    display: none;
+    min-width: 105px;
+    padding: 0;
+    background-color: #158a7a;
+    box-shadow: 0 8px 16px 0 rgba(0, 0, 0, .2);
+}
+
+.sec_nav .sec_nav-box .sec_nav-boxl li.dropdown .dropdown-content a {
+    display: block;
+    text-align: left;
+    text-decoration: none;
+    color: #fff;
+}
+
+.sec_nav .sec_nav-box .sec_nav-boxl li.dropdown .dropdown-content a:hover {
+    color: white;
+    background-color: #137668;
+}
+
+.sec_nav .sec_nav-box .sec_nav-boxl li.dropdown .dropdown-content.show {
+    z-index: 999;
+    display: block;
+}
+
+.sec_nav .sec_nav-box .sec_nav-boxl li:hover {
+    background-color: #158a7a;
+}
+
+.sec_nav .sec_nav-box .sec_nav-boxl li a {
+    display: inline-block;
+    padding: 0 25px;
+    text-decoration: none;
+    color: #fff;
+}
+
+.sec_nav .sec_nav-box .sec_nav-boxr {
+    box-sizing: border-box;
+    padding-right: 30px;
+}
+
+.sec_nav .sec_nav-box .sec_nav-boxr a {
+    font-size: 14px;
+    line-height: 50px;
+    display: block;
+    height: 50px;
+    padding: 0 10px;
+    text-decoration: none;
+    color: #fff;
+}
+
+.sec_nav .sec_nav-box .sec_nav-boxr a:hover {
+    text-decoration: none;
+    opacity: .8;
+}
+
+
+/* 版权 */
+
+.sec_copyright {
+    background: #2c313c;
+}
+
+.sec_copyrightBox {
+    padding-top: 32px;
+    padding-bottom: 40px;
+}
+
+.sec_copyrightF {
+    float: left;
+    width: 239px;
+    margin-right: 120px;
+}
+
+.sec_copyrightTitle {
+    font-size: 16px;
+    line-height: 56px;
+    height: 56px;
+    margin-bottom: 0;
+    color: #fff;
+}
+
+.sec_copyrightCon {
+    font-size: 14px;
+    line-height: 30px;
+    margin-bottom: 0;
+    color: #92969d;
+}
+
+.sec_copyrightS {
+    float: left;
+    width: 100px;
+    margin-right: 73px;
+}
+
+.sec_copyrightS ul,
+.sec_copyrightT ul {
+    margin-bottom: 0;
+    padding-left: 0;
+}
+
+.sec_copyrightS ul li,
+.sec_copyrightT ul li {
+    list-style: none;
+}
+
+.sec_copyrightS ul li a,
+.sec_copyrightT ul li a {
+    font-size: 14px;
+    line-height: 30px;
+    display: block;
+    height: 30px;
+    color: #92969d;
+}
+
+.sec_copyrightS ul li a:hover,
+.sec_copyrightT ul li a:hover {
+    text-decoration: underline;
+    color: #28ab99;
+}
+
+.sec_copyrightT {
+    float: left;
+    width: 300px;
+    margin-right: 59px;
+}
+
+.sec_copyrightW {
+    float: left;
+}
+
+.sec_copyrightW ul {
+    margin-bottom: 0;
+}
+
+.sec_copyrightW ul li {
+    float: left;
+    width: 109px;
+    margin-right: 55px;
+    padding-top: 8px;
+    list-style: none;
+}
+
+.sec_copyrightW p.sec_wxxl {
+    font-size: 14px;
+    line-height: 38px;
+    margin-bottom: 0;
+    text-align: center;
+    color: #92969d;
+}
+
+
+/* footer */
+
+.sec_foot {
+    font-size: 14px;
+    width: 100%;
+    height: 50px;
+    color: #757980;
+    background: #242934;
+}
+
+.sec_foot .sec_footZ,
+.sec_foot .sec_footI {
+    line-height: 50px;
+    float: left;
+    width: 200px;
+    height: 50px;
+    margin-right: 20px;
+    margin-bottom: 0;
+}
+
+.sec_foot a:hover {
+    text-decoration: underline;
+    color: #28ab99;
+}
+
+.sec_foot .sec_footE {
+    line-height: 50px;
+    float: right;
+    width: 318px;
+    height: 50px;
+    color: #757980;
+}
+
+.sec_foot .sec_footE:hover {
+    opacity: .8;
+}
+
+
+/* 轮播图focus */
+
+#focus {
+    width: 1100px;
+}
+
+.mb-wrapper {
+    position: relative;
+    top: 0;
+    left: 0;
+    margin: 0 auto;
+}
+
+.mb-slider,
+.mb-scroll {
+    position: relative;
+    top: 0;
+    left: 0;
+    overflow: hidden;
+    width: 100%;
+    height: 630px !important;
+    margin: 0 auto;
+    padding: 0;
+}
+
+.mb-active-slider {
+    border-color: #333;
+}
+
+.mb-slider .mb-panel {
+    display: block;
+    float: left;
+    margin-top: 180px;
+    list-style: none;
+    cursor: pointer;
+}
+
+.mb-panel a {
+    outline: 0;
+}
+
+.mb-slider .mb-panel.current {
+    cursor: auto;
+}
+
+.mb-inside * {
+    max-width: 100%;
+}
+
+a.mb-scrollButtons {
+    position: absolute;
+    top: 50%;
+    display: block;
+    width: 25px;
+    height: 70px;
+    margin-top: -35px;
+    cursor: pointer;
+    text-decoration: none;
+    border: 0;
+    outline: 0;
+    background-repeat: no-repeat;
+    background-position: center center;
+}
+
+a.mb-scrollButtons:hover {
+    opacity: .6;
+}
+
+a.mb-scrollButtons.mb-left {
+    left: -50px;
+    background-image: url(/image/anva/secarrL.png);
+}
+
+a.mb-scrollButtons.mb-right {
+    right: -50px;
+    background-image: url(/image/anva/secarrR.png);
+}
+
+a.mb-scrollButtons.disabled {
+    display: none;
+}
+
+.mb-controls {
+    position: absolute;
+    z-index: 100;
+    top: 350px;
+    left: 560px;
+    display: none;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.mb-controls a {
+    font: 18px/2.2 Georgia, Serif;
+    display: inline-block;
+    margin: 0 5px 0 0;
+    padding: 2px;
+    text-align: center;
+    text-decoration: none;
+    color: #666;
+    outline: 0;
+}
+
+.mb-panel {
+    margin-top: 90px;
+}
+
+.mb-controls a:hover {
+    color: black;
+}
+
+.mb-controls a.current {
+    color: #900;
+}
+
+.main-nav {
+    display: block;
+    margin: 0 0 20px 0;
+    padding: 0 0 10px 0;
+    text-align: center;
+    border-bottom: 2px solid #a71700;
+}
+
+.main-nav a {
+    font-size: 18px;
+    margin: 0 8px;
+    text-decoration: none;
+    color: #3e63ec;
+}
+
+.main-nav a:hover {
+    color: black;
+    border-bottom: 2px solid black;
+}
+
+.mb-inside img {
+    width: 100%;
+}
+
+
+/* 二级导航 */
+
+.l_nav {
+    display: table-cell;
+    width: 1200px;
+    padding: 20px 0;
+    text-align: center;
+    vertical-align: middle;
+    border-bottom: 1px solid #d7d7d7;
+}
+
+.l_nav ul {
+    display: inline-block;
+    overflow: hidden;
+}
+
+.l_nav ul li {
+    float: left;
+    margin-left: 12px;
+}
+
+.l_nav ul li:first-child {
+    margin-left: 0;
+}
+
+.l_nav ul li a {
+    line-height: 46px;
+    display: block;
+    height: 46px;
+    padding: 0 27px;
+    transition: all .4s;
+    color: #333;
+    border-radius: 46px;
+}
+
+.l_nav ul li a:hover {
+    background: #b8f4ec;
+}
+
+.l_nav ul li.active a {
+    color: #fff;
+    background: #09c2a9;
+    background: linear-gradient(to left, #0ad2b7, #08ae98);
+    background: -webkit-linear-gradient(to left, #0ad2b7, #08ae98);
+    background: -moz-linear-gradient(to left, #0ad2b7, #08ae98);
+    background: -o-linear-gradient(to left, #0ad2b7, #08ae98);
+}
+
+
+/*****ANVA rewrite*********/
+
+.t_back {
+    margin-bottom: 50px;
+    text-align: right;
+}
+
+.t_back a {
+    padding-right: 100px;
+}
+
+.t_back a img {
+    width: 18px;
+}
+
+.t_back a:hover {
+    color: #009688;
+}
+
+.t_pctit {
+    font-size: 18px !important;
+    position: relative;
+    width: 98px;
+    margin: auto;
+    padding-bottom: 15px;
+    border-bottom: 1px solid #939393;
+}
+
+.t_pctit span {
+    position: absolute;
+    bottom: 0;
+    left: 29px;
+    display: inline-block;
+    width: 40px;
+    height: 3px;
+    background-color: #2aab99;
+}
+
+.t_zxDel ul {
+
+    /* text-indent: 2em; */
+    margin-top: 30px;
+}
+
+.t_zxDel ul li {
+    font-size: 16px;
+    line-height: 2em;
+    color: #666;
+}
+
+.t_pcbox {
+    width: 100%;
+    margin-top: 20px;
+    border-top: 1px solid #666;
+    border-left: 1px solid #666;
+}
+
+.t_pcbox td {
+    font-size: 16px;
+    padding: 10px;
+    color: #666;
+    border-right: 1px solid #666;
+    border-bottom: 1px solid #666;
+}
+
+.t_pcbox .t_td1 {
+    width: 120px;
+}
+
+.t_h2 {
+    font-size: 16px !important;
+}
+
+.t_download a:hover {
+    color: #009688;
+}
+
+.t_download a {
+    display: inline-block;
+    width: 100%;
+    text-align: center;
+}
+
+.l_comTitle {
+    font-size: 20px;
+    line-height: 100px;
+    width: 100%;
+    height: 100px;
+    text-indent: 48px;
+    color: #111;
+    border-bottom: 1px solid #ccc;
+    background: url('/image/anva/icon_bg.png') no-repeat left -30px;
+}
+
+
+/* 新闻详情 */
+
+.t_content {
+    width: 100%;
+    padding-top: 70px;
+}
+
+.t_content .t_main {
+    width: 1200px;
+    margin: 0 auto;
+}
+
+.zxtitle {
+    padding-top: 20px !important;
+    text-align: center;
+}
+
+.t_zxDel {
+
+    /*     width: 1000px !important; */
+    padding-bottom: 80px;
+}
+
+.t_zxDel h1 {
+    font-size: 24px;
+    font-weight: 500;
+    text-align: center;
+    color: #333;
+}
+
+.t_zxDel h2 {
+    font-size: 20px;
+    font-weight: 500;
+    color: #333;
+}
+
+.t_zxDel h2.euxTitle {
+    margin-top: 40px;
+}
+
+.t_zxDel p {
+    font-size: 16px;
+    line-height: 2em;
+    padding-top: 40px;
+    color: #666;
+    text-align:justify;
+    text-justify:distribute-all-lines;
+}
+
+.t_zxDel img {
+    display: block;
+    margin: 40px auto 0 auto;
+}
+
+.sec_newBox {
+    margin-bottom: 50px;
+    padding-top: 44px;
+    padding-left: 20px;
+}
+
+.sec_newBox .sec_newBoxL {
+    position: relative;
+    box-sizing: border-box;
+    width: 82px;
+    height: 294px;
+    margin-right: 52px;
+    border: 1px solid #088a52;
+}
+
+.sec_newBox .sec_newBoxL .sec_newLogo {
+    position: absolute;
+    top: 11px;
+    left: 23px;
+    width: 68px;
+    height: 271px;
+    background: url(/image/anva/secNewbg.png) no-repeat;
+}
+
+.sec_newBox .sec_newBoxL .sec_newtxt {
+    position: absolute;
+    top: 21px;
+    left: -22px;
+    width: 45px;
+    height: 60px;
+    text-align: center;
+    color: #333;
+    background: #fff;
+}
+
+.sec_newBox .sec_newBoxL .sec_newtxt h3 {
+    font-size: 20px;
+    line-height: 34px;
+    height: 34px;
+}
+
+.sec_newBox .sec_newBoxL .sec_newtxt span {
+    display: block;
+    width: 32px;
+    height: 1px;
+    margin: 0 auto;
+    background: #d7d7d7;
+}
+
+.sec_newBox .sec_newBoxL .sec_newtxt p {
+    font-size: 14px;
+    line-height: 24px;
+    height: 24px;
+    color: #333;
+}
+
+.sec_newBox .sec_newBoxR {
+    overflow: hidden;
+    width: 1045px;
+    height: 294px;
+    padding-top: 12px;
+}
+
+.sec_newBox .sec_newBoxR li {
+    float: left;
+    margin-right: 45px;
+    margin-bottom: 48px;
+}
+
+.sec_newBox .sec_newBoxR li:nth-child(3n) {
+    margin-right: 0;
+}
+
+.sec_newBox .sec_newBoxR li .sec_newTime {
+    box-sizing: border-box;
+    width: 62px;
+    height: 62px;
+    margin-right: 15px;
+    padding-top: 10px;
+    padding-bottom: 7px;
+    /* background: #16a393; */
+    text-align: center;
+    background: url(/image/anva/calendar.png) no-repeat center;
+}
+
+.sec_newBox .sec_newBoxR li .sec_newTime .sec_newTimeD {
+    font-size: 18px;
+    line-height: 32px;
+    height: 24px;
+    color: #fff;
+}
+
+.sec_newBox .sec_newBoxR li .sec_newTime .sec_newTimeY {
+    font-size: 14px;
+    line-height: 22px;
+    height: 22px;
+    color: #e8efee;
+}
+
+.sec_newBox .sec_newBoxR li .sec_newCon {
+    width: 240px;
+}
+
+.sec_newBox .sec_newBoxR li .sec_newCon .sec_newConT {
+    font-size: 16px;
+    line-height: 34px;
+    overflow: hidden;
+    height: 34px;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+}
+
+.sec_newBox .sec_newBoxR li .sec_newCon .sec_newConT a {
+    display: block;
+    height: 34px;
+    color: #252525;
+}
+
+.sec_newBox .sec_newBoxR li .sec_newCon .sec_newConT a:hover {
+    text-decoration: underline;
+}
+
+.sec_newBox .sec_newBoxR li .sec_newCon .sec_newConP {
+    font-size: 14px;
+    line-height: 22px;
+    overflow: hidden;
+    height: 22px;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    color: #555;
+}
+
+.sec_banner {
+    position: relative;
+    width: 100%;
+    margin-bottom: 100px;
+    background: url(/image/anva/secbanner.png) no-repeat center;
+}
+
+.sec_banner>h6 {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 30px;
+    height: 30px;
+    margin-top: -15px;
+    margin-left: -15px;
+    opacity: .8;
+    border-radius: 50%;
+    background-color: rgb(40, 171, 153);
+    background-image: url(/image/anva/rightArr.png);
+    background-repeat: no-repeat;
+    background-position: center center;
+}
+
+.sec_banner .sec_bannerL {
+    position: relative;
+    float: left;
+    width: 50%;
+    height: 550px;
+}
+
+.sec_banner .sec_bannerL h3 {
+    position: absolute;
+    top: 240px;
+    right: 220px;
+    width: 375px;
+    height: 106px;
+    background: url(/image/anva/secbannerL.png) no-repeat;
+}
+
+.sec_banner .sec_bannerR {
+    position: relative;
+    float: left;
+    width: 50%;
+    height: 550px;
+}
+
+.sec_banner .sec_bannerR .sec_anvaIntro {
+    position: absolute;
+    top: 67px;
+    left: 222px;
+    box-sizing: border-box;
+    width: 377px;
+    height: 396px;
+    padding: 37px;
+    border: 1px solid rgb(147, 147, 147);
+}
+
+.sec_bannerR .sec_anvaIntro h3 {
+    position: absolute;
+    bottom: -28px;
+    left: 50%;
+    width: 62px;
+    height: 55px;
+    margin-left: -31px;
+    background: url(/image/anva/secHome.png) no-repeat;
+}
+
+.secIntro>li {
+    position: relative;
+    margin-bottom: 150px;
+}
+
+.secIntro>li h6 {
+    position: absolute;
+    width: 30px;
+    height: 30px;
+    opacity: .8;
+    border-radius: 50%;
+    background-repeat: no-repeat;
+    background-position: center center;
+}
+
+.secIntro>li h6.leftArr {
+    top: 192px;
+    left: 691px;
+    background-image: url(/image/anva/leftArr.png);
+}
+
+.secIntro>li h6.rightArr {
+    top: 209px;
+    left: 531px;
+    background-image: url(/image/anva/rightArr.png);
+}
+
+.secIntro>li h6.arrone {
+    background-color: rgb(121, 119, 182);
+}
+
+.secIntro>li h6.arrtwo {
+    background-color: rgb(163, 172, 179);
+}
+
+.secIntro>li h6.arrthree {
+    background-color: rgb(179, 195, 210);
+}
+
+.secIntro>li h6.arrfour {
+    background-color: rgb(153, 182, 197);
+}
+
+.secIntro>li .secIntroP {
+    position: absolute;
+    top: 50%;
+    width: 340px;
+    transform: translateY(-50%);
+}
+
+.secIntro>li .secIntroP.special {
+    right: 0;
+}
+
+.secIntro>li .secIntroP h4,
+.sec_bannerR .sec_anvaIntro h4 {
+    font-size: 16px;
+    line-height: 46px;
+    text-align: center;
+    color: rgb(35, 42, 63);
+}
+
+.secIntro>li .secIntroP .secIntroL,
+.sec_bannerR .sec_anvaIntro .secIntroL {
+    position: relative;
+    width: 100px;
+    height: 1px;
+    margin: 0 auto 28px;
+    background-color: rgb(147, 147, 147);
+}
+
+.secIntro>li .secIntroP .secIntroL>span,
+.sec_bannerR .sec_anvaIntro .secIntroL>span {
+    position: absolute;
+    top: -2px;
+    left: 50%;
+    width: 24px;
+    height: 3px;
+    margin-left: -12px;
+    background-color: rgb(40, 171, 153);
+}
+
+.secIntro>li .secIntroP>p,
+.sec_bannerR .sec_anvaIntro>p {
+    font-size: 14px;
+    line-height: 34px;
+    padding-left: 10px;
+    text-align: justify;
+    color: rgb(85, 85, 85);
+}
+
+h4.secgTitle {
+    font-size: 18px;
+    font-weight: 500;
+    line-height: 50px;
+    text-align: center;
+    color: rgb(17, 17, 17);
+}
+
+div.secgIntroL {
+    position: relative;
+    width: 94px;
+    height: 1px;
+    margin: 0 auto 28px;
+    background-color: rgb(147, 147, 147);
+}
+
+div.secgIntroL>span {
+    position: absolute;
+    top: -2px;
+    left: 50%;
+    width: 24px;
+    height: 3px;
+    margin-left: -12px;
+    background-color: rgb(40, 171, 153);
+}
+
+
+/* .virusList li {
+float: left;
+width: 256px;
+margin-right: 58px;
+margin-bottom: 81px;
+}
+
+.virusList li:nth-child(4n) {
+margin-right: 0;
+}
+
+.virusList li>div {
+box-sizing: border-box;
+width: 256px;
+height: 195px;
+margin-bottom: 21px;
+border: 2px solid #85d2c7;
+background-repeat: no-repeat;
+}
+
+.virusList li>p {
+padding-top: 0;
+}
+
+.virusList li>p>a {
+font-size: 16px;
+line-height: 64px;
+display: block;
+width: 256px;
+height: 64px;
+text-align: center;
+color: #28ab99;
+background: url(/image/anva/virusT.png) no-repeat;
+}
+
+.virusList li>p>a:hover {
+opacity: .8;
+}
+ */
+
+
+/*登录*/
+
+.l_loginWrap {
+    overflow: hidden;
+    width: 100%;
+    height: 914px;
+    background: url('/image/anva/login_bg.jpg') no-repeat center center;
+}
+
+.l_loginWrap .l_login {
+    overflow: hidden;
+    width: 438px;
+    margin: 100px auto;
+    border-radius: 5px;
+    background-color: rgba(22, 147, 145, .25);
+    z-index: 99;
+    position: relative;
+}
+
+.l_loginWrap .l_login .l_loginHead {
+    font-size: 22px;
+    font-weight: bold;
+    line-height: 60px;
+    height: 60px;
+    text-align: center;
+    color: #fefefe;
+    background-color: rgb(18, 150, 141);
+}
+
+.l_loginWrap .l_login .l_loginCon {
+    padding: 15px 0 40px;
+}
+
+.l_loginWrap .l_login .item {
+    width: 292px;
+    margin: 15px auto;
+}
+
+.l_loginWrap .l_login .item .label {
+    font-size: 14px;
+    line-height: 40px;
+    color: #fff;
+}
+
+.l_loginWrap .l_login .item .input {
+    position: relative;
+}
+
+.l_loginWrap .l_login .item .input .loginIcon {
+    position: absolute;
+    top: 9px;
+    left: 10px;
+    width: 21px;
+    height: 22px;
+    background: url('/image/anva/login_icon.png') no-repeat;
+}
+
+.l_loginWrap .l_login .item input {
+    width: 100%;
+    height: 38px;
+    text-indent: 42px;
+    border: 1px solid rgb(48, 199, 189);
+    border-radius: 5px;
+    background-color: rgba(25, 184, 169, .4);
+}
+
+.l_loginWrap .l_login .l_registerCon .item input {
+    border: 1px solid #ffae00;
+}
+
+.l_loginWrap .l_login .item .input .special_bg {
+    background: url('/image/anva/login_icon.png') no-repeat center bottom;
+}
+
+.l_loginWrap .l_login .item input.codeInput {
+    width: 166px;
+    height: 38px;
+    text-indent: 20px;
+    border: 1px solid rgb(48, 199, 189);
+}
+
+.l_loginWrap .l_login .code {
+    float: right;
+    width: 104px;
+    height: 40px;
+    vertical-align: top;
+}
+
+.l_loginWrap .l_login .code img {
+    width: 100%;
+    height: 40px;
+}
+
+.l_loginWrap .l_login .remember {
+    margin-top: 29px;
+    color: #fff;
+}
+
+.l_loginWrap .l_login .remember input {
+    width: 16px;
+    height: 16px;
+    margin-bottom: 1px;
+    vertical-align: bottom;
+}
+
+.l_loginWrap .l_login .login_btn {
+    font-size: 18px;
+    line-height: 40px;
+    display: block;
+    width: 100%;
+    height: 40px;
+    text-align: center;
+    color: #fff;
+    border-radius: 4px;
+    background-color: rgb(16, 178, 156);
+}
+
+.l_loginWrap .l_login .register_btn {
+    background: #ffae00;
+}
+
+.l_loginWrap .l_login .login_btn:hover {
+    opacity: .8;
+    filter: alpha(opacity=80);
+}
+
+.l_loginWrap .loginText {
+    width: 292px;
+    margin: 30px auto 0;
+    text-align: right;
+}
+
+.l_loginWrap .loginText a:hover {
+    text-decoration: underline;
+}
+
+.l_loginWrap .loginText a {
+    font-size: 14px;
+    color: #fff;
+}
+
+
+/*联盟简介*/
+
+.l_des {
+    margin: 40px auto 60px;
+}
+
+.l_des .text {
+    font-size: 14px;
+    line-height: 32px;
+    float: left;
+    width: 520px;
+    height: 235px;
+    padding: 40px;
+    text-align: justify;
+    color: #666;
+    background: #f0fbf9;
+}
+
+.l_des .img {
+    position: relative;
+    float: right;
+    width: 600px;
+    height: 315px;
+    background: url('/image/anva/l_des.jpg') no-repeat;
+}
+
+.l_des .img:after {
+    position: absolute;
+    top: 50%;
+    left: -10px;
+    width: 10px;
+    height: 18px;
+    margin-top: -9px;
+    content: '';
+    background: url('/image/anva/l_tri.png') no-repeat;
+}
+
+.l_bigEvent {
+    position: relative;
+    margin: 50px auto;
+}
+
+.l_bigEvent .l_line {
+    position: absolute;
+    z-index: 1;
+    left: 50%;
+    width: 1px;
+    height: 100%;
+    margin-left: -1px;
+    background: #28ab99;
+}
+
+.l_bigEvent .event {
+    font-size: 14px;
+    margin-top: 30px;
+}
+
+.l_bigEvent .event>div {
+    float: left;
+}
+
+.l_bigEvent .event .l_time {
+    width: 528px;
+    color: #28ab99;
+}
+
+.l_bigEvent .event .l_dot {
+    width: 15px;
+    height: 15px;
+    margin: 0 62px;
+    border: 2px solid #28ab99;
+    border-radius: 50%;
+    background: #fff;
+    -webkit-box-shadow: 0 0 0 5px #fff;
+    -moz-box-shadow: 0 0 0 5px #fff;
+    box-shadow: 0 0 0 5px #fff;
+    -o-box-shadow: 0 0 0 5px #fff;
+}
+
+.l_bigEvent .event .first {
+    border: 2px solid #fff;
+    background: #28ab99;
+}
+
+.l_bigEvent .event .l_text {
+    line-height: 28px;
+    width: 528px;
+    margin-top: -4px;
+    color: #333;
+}
+
+.l_bigEvent .eventRight .l_time {
+    text-align: right;
+}
+
+.l_bigEvent .eventRight .l_text {
+    text-align: left;
+}
+
+.l_bigEvent .eventLeft .l_time {
+    text-align: left;
+}
+
+.l_bigEvent .eventLeft .l_text {
+    text-align: right;
+}
+
+
+/*联系我们*/
+
+.l_addr {
+    width: 100%;
+    margin-bottom: 40px;
+}
+
+.l_addr .l_img {
+    float: left;
+    width: 700px;
+}
+
+.l_addr .l_img img {
+    display: block;
+    width: 100%;
+}
+
+.l_addr .l_con {
+    float: right;
+    width: 450px;
+    margin-top: 47px;
+}
+
+.l_addr .l_con li {
+    font-size: 16px;
+    line-height: 30px;
+    margin-bottom: 30px;
+    color: #666;
+}
+
+.l_addr .l_con li span {
+    color: #333;
+}
+
+.l_addr .l_con li:before {
+    display: inline-block;
+    width: 30px;
+    height: 30px;
+    margin-right: 23px;
+    content: '';
+    vertical-align: bottom;
+    background-image: url('/image/anva/l_addr_bg.png');
+    background-repeat: no-repeat;
+}
+
+.l_addr .l_con li.l_phone:before {
+    background-position: 0 -59px;
+}
+
+.l_addr .l_con li.l_fax:before {
+    background-position: 0 -119px;
+}
+
+.l_addr .l_con li.l_address:before {
+    background-position: 0 -178px;
+}
+
+.l_comTitle2 {
+    line-height: 54px;
+    width: 100%;
+    height: 54px;
+    text-align: center;
+}
+
+.l_comTitle2 {
+    font-size: 18px;
+    position: relative;
+}
+
+.l_comTitle2:before {
+    position: absolute;
+    z-index: 1;
+    bottom: 0;
+    left: 50%;
+    width: 100px;
+    height: 1px;
+    margin-left: -50px;
+    content: '';
+    background: #ccc;
+}
+
+.l_comTitle2:after {
+    position: absolute;
+    z-index: 2;
+    bottom: 0;
+    left: 50%;
+    width: 24px;
+    height: 3px;
+    margin-left: -12px;
+    content: '';
+    background: #28ab99;
+}
+
+
+/* 合作伙伴 */
+
+.sec_partner {
+    position: relative;
+}
+
+.l_partner {
+    margin-bottom: 50px;
+}
+
+.l_partner .l_partnerList li {
+    display: none;
+}
+
+.l_partner .l_partnerList li.active {
+    display: block;
+}
+
+.l_partner table {
+    width: 100%;
+    table-layout: fixed;
+    border-spacing: 0;
+    border-collapse: collapse;
+    text-align: center;
+}
+
+.l_partner table.seczu img {
+    width: 100%;
+}
+
+.l_partner table.seczilv img {
+    width: 70%;
+}
+
+.l_partner table.secwork img {
+    width: 60%;
+}
+
+.l_partner table td {
+    height: 124px;
+    border: 1px solid #eef2f5;
+}
+
+.l_partner table tr:first-child td {
+    border-top: none;
+}
+
+.l_partner table tr:last-child td {
+    border-bottom: none;
+}
+
+.l_partner table tr td:first-child {
+    border-left: none;
+}
+
+.l_partner table tr td:last-child {
+    border-right: none;
+}
+
+.l_partnerTab {
+    width: 190px;
+    margin: 0 auto 100px;
+}
+
+.l_partnerTab>li {
+    width: 12px;
+    height: 12px;
+    margin: 0 13px;
+    cursor: pointer;
+    border-radius: 50%;
+    background: #9ab9e8;
+}
+
+.l_partnerTab>li.active {
+    background: #3574d1;
+}
+
+
+/* 首页 */
+
+.secEcharts {
+    height: 815px;
+}
+
+h3.secIndTil {
+    font-size: 32px;
+    font-weight: bold;
+    line-height: 80px;
+    height: 80px;
+    padding-top: 160px;
+    text-align: center;
+    color: rgb(3, 140, 121);
+}
+
+.secLineBox {
+    text-align: center;
+}
+
+.secLineBox .secLine {
+    display: inline-block;
+    height: 6px;
+}
+
+.secLineBox .secLine .secLineL,
+.secLineBox .secLine .secLineR {
+    float: left;
+    height: 1px;
+    margin-top: 3px;
+    background-color: rgb(204, 204, 204);
+}
+
+.secLineBox .secLine .secLineM {
+    float: left;
+    width: 6px;
+    height: 6px;
+    margin: 0 14px;
+    border-radius: 50%;
+    background-color: rgb(204, 204, 204);
+}
+
+div.sec_flogo {
+    height: 868px;
+    background: url(/image/anva/sec_flogo.png) no-repeat center center;
+}
+
+div.sec_flogo ul {
+    position: relative;
+}
+
+div.sec_flogo ul li {
+    position: absolute;
+    width: 366px;
+    height: 382px;
+    background: url(/image/anva/sec_logoW.png) no-repeat;
+}
+
+div.sec_flogo ul li:hover {
+    background: url(/image/anva/sec_logoH.png) no-repeat;
+}
+
+/* div.sec_flogo ul li>span {
+    position: absolute;
+    top: 85px;
+    left: 50%;
+    width: 135px;
+    height: 135px;
+    transform: translate(-50%, 0);
+    background-repeat: no-repeat;
+}
+
+div.sec_flogo ul li>p {
+    font-size: 16px;
+    line-height: 1.7;
+    position: absolute;
+    top: 235px;
+    left: 50%;
+    transform: translate(-50%, 0);
+    text-align: center;
+    color: rgb(0, 0, 0);
+} */
+div.sec_flogo ul li a {
+    display: block;
+    width: 366px;
+    height: 382px;
+}
+
+div.sec_flogo ul li a>span {
+    position: absolute;
+    top: 85px;
+    left: 50%;
+    width: 135px;
+    height: 135px;
+    transform: translate(-50%, 0);
+    background-repeat: no-repeat;
+}
+
+div.sec_flogo ul li a>p {
+    font-size: 16px;
+    line-height: 1.7;
+    position: absolute;
+    top: 235px;
+    left: 50%;
+    transform: translate(-50%, 0);
+    text-align: center;
+    color: rgb(0, 0, 0);
+}
+
+.sec_gavnew {
+    box-sizing: border-box;
+    padding-top: 190px;
+    padding-bottom: 150px;
+    background: #f4f6f6;
+}
+
+.sec_dynamic {
+    width: 349px;
+    height: 508px;
+    margin-right: 20px;
+    background: url(/image/anva/sec_dynamic.png) no-repeat;
+}
+
+div.sec_dynDelT {
+    width: 830px;
+    height: 48px;
+    margin-bottom: 41px;
+    text-align: center;
+    border-bottom: 1px solid #ccc;
+}
+
+div.sec_dynDelT ul {
+    display: inline-block;
+}
+
+div.sec_dynDelT ul li {
+    font-size: 16px;
+    line-height: 44px;
+    float: left;
+    height: 44px;
+    margin: 0 48px;
+    padding: 0 2px;
+    cursor: pointer;
+    color: #333;
+}
+
+div.sec_dynDelT ul li.active {
+    border-bottom: 4px solid #21c3ac;
+}
+
+.sec_dynDelC>li {
+    display: none;
+}
+
+.sec_dynDelC>li.active {
+    display: block;
+}
+
+.sec_dynDelC .sec_gnewBox {
+    float: left;
+    width: 264px;
+    height: 418px;
+    margin-right: 19px;
+    background-color: #fff;
+}
+
+.sec_dynDelC .sec_gnewBox .sec_gnewImg {
+    position: relative;
+    height: 212px;
+    margin-bottom: 22px;
+    background-repeat: no-repeat;
+}
+
+.sec_dynDelC .sec_gnewBox .sec_gnewImg .sec_gnewDate {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    width: 55px;
+    height: 55px;
+    background-color: #67bfb5;
+}
+
+.sec_dynDelC .sec_gnewBox .sec_gnewImg .sec_gnewDate .sec_gnewDateD {
+    font-size: 18px;
+    line-height: 28px;
+    height: 28px;
+    text-align: center;
+    color: #fff;
+}
+
+.sec_dynDelC .sec_gnewBox .sec_gnewImg .sec_gnewDate .sec_gnewDateYM {
+    font-size: 12px;
+    line-height: 26px;
+    height: 26px;
+    text-align: center;
+    color: #fff;
+}
+
+.sec_dynDelC .sec_gnewBox .sec_gnewTitle {
+    font-size: 14px;
+    line-height: 26px;
+    display: -webkit-box;
+    overflow: hidden;
+    margin-bottom: 16px;
+    padding: 0 20px;
+    text-overflow: ellipsis;
+    color: rgb(1, 166, 142);
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 2;
+}
+
+.sec_dynDelC .sec_gnewBox .sec_gnewCon {
+    font-size: 14px;
+    line-height: 26px;
+    display: -webkit-box;
+    overflow: hidden;
+    margin-bottom: 16px;
+    padding: 0 20px;
+    text-overflow: ellipsis;
+    color: #666;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 4;
+}
+
+
+/* CSS 全屏滚动 */
+
+.banner {
+    font-size: 0;
+    position: relative;
+    overflow: hidden;
+    width: 100%;
+    height: 679px;
+}
+
+.b-img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 679px;
+}
+
+.b-img a {
+    display: block;
+    float: left;
+    height: 679px;
+}
+
+.b-list {
+    position: relative;
+    z-index: 1;
+    width: 615px !important;
+    height: 50px;
+    margin: 0 auto;
+    top: 617px;
+}
+
+.b-list span {
+    display: block;
+    float: left;
+    width: 83px;
+    height: 12px;
+    margin: 0 20px;
+    cursor: pointer;
+    background-color: rgba(255, 251, 251, .5);
+}
+
+.b-list .spcss {
+    background: #fff;
+}
+
+.g_virusBox {
+    padding-top: 50px;
+    padding-right: 100px;
+    padding-left: 100px;
+}
+
+.g_title {
+    font-size: 32px;
+    line-height: 60px;
+    height: 60px;
+    margin-bottom: 20px;
+    padding-left: 100px;
+    background: url(/image/anva/g_titlebg.png) no-repeat 0 18px;
+}
+
+.g_subtitle {
+    font-size: 26px;
+    line-height: 50px;
+    margin-top: -15px;
+    margin-bottom: 20px;
+    padding-left: 80px;
+    eight: 50px;
+}
+
+.g_content {
+    font-size: 20px;
+    line-height: 36px;
+    margin-bottom: 20px;
+    padding-left: 70px;
+    text-align:justify;
+    text-justify:distribute-all-lines;
+}
+
+span.g_red {
+    color: #e71f19;
+}
+
+span.g_orange {
+    color: #f08619;
+}
+
+span.g_blue {
+    color: #14a1b8;
+}
+
+.g_conimg {
+    width: 70%;
+}
+
+.g_imgcon {
+    width: 25%;
+}
+
+.g_imgcon img {
+    width: 100%;
+}
+
+.g_mb10 {
+    margin-bottom: 10px;
+}
+
+.g_regBox {
+    position: absolute;
+    top: 120px;
+    left: 50%;
+    width: 1095px;
+    transform: translateX(-50%);
+}
+
+.g_regUl li {
+    float: left;
+    width: 230px;
+    margin: 0 20px;
+}
+
+.g_regUl li a {
+    display: block;
+}
+
+.g_regUl li a:hover {
+    opacity: .8;
+}
+
+.g_regUl li a .g_regImg {
+    width: 230px;
+    height: 230px;
+    border-radius: 50%;
+    background-color: rgba(255, 255, 255, .4);
+    background-repeat: no-repeat;
+    background-position: center center;
+}
+
+.g_regUl li a .g_regTxt {
+    font-size: 18px;
+    line-height: 50px;
+    height: 50px;
+    text-align: center;
+    color: #fff;
+}
+
+.g_regTitle {
+    font-size: 36px;
+    line-height: 200px;
+    height: 200px;
+    text-align: center;
+    color: #fff;
+}
+
+
+/*个人信息*/
+
+.l_personInfo {
+    width: 740px;
+    margin: 51px auto 0;
+}
+
+.l_personInfo .l_img {
+    overflow: hidden;
+    width: 148px;
+    height: 148px;
+    border-radius: 50%;
+    background: #f8f8f8;
+}
+
+.l_personInfo .l_img img {
+    width: 100%;
+}
+
+.l_personInfo .l_inputGroup label {
+    font-size: 14px;
+    line-height: 32px;
+    display: inline-block;
+    width: 80px;
+    height: 32px;
+    margin-right: 23px;
+    text-align: right;
+    color: #666;
+}
+
+.l_personInfo .l_inputGroup input {
+    width: 442px;
+    height: 30px;
+    text-indent: 10px;
+    color: #666;
+    border: 1px solid #ddd;
+}
+
+.l_personInfo .l_inputGroup .l_inputWrap {
+    margin-bottom: 13px;
+}
+
+.l_divider {
+    width: 100%;
+    height: 0;
+    margin: 44px auto;
+    border-bottom: 1px solid #ddd;
+}
+
+.l_personInfo .l_password {
+    line-height: 148px;
+    width: 148px;
+    height: 148px;
+    text-align: center;
+    color: #1465dc;
+    background: url('/image/anva/l_icon2.png') no-repeat 12px center;
+}
+
+.l_personInfo .l_btnGroup {
+    width: 290px;
+    margin: 50px auto;
+}
+
+.g_msgDis {
+    font-size: 18px;
+    line-height: 32px;
+    display: inline-block;
+    height: 32px;
+    color: #333;
+}
+
+.t_content p.g_virusCon {
+    font-family: 'Microsoft YaHei';
+    font-size: 14px;
+    line-height: 2.143;
+    color: rgb(85, 85, 85);
+}
+
+ul.g_virusList li {
+    float: left;
+    width: 218px;
+    height: 272px;
+    margin-bottom: 70px;
+    margin-left: 66px;
+    background: url(/image/anva/virusList.png) no-repeat;
+}
+
+ul.g_virusList li>div {
+    width: 70px;
+    height: 73px;
+    margin: 40px auto 80px;
+}
+
+ul.g_virusList li>p {
+    font-size: 19px;
+    font-weight: bold;
+    line-height: 28px;
+    line-height: 28px;
+    height: 28px;
+    padding-top: 0;
+    text-align: center;
+}
+
+ul.g_virusList li>p a {
+    color: rgb(12, 144, 135);
+}
+
+ul.g_virusList li>p a:hover {
+    opacity: .8;
+    font-size: 26px;
+}
+
+ul.g_virList li {
+    margin-bottom: 50px;
+}
+
+ul.g_virList li div.g_virImg {
+    box-sizing: border-box;
+    width: 351px;
+    height: 174px;
+    margin-right: 68px;
+    padding: 11px;
+    border: 1px solid rgb(78, 108, 157);
+}
+
+ul.g_virList li div.g_virCon {
+    width: 781px;
+    text-align:justify;
+    text-justify:distribute-all-lines;
+}
+
+ul.g_virList li div.g_virCon h3 {
+    font-size: 18px;
+    font-weight: bold;
+    line-height: 66px;
+    height: 66px;
+    padding-left: 68px;
+    color: rgb(25, 74, 139);
+    background-repeat: no-repeat;
+    background-position: 0 12px;
+}
+
+ul.g_virList li div.g_virCon p {
+    font-size: 14px;
+    line-height: 30px;
+    height: 30px;
+    color: rgb(85, 85, 85);
+}
+
+.t_404 {
+    padding-top: 15px;
+}
+
+.t_404 h1 {
+    font-size: 150px;
+    margin-bottom: 100px;
+    text-align: center;
+    color: #333;
+}
+
+.t_404 p {
+    text-align: center;
+}
+
+.t_404 p a {
+    font-size: 18px;
+    padding: 10px 50px;
+    color: #fff;
+    border-radius: 20px;
+    background-color: #3f7f7f;
+}
+
+.t_404 p a:hover {
+    opacity: .9;
+}
+
+.g_icpBtn{
+    color: #757980;
+}
+
+.g_icpBtn:hover{
+	opacity:0.8;
+}
+
+.g_modeltable {
+    padding: 40px;
+}
+
+.g_modeltable table td {
+    word-break: break-all;
+}
+
+ul.g_virusList li:hover{
+    opacity: 0.8;
+}
+
+ul.g_virusList li:hover p a{
+    font-size: 22px;
+}
+.radarBox {
+    position: relative;
+    padding-top: 175px;
+    padding-bottom: 46px;
+}
+
+.radarBox .radar {
+    width: 304px;
+    height: 304px;
+    margin: 0 auto;
+    background: url(/image/anva/radar.png) no-repeat;
+}
+
+div.radar {
+    -webkit-transition-duration: 1s;
+    -moz-transition-duration: 1s;
+    -webkit-transition-property: -webkit-transform;
+    -moz-transition-property: -moz-transform;
+    -webkit-animation: rotate 3s linear infinite;
+    -moz-animation: rotate 3s linear infinite;
+    -o-animation: rotate 3s linear infinite;
+    animation: rotate 3s linear infinite;
+}
+
+@-webkit-keyframes rotate {
+    from {
+        -webkit-transform: rotate(0deg);
+    }
+
+    to {
+        -webkit-transform: rotate(360deg);
+    }
+}
+
+@-moz-keyframes rotate {
+    from {
+        -moz-transform: rotate(0deg);
+    }
+
+    to {
+        -moz-transform: rotate(359deg);
+    }
+}
+
+@-o-keyframes rotate {
+    from {
+        -o-transform: rotate(0deg);
+    }
+
+    to {
+        -o-transform: rotate(359deg);
+    }
+}
+
+@keyframes rotate {
+    from {
+        transform: rotate(0deg);
+    }
+
+    to {
+        transform: rotate(359deg);
+    }
+}
+
+.radarLine01 {
+    position: absolute;
+    top: 236px;
+    left: 311px;
+    width: 150px;
+    height: 15px;
+    background: url(/image/anva/radarLine01.png) no-repeat;
+}
+
+.radarLine02 {
+    position: absolute;
+    top: 236px;
+    left: 740px;
+    width: 152px;
+    height: 13px;
+    background: url(/image/anva/radarLine02.png) no-repeat;
+}
+
+.radarLine03 {
+    position: absolute;
+    top: 396px;
+    left: 311px;
+    width: 165px;
+    height: 13px;
+    background: url(/image/anva/radarLine03.png) no-repeat;
+}
+
+.radarLine04 {
+    position: absolute;
+    top: 396px;
+    left: 749px;
+    width: 144px;
+    height: 13px;
+    background: url(/image/anva/radarLine04.png) no-repeat;
+}
+
+.radarBox .radarTxt {
+    position: absolute;
+    width: 313px;
+    height: 75px;
+    cursor: pointer;
+    background: url(/image/anva/radarTxt01.png) no-repeat;
+}
+
+.radarBox .radarTxt.radarTxt01 {
+    top: -39px;
+    left: -319px;
+}
+
+.radarBox .radarTxt.radarTxt02 {
+    top: -31px;
+    left: 150px;
+}
+
+.radarBox .radarTxt.radarTxt03 {
+    top: -37px;
+    left: -319px;
+}
+
+.radarBox .radarTxt.radarTxt04 {
+    top: -37px;
+    left: 144px;
+}
+
+.radarBox .radarTxt.active {
+    background: url(/image/anva/radarTxt02.png) no-repeat;
+}
+
+.g_table {
+    display: table;
+}
+
+.g_cell {
+    display: table-cell;
+    vertical-align: middle;
+}
+
+.radarBox .radarTxt p {
+    font-size: 18px;
+    line-height: 26px;
+    text-align: center;
+    color: #000;
+}
+
+.radarBox .radarTxt.active p {
+    color: #fff;
+}
+
+.radarLine {
+    width: 1203px;
+    height: 11px;
+    margin: 0 auto;
+    background: url(/image/anva/radarLine.png) no-repeat;
+}
+
+.g_city {
+    padding: 34px 2px 107px;
+}
+
+.g_city li {
+    font-size: 16px;
+    line-height: 46px;
+    float: left;
+    box-sizing: border-box;
+    width: 132px;
+    height: 46px;
+    margin-right: 20px;
+    margin-bottom: 16px;
+    text-align: center;
+    color: rgb(3, 140, 121);
+    border-right: 2px solid #38ceb5;
+    border-left: 2px solid #38ceb5;
+    background: #d7f5f0;
+}
+
+.g_city li:nth-child(8n) {
+    margin-right: 0;
+}
+
+.g_city li.active {
+    color: #fff;
+    background: #1ab8ae;
+}
+
+.sec_partner {
+    background: #f9f9f9;
+}
+
+
+.t-map {
+    width: 1200px;
+    height: 1000px;
+    background: url('/image/anva/map.png') no-repeat center;
+    position: relative;
+}
+
+.t-map ul.mapLabel {
+    position: absolute;
+    top: 400px;
+    right: 0;
+}
+
+.t-map ul.mapLabel li {
+     font-size: 14px;
+    color: #333;
+    line-height: 2em;
+    cursor: pointer;
+    margin-bottom: 5px;
+}
+
+.t-map ul.mapLabel li span {
+    display: inline-block;
+    width: 13px;
+    height: 13px;
+    border-radius: 50%;
+    vertical-align: middle;
+    margin-bottom: 5px;
+    margin-right: 10px;
+}
+
+.t-map .t-li1 span {
+    background-color: #01e1c2;
+}
+
+.t-map .t-li2 span {
+    background-color: #26d3ac;
+}
+
+.t-map .t-li3 span {
+    background-color: #03d9bb;
+}
+
+.t-map .t-li4 span {
+    background-color: #00c3a8;
+}
+
+.t-map .t-li5 span {
+    background-color: #28ab99;
+}
+
+.t-container {
+    position: absolute;
+    width: 32px;
+    height: 32px;
+    left: 0px;
+    top: -23px;
+    display: none;
+}
+.t-container.active{
+    display: block;
+}
+.t-dot {
+    position: absolute;
+    width: 12px;
+    height: 12px;
+    left: 12px;
+    top: 12px;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    background-color: #fae709;
+    border-radius: 50%;
+    z-index: 2;
+}
+
+.t-pulse {
+    position: absolute;
+    width: 15px;
+    height: 15px;
+    left: 9px;
+    top: 10px;
+    border: 1px solid #fae709;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    border-radius: 50%;
+    z-index: 1;
+    -webkit-animation: warn 2s ease-out;
+    -moz-animation: warn 2s ease-out;
+    animation: warn 2s ease-out;
+    -webkit-animation-iteration-count: infinite;
+    -moz-animation-iteration-count: infinite;
+    animation-iteration-count: infinite;
+    box-shadow: 1px 1px 2px #fae709;
+}
+
+.t-pulse1 {
+    position: absolute;
+    width: 25px;
+    height: 25px;
+    left: 2px;
+    top: 2px;
+    border: 3px solid #fae709;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    border-radius: 50%;
+    z-index: 2;
+    -webkit-animation: warn1 2s ease-out;
+    -moz-animation: warn1 2s ease-out;
+    animation: warn1 2s ease-out;
+    -webkit-animation-iteration-count: infinite;
+    -moz-animation-iteration-count: infinite;
+    animation-iteration-count: infinite;
+    box-shadow: 1px 1px 2px #fae709;
+}
+
+@keyframes warn {
+    0% {
+        transform: scale(0.3);
+        -webkit-transform: scale(0.3);
+        opacity: 0.0;
+    }
+    25% {
+        transform: scale(0.3);
+        -webkit-transform: scale(0.3);
+        opacity: 0.1;
+    }
+    /*index.html:18 50% {
+        transform: scale(0.5);
+        -webkit-transform: scale(0.5);
+        opacity: 0.3;
+    }*/
+    75% {
+        transform: scale(0.8);
+        -webkit-transform: scale(0.8);
+        opacity: 0.5;
+    }
+    100% {
+        transform: scale(1);
+        -webkit-transform: scale(1);
+        opacity: 0.0;
+    }
+}
+
+@keyframes warn1 {
+    0% {
+        transform: scale(0.3);
+        -webkit-transform: scale(0.3);
+        opacity: 0.0;
+    }
+    25% {
+        transform: scale(0.3);
+        -webkit-transform: scale(0.3);
+        opacity: 0.1;
+    }
+    50% {
+        transform: scale(0.3);
+        -webkit-transform: scale(0.3);
+        opacity: 0.3;
+    }
+    75% {
+        transform: scale(0.5);
+        -webkit-transform: scale(0.5);
+        opacity: 0.5;
+    }
+    100% {
+        transform: scale(0.8);
+        -webkit-transform: scale(0.8);
+        opacity: 0.0;
+    }
+}
+
+
+.chinaCity {
+    width: 100%;
+    position: absolute;
+    left: 0px;
+    top: 151px;
+}
+
+.chinaCity>li {
+    position: absolute;
+    color: #f1f1f1;
+    font-size: 12px;
+}
+
+.chinaCity>li span {
+    cursor: pointer;
+}
+
+.chinaCity li.beijing {
+    left: 750px;
+    top: 225px;
+}
+
+.chinaCity li.tianjin {
+    left: 755px;
+    top: 240px;
+}
+
+.chinaCity li.shanghai {
+    left: 820px;
+    top: 400px;
+}
+
+.chinaCity li.chongqing {
+    left: 585px;
+    top: 455px;
+}
+
+.chinaCity li.hebei {
+    left: 730px;
+    top: 260px;
+}
+
+.chinaCity li.henan {
+    left: 695px;
+    top: 365px;
+}
+
+.chinaCity li.yunnan {
+    left: 470px;
+    top: 565px;
+}
+
+.chinaCity li.liaoning {
+    left: 845px;
+    top: 180px;
+}
+
+.chinaCity li.heilongjiang {
+    left: 900px;
+    top: 50px;
+}
+
+.chinaCity li.hunan {
+    left: 675px;
+    top: 490px;
+}
+
+.chinaCity li.anhui {
+    left: 765px;
+    top: 385px;
+}
+
+.chinaCity li.shandong {
+    left: 775px;
+    top: 310px;
+}
+
+.chinaCity li.xinjiang {
+    left: 240px;
+    top: 180px;
+}
+
+.chinaCity li.jiangsu {
+    left: 805px;
+    top: 360px;
+}
+
+.chinaCity li.zhejiang {
+    left: 825px;
+    top: 450px;
+}
+
+.chinaCity li.jiangxi {
+    left: 745px;
+    top: 490px;
+}
+
+.chinaCity li.hubei {
+    left: 665px;
+    top: 410px;
+}
+
+.chinaCity li.guangxi {
+    left: 590px;
+    top: 590px;
+}
+
+.chinaCity li.gansu {
+    left: 410px;
+    top: 200px;
+}
+
+.chinaCity li.shanxi {
+    left: 680px;
+    top: 285px;
+}
+
+.chinaCity li.neimenggu {
+    left: 630px;
+    top: 190px;
+}
+
+.chinaCity li.shanxi2 {
+    left: 620px;
+    top: 355px;
+}
+
+.chinaCity li.jilin {
+    left: 895px;
+    top: 135px;
+}
+
+.chinaCity li.fujian {
+    left: 795px;
+    top: 525px;
+}
+
+.chinaCity li.guizhou {
+    left: 575px;
+    top: 515px;
+}
+
+.chinaCity li.guangdong {
+    left: 710px;
+    top: 585px;
+}
+
+.chinaCity li.qinghai {
+    left: 405px;
+    top: 285px;
+}
+
+.chinaCity li.xizang {
+    left: 220px;
+    top: 370px;
+}
+
+.chinaCity li.sichuan {
+    left: 505px;
+    top: 430px;
+}
+
+.chinaCity li.ningxia {
+    left: 550px;
+    top: 285px;
+}
+
+.chinaCity li.hainan {
+    left: 635px;
+    top: 680px;
+}
+
+.chinaCity li.taiwan {
+    left: 865px;
+    top: 570px;
+}
+
+.chinaCity li.xianggang {
+    left: 740px;
+    top: 625px;
+}
+
+.chinaCity li.aomen {
+    left: 710px;
+    top: 650px;
+}
+
+.cityTip {
+    box-sizing: border-box;
+    width: 210px;
+    padding: 10px 30px 10px;
+    position: absolute;
+    left: 50%;
+    margin-left: -105px;
+    top: 28px;
+    z-index: 999;
+    border-radius: 10px;
+    background-color: rgba(0, 0, 0, 0.7);
+}
+
+.cityTip:after {
+    position: absolute;
+    content: "";
+    left: 90px;
+    top: -12px;
+    width: 0;
+    height: 0;
+    border-left: 12px solid transparent;
+    border-right: 12px solid transparent;
+    border-bottom: 12px solid rgba(0, 0, 0, 0.7);
+}
+
+.cityTip h4.cityTipT {
+    height: 42px;
+    line-height: 42px;
+    margin-top: 0px;
+    margin-bottom: 0px;
+    font-size: 16px;
+    color: rgb(255, 255, 255);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.6);
+}
+
+.cityTip .cityTipC {
+    padding-top: 10px;
+}
+
+.cityTip .cityTipC li {
+    float: left;
+    width: 75px;
+    font-size: 16px;
+    height: 34px;
+    line-height: 34px;
+}
+
+.clearfix:after {
+    content: '';
+    display: block;
+    clear: both;
+}
+
+.clearfix {
+    zoom: 1;
+}
+
+@media screen and (max-width: 1030px){
+    body {
+        min-width: auto;
+    }
+    .sec_mbox {
+        width: auto;
+    }
+    .l_nav {
+        width: auto;
+        padding: 20px 0;
+        text-align: center;
+    }
+    .t_content .t_main {
+        width: auto;
+        margin: 0 auto;
+    }
+    .t-map {
+        width: auto;
+        height: 1000px;
+    }
+}

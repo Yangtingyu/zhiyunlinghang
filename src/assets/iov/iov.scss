@@ -1,0 +1,12 @@
+/* 车联网IOV通用样式 */
+
+// 自适应大屏容器
+.fullscreen-container{
+  background-color: #032d43;
+}
+// 背景单独指定
+.container{
+  width: 1920px;
+  height: 1080px;
+  background-image: url('/image/iov/bg.jpg');
+}

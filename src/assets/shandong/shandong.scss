@@ -1,0 +1,72 @@
+// 背景单独指定
+.container{
+  width: 1920px;
+  height: 1080px;
+  background-image: url('/image/shandong/img/bg.jpg');
+}
+
+// 主容器
+.main-container{
+  top: 75px;
+  margin: 0 30px;
+  overflow: auto;
+  &::-webkit-scrollbar-track-piece{
+    background-color: rgba(10, 89, 158, 0.2);
+    -webkit-border-radius:0;
+  }
+  &::-webkit-scrollbar{
+    width:5px;
+    height:5px;
+  }
+  &::-webkit-scrollbar-thumb{
+    height:50px;
+    background-color: rgba(153, 153, 153, 0.24);
+    -webkit-border-radius:4px;
+    outline:1px solid rgba(255, 255, 255, 0.21);
+    outline-offset:-2px;
+    border: 1px solid #55a2ea6b;
+  }
+  &::-webkit-scrollbar-thumb:hover{
+    height:50px;
+    background-color: rgba(159, 159, 159, 0.29);
+    -webkit-border-radius:4px;
+  }
+  &::-webkit-scrollbar-corner{
+    background-color: rgba(159, 159, 159, 0.29);
+  }
+}
+
+// 顶部菜单微调颜色
+.gxb-container.top-bar{
+  height: 75px;
+}
+.gxb-container /deep/ .box {
+  background: #0d3d5ad9;
+  max-height: 700px;
+  overflow: auto;
+
+  &::-webkit-scrollbar-track-piece{
+    background-color: rgba(10, 89, 158, 0.2);
+    -webkit-border-radius:0;
+  }
+  &::-webkit-scrollbar{
+    //width:8px;
+    height:auto;
+  }
+  &::-webkit-scrollbar-thumb{
+    height:50px;
+    background-color: rgba(153, 153, 153, 0.24);
+    -webkit-border-radius:4px;
+    outline:1px solid rgba(255, 255, 255, 0.21);
+    outline-offset:-2px;
+    border: 1px solid #55a2ea6b;
+  }
+  &::-webkit-scrollbar-thumb:hover{
+    height:50px;
+    background-color: rgba(159, 159, 159, 0.29);
+    -webkit-border-radius:4px;
+  }
+  &::-webkit-scrollbar-corner{
+    background-color: rgba(159, 159, 159, 0.29);
+  }
+}

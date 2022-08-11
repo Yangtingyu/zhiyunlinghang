@@ -1,0 +1,101 @@
+.gxb-container {
+
+  .fade-enter-active, .fade-leave-active {
+    opacity: 1;
+    transition: opacity .2s linear;
+  }
+
+  .fade-enter, .fade-leave-to {
+    opacity: 0;
+  }
+
+  .slide-y-enter-active, .slide-y-leave-active {
+    transform: translateY(0);
+    opacity: 1;
+    transition: opacity .2s linear, transform .2s ease;
+  }
+
+  .slide-y-enter, .slide-y-leave-to {
+    transform: translateY(5px);
+    opacity: 0;
+  }
+
+  .slide-x-enter-active, .slide-x-leave-active {
+    transform: translateX(0);
+    opacity: 1;
+    transition: opacity .2s linear, transform .2s ease;
+  }
+
+  .slide-x-enter, .slide-x-leave-to {
+    transform: translateX(-5px);
+    opacity: 0;
+  }
+
+  .router-enter-active, .router-leave-active {
+    transform: translateY(0);
+    opacity: 1;
+    transition: opacity .2s linear, transform .2s ease;
+  }
+
+  .router-enter, .router-leave-to {
+    transform: translateY(25px);
+    opacity: 0;
+  }
+
+  .list-complete-item {
+    transition: all 0.2s;
+  }
+
+  .list-complete-enter, .list-complete-leave-to {
+    opacity: 0;
+    transform: translateX(-30px);
+  }
+
+  .list-complete-leave-active {
+    position: absolute;
+    width: 100%;
+  }
+
+  .left-in-out-enter-active, .left-in-out-leave-active {
+    transform: translateX(0);
+    transition: transform .2s ease;
+  }
+
+  .left-in-out-enter, .left-in-out-leave-to {
+    transform: translateX(-100%);
+  }
+
+  .left-side-enter-active, .left-side-leave-active {
+    transform: translateX(0);
+    opacity: 1;
+    transition: opacity .2s linear, transform .2s ease;
+  }
+
+  .left-side-enter, .left-side-leave-to {
+    transform: translateX(-300px);
+    opacity: 0;
+  }
+
+  .right-side-enter-active, .right-side-leave-active {
+    transform: translateX(0);
+    opacity: 1;
+    transition: opacity .2s linear, transform .2s ease;
+  }
+
+  .right-side-enter, .right-side-leave-to {
+    transform: translateX(300px);
+    opacity: 0;
+  }
+
+  .bottom-side-enter-active, .bottom-side-leave-active {
+    transform: translateY(0);
+    opacity: 1;
+    transition: opacity .2s linear, transform .2s ease;
+  }
+
+  .bottom-side-enter, .bottom-side-leave-to {
+    transform: translateY(300px);
+    opacity: 0;
+  }
+
+}

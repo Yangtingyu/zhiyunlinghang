@@ -1,0 +1,78 @@
+  // 缩小倍数
+  $zoom: 0.4166;
+
+  .list02{
+    font-size: $zoom*36px;
+    color: rgba(198, 222, 255, .85);
+    li{
+      height: $zoom*100px;
+      border-top: $zoom*2px solid rgba(37, 237, 255, .25);
+      border-bottom: $zoom*2px solid rgba(37, 237, 255, .25);
+      margin-top: $zoom*4px;
+      .xh{width: $zoom*100px;height: $zoom*100px;}
+      .d{font-size: $zoom*42px;}
+      .bar{height: $zoom*11px; margin-top: $zoom*5px;
+        span{top: $zoom*2px;left: $zoom*2px;display: inline-block; height: $zoom*7px; }
+      }
+      &:nth-child(odd){
+        background: rgba(8, 245, 237, .03);
+        .xh{background: rgba(8, 245, 237, .08);}
+        .bar{background: #083650;
+          span{background: -webkit-linear-gradient(left, #007c66 0%,#6fe1d7 100%);}
+        }
+      }
+      &:nth-child(even){
+        background: rgba(8, 192, 245, .03);color: rgba(170, 226, 232, .85);
+        .xh{background: rgba(8, 164, 245, .08);}
+        .bar{background: #082d50;
+          span{background: -webkit-linear-gradient(left, #015c7d 0%,#68bedd 100%);}
+        }
+      }
+      .sk{display: inline-block;width: $zoom*16px; height: $zoom*16px; padding: $zoom*2px; background: #25edff; border: $zoom*2px solid #25edff; background-clip: zzzzzzzzzzzzzzzzzz-box;margin-right: $zoom*16px;}
+    }
+  }
+  .list01{
+    font-size: $zoom*36px;
+    // color: #bcf9ff;
+    li{
+      height: $zoom*87px;
+      border-top: $zoom*2px solid rgba(114, 156, 190, .4);
+      border-left: $zoom*4px solid rgba(114, 156, 190, .4);
+      margin-top: $zoom*10px;
+      &:nth-child(odd){background: rgba(11, 108, 129, .1);color: #bcf9ff;}
+      &:nth-child(even){background: rgba(114, 171, 190, .2);color: #c6deff;}
+      .xh{width: $zoom*110px; text-align: center;}
+      .t{ width: $zoom*700px;overflow: hidden; text-overflow:ellipsis; white-space: nowrap;}
+      .d{font-size: $zoom*42px; text-align: right; padding-right: $zoom*26px;}
+    }
+
+  }
+  .subhead-d{
+    font-size: $zoom*50px;
+    color: #fff;
+    padding-right: $zoom*26px;
+  }
+  .subhead-a{
+    a{
+      width: $zoom*78px;height: $zoom*78px;
+      &.active{border: 1px solid #3aa7b7;}
+    }
+  }
+  .subhead-img{
+    padding-right: $zoom*26px;
+  }
+  //滚动条
+  .gun::-webkit-scrollbar {
+    /*滚动条整体样式*/
+    width : 10px;  /*高宽分别对应横竖滚动条的尺寸*/
+    height: 1px;
+    }
+  .gun::-webkit-scrollbar-thumb {
+    /*滚动条里面小方块*/
+    background-color: #095367;
+    }
+  .gun::-webkit-scrollbar-track {
+    /*滚动条里面轨道*/
+    box-shadow   : inset 0 0 5px rgba(0, 0, 0, 0.2);
+    background   : #073649;
+    }

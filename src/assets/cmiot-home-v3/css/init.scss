@@ -1,0 +1,143 @@
+@charset "utf-8";
+body,h1,h2,h3,h4,h5,h6,hr,p,dl,dt,dd,ul,ol,li,pre,fieldset,button,input,textarea,th,td,div {
+	margin:0;
+	padding:0;
+}
+body,button,input,select,textarea {
+	font-family: Tahoma,Helvetica,Arial,"\5FAE\8F6F\96C5\9ED1",sans-serif;
+}
+html,body {
+    height: 100%;
+    width: 100%;
+}
+address,cite,dfn,em,var,i {
+	font-style:normal;
+}
+ul,ol {
+	list-style:none;
+}
+a {
+	text-decoration:none;
+}
+a:hover {
+	text-decoration:none;
+}
+fieldset,img {
+	border:none;
+}
+button,input,select,textarea {
+	outline:none;
+	font-size:100%;
+}
+table {
+	border-collapse:collapse;
+	border-spacing:0;
+}
+hr {
+	border:none;
+	height:1px;
+}
+div {
+    box-sizing: border-box;
+}
+
+/* 清除浮动 */
+.f-l {
+    float: left;
+}
+.f-r {
+    float: right;
+}
+.clear::after {
+    content: '';
+    display: block;
+    clear: both;
+}
+
+/*字号*/
+.f-14 {
+    font-size: 14px;
+}
+.f-16 {
+    font-size: 16px;
+}
+.f-18 {
+    font-size: 18px;
+}
+.f-20 {
+    font-size: 20px;
+}
+.f-22 {
+    font-size: 22px;
+}
+.f-24 {
+    font-size: 24px;
+}
+
+/*鼠标*/
+.cursor {
+    cursor: pointer;
+}
+.overlay{
+    pointer-events: none
+}
+
+/*定位*/
+.pr{
+    position: relative;
+}
+.pa{
+    position: absolute;
+}
+
+/*flex*/
+.fr{
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: row;
+    flex-direction: row;
+}
+.fc{
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+}
+.ac{
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+}
+.jc{
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+}
+.ja{
+    justify-content: space-around;
+}
+.jw{
+    justify-content: space-between;
+}
+.je{
+    justify-content: flex-end;
+}
+.f1{
+    -webkit-box-flex: 1;
+    -ms-flex: 1;
+    flex: 1;
+}
+.jvc{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.fw{
+    flex-wrap: wrap;
+}

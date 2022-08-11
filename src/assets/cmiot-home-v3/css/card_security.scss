@@ -1,0 +1,366 @@
+/*内容安全*/
+@charset "utf-8";
+.leftbox {
+    width: 445px;
+    margin-right: 20px;
+}
+.rightbox_t_r {
+    margin-left: 20px;
+}
+.bgjb{
+    background: -moz-linear-gradient(top, rgba(106, 149, 255, 0) 0%, rgba(106, 149, 255, .1) 100%);
+    background: -webkit-linear-gradient(top,  rgba(106, 149, 255, 0) 0%, rgba(106, 149, 255, .1) 100%);
+    background: -o-linear-gradient(top,  rgba(106, 149, 255,  0) 0%, rgba(106, 149, 255, .1) 100%);
+    background: -ms-linear-gradient(top,  rgba(106, 149, 255,  0) 0%, rgba(106, 149, 255, .1) 100%);
+    background: linear-gradient(to bottom, rgba(106, 149, 255,  0) 0%, rgba(106, 149, 255, .1) 100%);
+}
+.leftbox .stats {
+    color: #fff;
+    padding: 6px;
+    border-top: 1px solid #375d99;
+    border-bottom: 1px solid #375d99;
+    box-sizing: border-box;
+    background: rgba(25, 119, 248, 0.202);
+}
+.leftbox .stats span {
+    display: inline-block;
+    height: 30px;
+    line-height: 30px;
+}
+.leftbox .stats .n {
+    margin-right: 2px;
+    padding-left: 10px;
+    box-sizing: border-box;
+    background: rgba(106, 255, 215, 0.051);
+}
+.leftbox .stats .num {
+    font-family: 'Aldrich';
+    text-align: right;
+    padding-right: 10px;
+    box-sizing: border-box;
+    background: rgba(106, 255, 215, 0.102);
+}
+.leftbox .stats>div {
+    margin-top: 5px;
+}
+.leftbox .stats>div:first-child {
+    width: 100%;
+    margin-top: 0;
+}
+.leftbox .stats>div:nth-child(2n) {
+    margin-right: 5px;
+}
+.leftbox .stats>div:first-child .n,
+.leftbox .stats>div:nth-child(2) .n,
+.leftbox .stats>div:nth-child(4) .n {
+    width: 115px;
+}
+.leftbox .stats>div:nth-child(3) .n,
+.leftbox .stats>div:nth-child(5) .n {
+    width: 96px;
+}
+.leftbox .stats>div:first-child .num {
+    color: #3afbff;
+}
+.sec_1 {
+    margin-top: 15px;
+}
+.sec_2{
+    margin-top: 15px;
+}
+.sec_3{
+    margin-top: 15px;
+}
+.sec_3 ul {
+    padding: 0 15px;
+}
+.sec_3 ul li>p {
+    color: #fff;
+}
+.sec_3 ul li>p span:first-child {
+    display: inline-block;
+    width: 75px;
+    font-family: 'Mont-R';
+    margin-left: 10px;
+}
+.sec_3 ul li>p span:first-child:before {
+    content: '';
+    width: 4px;
+    height: 8px;
+    background: #99d8ff;
+    position: absolute;
+    top: 50%;
+    left: -10px;
+    transform: translateY(-50%);
+}
+.sec_3 ul li>p span:nth-child(3) {
+    font-family: 'Aldrich';
+}
+.sec_3 ul li .bar_box {
+    width: 100%;
+    height: 10px;
+    margin-top: 3px;
+    background: #0e254a;
+}
+.sec_3 ul li .bar_box .bar {
+    height: 6px;
+}
+.sec_3 ul li .bar_box .bar i {
+    display: inline-block;
+    height: 6px;
+}
+.sec_3 ul li .bar_box .bar i:first-child {
+    background: #7aaccc;
+}
+.sec_3 ul li .bar_box .bar i:nth-child(2) {
+    background: #93c4e3;
+}
+.sec_3 ul li .bar_box .bar i:nth-child(3) {
+    background: #99d8ff;
+}
+.sec_3 ul li:first-child>p span:first-child:before {
+    background: #ff4848;
+}
+.sec_3 ul li:first-child .bar_box .bar i:first-child {
+    background: #b45050;
+}
+.sec_3 ul li:first-child .bar_box .bar i:nth-child(2) {
+    background: #ff5f5f;
+}
+.sec_3 ul li:first-child .bar_box .bar i:nth-child(3) {
+    background: #ff4848;
+}
+.rightbox_t_r .stats>div {
+    width: 100px;
+    height: 91px;
+    padding: 1px;
+    box-sizing: border-box;
+    background: url(/image/cmiot-home-v3/img/card_security/stats2.png) center/100% 100% no-repeat;
+}
+.rightbox_t_r .stats>div span:first-child {
+    font-family: 'Aldrich';
+}
+.rightbox_t_r .stats>div span:nth-child(2) {
+    width: 100%;
+    height: 27px;
+    line-height: 27px;
+    text-align: center;
+}
+.sec_4 {
+    margin-top: 15px;
+}
+.sec_4 .list_head {
+    width: 100%;
+    height: 35px;
+    margin-top: 10px;
+    /*padding-left: 15px;*/
+    border-bottom: 1px solid #4364b3;
+    box-sizing: border-box;
+    background: rgba(106, 149, 255, 0.102);
+}
+.sec_4 ul {
+    width: 100%;
+    color: #fff;
+    /*padding-left: 15px;*/
+    box-sizing: border-box;
+}
+.sec_4 ul li {
+    height: 35px;
+    margin-top: 5px;
+}
+.sec_4 .list_head span,
+.sec_4 ul li span {
+    display: inline-block;
+    text-align: center;
+}
+.sec_4 ul li:nth-child(odd) {
+    background: rgba(106, 149, 255, 0.051)
+}
+.sec_4 ul li:nth-child(even) {
+    background: rgba(106, 255, 215, 0.051)
+}
+.sec_4 .list_head span:first-child,
+.sec_4 ul li span:first-child,
+.sec_4 .list_head span:nth-child(4),
+.sec_4 ul li span:nth-child(4) {
+    width: 110px;
+}
+.sec_4 .list_head span:nth-child(2),
+.sec_4 ul li span:nth-child(2) {
+    width: 75px;
+}
+
+.sec_4 ul li span:nth-child(3) {
+    color: #ff5f5f;
+    padding: 0 10px;
+    box-sizing: border-box;
+}
+.sec_5{
+    margin-top: 15px;
+}
+.rightbox_t_l .stats {
+    margin-bottom: 15px;
+}
+.rightbox_t_l .stats>div {
+    width: 281px;
+    height: 55px;
+    padding: 0 6px 0 3px;
+    margin-right: 34px;
+    box-sizing: border-box;
+    background: url(/image/cmiot-home-v3/img/card_security/stats1.png) center/100% 100% no-repeat;
+}
+.rightbox_t_l .stats>div:nth-child(3n) {
+    margin-right: 0;
+}
+.rightbox_t_l .stats>div span {
+    display: inline-block;
+}
+.rightbox_t_l .stats>div span:first-child {
+    width: 129px;
+    text-align: center;
+}
+.rightbox_t_l .stats>div span:nth-child(2) {
+    text-align: right;
+    font-size: 30px;
+    font-family: 'Aldrich';
+    padding-right: 12px;
+    box-sizing: border-box;
+}
+.rightbox_t_l .stats>div.t1 span:nth-child(2) {
+    color: #15fffc;
+}
+.rightbox_t_l .stats>div.t2 span:nth-child(2) {
+    color: #ff5f5f;
+}
+.map_box{
+    width: 912px;
+    height: 590px;
+    background: url(/image/cmiot-home-v3/img/mapbg.jpg) center/100% 100% no-repeat;
+}
+.map_box .map {
+    width: 100%;
+    height: 100%;
+    z-index: 2;
+}
+.map_box .mapt {
+    width: 268px;
+    height: 164px;
+    padding: 5px 4px 11px 9px;
+    background: url(/image/cmiot-home-v3/img/card_security/mapt.png) 0 0 no-repeat;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 999;
+}
+.map_box .mapt .n {
+    height: 26px;
+    line-height: 26px;
+    margin-top: 9px;
+    margin-left: 20px;
+}
+.map_box .mapt .list {
+    margin-top: 20px;
+}
+.map_box .mapt .list li {
+    padding-left: 35px;
+    padding-right: 15px;
+    margin-top: 9px;
+    box-sizing: border-box;
+}
+.map_box .mapt .list li span:first-child {
+    color: #9da4b6;
+}
+.map_box .mapt .list li span:nth-child(2) {
+    font-family: 'Aldrich';
+    color: #fff;
+}
+.map_box .mapChina_bg {
+    width: 100%;
+    height: 100%;
+    background: url(/image/cmiot-home-v3/img/chinamapbg.png) center no-repeat;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 1;
+}
+.map_box .nanhai {
+    width: 117px;
+    height: 123px;
+    background: url(/image/cmiot-home-v3/img/nanhai.png) center no-repeat;
+    position: absolute;
+    bottom: 96px;
+    right: 66px;
+    z-index: 1;
+}
+.sec_c1{
+    margin-top: 18px;
+}
+.sec_c1 .sub_tab {
+    width: 100%;
+    height: 40px;
+    background: #0f2048;
+}
+.sec_c1 .sub_tab a {
+    display: inline-block;
+    height: 40px;
+    line-height: 40px;
+    color: #babcc4;
+    padding: 0 20px;
+    position: relative;
+}
+.sec_c1 .sub_tab a.on {
+    font-weight: bold;
+    color: #fff;
+    background-image: -webkit-linear-gradient(top, rgba(33,148,255,0.5) 0%, rgba(33,148,255,0.01176) 100%);
+    background-image: -o-linear-gradient(top, rgba(33,148,255,0.5) 0%, rgba(33,148,255,0.01176) 100%);
+    background-image: linear-gradient(to top, rgba(33,148,255,0.5) 0%, rgba(33,148,255,0.01176) 100%);
+}
+.sec_c1 .sub_tab a.on:after {
+    content: '';
+    width: 100%;
+    height: 3px;
+    background: #2184ff;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+}
+.sec_c1 .legend {
+    color: #feffff;
+    top: 10px;
+    right: 27px;
+}
+.sec_c1 .legend li {
+    margin-left: 30px;
+}
+.sec_c1 .legend li:first-child {
+    margin-left: 0;
+}
+.sec_c1 .legend li i {
+    display: inline-block;
+    width: 12px;
+    height: 12px;
+    margin-left: 7px;
+    border: 1px solid #fff;
+    box-sizing: border-box;
+}
+
+.sec_c1 .legend li:first-child i {
+    background: #70dcff;
+}
+.sec_c1 .legend li:nth-child(2) i {
+    background: #2184ff;
+}
+.sec_c1 .legend li:nth-child(3) i {
+    background: #d14850;
+}
+
+
+
+
+
+
+
+
+
+
+

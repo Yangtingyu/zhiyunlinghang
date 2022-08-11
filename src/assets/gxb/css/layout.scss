@@ -1,0 +1,228 @@
+.gxb-container {
+
+  .db {
+    display: block;
+  }
+
+  .di {
+    display: inline;
+  }
+
+  .dib {
+    display: inline-block;
+  }
+
+  .dn {
+    display: none;
+  }
+
+  .dg {
+    display: grid;
+  }
+
+  .dig {
+    display: inline-grid;
+  }
+
+  .gr {
+    grid-auto-flow: row;
+  }
+
+  .gc {
+    grid-auto-flow: column;
+  }
+
+  @for $i from 1 through 10 {
+    .gr#{$i} {
+      grid-template-rows: repeat(#{$i}, 1fr);
+    }
+    .gc#{$i} {
+      grid-template-columns: repeat(#{$i}, 1fr);
+    }
+    .grs#{$i} {
+      grid-row: span #{$i};
+    }
+    .gcs#{$i} {
+      grid-column: span #{$i};
+    }
+  }
+
+  @for $i from 0 through 4 {
+    $val: $i * 5 + 5;
+    .gg#{$val} {
+      grid-gap: #{$val}px
+    }
+  }
+
+  .fr {
+    display: flex;
+    flex-direction: row;
+  }
+
+  .fc {
+    display: flex;
+    flex-direction: column;
+  }
+
+  @for $i from 1 through 6 {
+    .f#{$i} {
+      flex: #{$i};
+    }
+  }
+
+  .as {
+    align-items: flex-start;
+  }
+
+  .ac {
+    align-items: center;
+  }
+
+  .ae {
+    align-items: flex-end;
+  }
+
+  .js {
+    justify-content: flex-start;
+  }
+
+  .jc {
+    justify-content: center;
+  }
+
+  .je {
+    justify-content: flex-end;
+  }
+
+  .fajc {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .tl {
+    text-align: left;
+  }
+
+  .tc {
+    text-align: center;
+  }
+
+  .tr {
+    text-align: right;
+  }
+
+  .vt {
+    vertical-align: top;
+  }
+
+  .vc {
+    vertical-align: center;
+  }
+
+  .vb {
+    vertical-align: bottom;
+  }
+
+  .ma {
+    margin: 0 auto;
+  }
+
+  .pr {
+    position: relative;
+  }
+
+  .pa {
+    position: absolute;
+  }
+
+  .pf {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    left: 0;
+    top: 0;
+  }
+
+  .wf {
+    width: 100%;
+  }
+
+  .hf {
+    height: 100%;
+  }
+
+  .oh {
+    overflow: hidden;
+  }
+
+  .ov {
+    overflow: visible;
+  }
+
+  .os {
+    overflow: auto;
+  }
+
+  .osx {
+    overflow-x: auto;
+    overflow-y: hidden;
+  }
+
+  .osy {
+    overflow-x: hidden;
+    overflow-y: auto;
+  }
+
+  .vh {
+    visibility: hidden;
+  }
+
+  .vv {
+    visibility: visible;
+  }
+
+  .a {
+    cursor: pointer;
+  }
+
+  .b {
+    font-weight: bold;
+  }
+
+  .i {
+    font-style: italic;
+  }
+
+  .u {
+    text-decoration: underline;
+  }
+
+  .toe {
+    text-overflow: ellipsis;
+    overflow: hidden;
+    white-space: nowrap;
+  }
+
+  .pen {
+    pointer-events: none;
+  }
+
+  .pea {
+    pointer-events: auto;
+  }
+
+  .pre {
+    white-space: pre-wrap
+  }
+
+  .tlf {
+    table-layout: fixed;
+  }
+
+  .pstk {
+    position: sticky;
+  }
+
+
+}
