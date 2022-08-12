@@ -7,35 +7,66 @@
 <template>
   <div class="gxb-container">
     <div class="top-title">
-      <div class="title-name">车路协同安全管理平台</div>
+      <div class="title-name">{{ appTitle }}</div>
     </div>
     <div class="main fr">
       <div class="left">
-        <div class="left-1">
+        <div class="left-1 part part-l">
           <div class="name">资产总数</div>
           <div class="value"><span v-for="(item,index) in terminalCountText" :key="index">{{item}}</span><div class="footer"></div></div>
         </div>
 
-        <div class="left-2">
+        <div class="left-2 part part-l">
+          <div class="part-title">
+            <span>资产安全态势</span>
+            <img src="/image/cvis/icon_title.png" alt="" class="underline">
+          </div>
+          <ul class="left-2-list">
+            <li class="item" v-for="item,index in left2List" :key="index">
+              <div class="l">
+                <img :src="`/image/cvis/icon_zcaqts_0${index+1}.png`" alt="">
+              </div>
+              <div class="r">
+                <div class="name">{{item.name}}</div>
+                <div class="count">{{formatNumber(item.count)}}</div>
+              </div>
+            </li>
+          </ul>
+          <div class="left-2-radar">
 
+          </div>
         </div>
       </div>
       <div class="center"></div>
       <div class="right"></div>
+      <div class="bottom"></div>
     </div>
   </div>
 </template>
 
 <script>
   import { toThousands } from '@/utils/base';
-  import {customList,commonList} from '@/api'
+  import { customList, commonList} from '@/api'
+  import { formatNumber } from "@/libs/commonUtil.js"
+  import Radar from '../components/radar.vue';
   import Mock from './mock'
   export default {
     name: "index",
+    components:{Radar},
     data() {
       return {
+        appTitle: window.VUE_CONFIG.appTitle,
+        formatNumber,
         isMock: window.VUE_CONFIG.isMockQuery,
-        assetsCount: 0
+        assetsCount: 0,
+        left2List:[
+          {name:"主机数", count:111},
+          {name:"网络设备", count:111},
+          {name:"安全设备", count:111},
+          {name:"应用系统", count:111},
+          {name:"数据库", count:111},
+          {name:"中间件", count:222333},
+        ]
       }
     },
     computed: {
@@ -133,6 +164,4 @@
 </script>
 
 <style src="@/assets/gxb/css/gxb-all.scss" scoped lang="scss"></style>
-<style src="./index.scss" scoped lang="scss">
-
-</style>
+<style src="./index.scss" scoped lang="scss"></style>

@@ -22,7 +22,8 @@
   }
 }
 .left{
-  width: 417px;
+  width: 390px;
+
   .left-1{
     width: 369px;
     height: 180px;
@@ -96,4 +97,72 @@
       }
     }
   }
+  .left-2{
+    .left-2-list{
+      display: flex;
+      flex-direction: row;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      .item{
+        width: 168px;
+        height: 74px;
+        background: url('/image/cvis/bg_zcaqts_item.png');
+        background-size: 100% 100%;
+        display: flex;
+        flex-direction: row;
+        margin-bottom: 10px;
+        .l{
+          width: 34%;
+          flex-shrink: 0;
+          img{
+            width: 33px;
+            display: block;
+            margin:  19px auto;
+          }
+        }
+        .r{
+          padding-left: 8px;
+          margin: 5px 0;
+          .name{
+            font-size: 16px;
+            font-family: Microsoft YaHei;
+            font-weight: 400;
+            color: #FEFEFE;
+            line-height: 30px;
+          }
+          .count{
+            font-size: 30px;
+            font-family: "DS-DIGIB";
+            font-weight: 400;
+            color: #2A7FFF;
+            line-height: 30px;
+          }
+        }
+      }
+    }
+    .left-2-radar{
+      height: 345px;
+    }
+  }
+}
+.part{
+  .part-title{
+    font-size: 20px;
+    font-family: Microsoft YaHei;
+    font-weight: 600;
+    font-style: italic;
+    color: #FFFFFF;
+    line-height: 33px;
+    position: relative;
+    margin-bottom: 30px;
+    .underline{
+      display: block;
+      position: absolute;
+      left: -6px;
+      top:10px;
+    }
+  }
+}
+.part-l{
+  padding-left: 30px;
 }

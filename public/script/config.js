@@ -4,6 +4,24 @@ if (ENVIRONMENT_MODE == 'dev') {
     // iov:车联网、iot-jiangxi:江西物联网、iot-shandong:山东物联网、数据安全data_security_beijing_unicom
     // let appFlag = "iot-jiangxi"
     let appConfigInfo = {
+        "cq-cvis": {
+            // 默认主页名，用于登录默认页面（江西物联网：iot-jiangxi-overall-situation，车联网：iov-overall-situation)
+            defaultHomePage: '/cvis/security-manage',
+            // 应用标题（影响登录页、标题栏名称）
+            appTitle: '车路协同安全管理平台',
+            // 应用描述
+            appDesc: 'W7 北京 物联网',
+            // 登录页风格类型（login-page-default：默认风格，login-page-type-1：数据安全新版风格）
+            loginPageType: 'login-page-blue-sky',
+            // 预览缩略图
+            previewImg: '/image/app-list/iov.png',
+            // 登录使用的应用Key
+            key: 'caiot-manage-w7',
+            // 地图对应的省份名
+            provinceName: '北京',
+            // 大屏缩放模式(width:宽度撑满,auto:自适应,stretch:撑满屏幕，会变形)
+            bigScrrenScaleMode: 'auto'
+        },
         "w-beijing": {
             // 默认主页名，用于登录默认页面（江西物联网：iot-jiangxi-overall-situation，车联网：iov-overall-situation)
             defaultHomePage: '/overall-situation-bj-w7',
