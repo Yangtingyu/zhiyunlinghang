@@ -1,166 +1,171 @@
 
 <template>
-  <div class="gxb-container">
-    <div class="top-title">
-      <div class="title-name">{{ appTitle }}</div>
-    </div>
-    <div class="main fr">
-      <div class="left">
-        <div class="left-1 part part-l">
-          <div class="name">资产总数</div>
-          <div class="value">
-            <span v-for="(item, index) in terminalCountText" :key="index">{{
-              item
-            }}</span>
-            <div class="footer"></div>
+  <zebra-auto-fullscreen-container
+    scaleMode="auto"
+    center
+    style="background-color: #081738"
+  >
+    <div id="main" class="gxb-container">
+      <div class="top-title">
+        <div class="title-name">{{ appTitle }}</div>
+      </div>
+      <div class="main fr">
+        <div class="left">
+          <div class="left-1 part part-l">
+            <div class="name">资产总数</div>
+            <div class="value">
+              <span v-for="(item, index) in terminalCountText" :key="index">{{
+                item
+              }}</span>
+              <div class="footer"></div>
+            </div>
           </div>
-        </div>
 
-        <div class="left-2 part part-l">
-          <div class="part-title">
-            <span>资产安全态势</span>
-            <img src="/image/cvis/icon_title.png" alt="" class="underline" />
-          </div>
-          <ul class="left-2-list">
-            <li class="item" v-for="(item, index) in left2List" :key="index">
-              <div class="l">
-                <img
-                  :src="`/image/cvis/icon_zcaqts_0${index + 1}.png`"
-                  alt=""
-                />
-              </div>
-              <div class="r">
-                <div class="name">{{ item.name }}</div>
-                <div class="count">{{ formatNumber(item.val) }}</div>
-              </div>
-            </li>
-          </ul>
-          <div class="left-2-radar">
-            <radar :data="left2List" />
-          </div>
-        </div>
-      </div>
-      <div class="center">
-        <div class="marquee">
-          <marquee>
-            <span v-for="(item, index) in marqueeList" :key="index">
-              <span class="text">发现{{ item.ip }}遭受{{ item.lx }}</span>
-              <span class="time">{{ item.time }}</span>
-            </span>
-          </marquee>
-        </div>
-        <div class="map">
-          <div class="map-select">
-            <div
-              @click="mapType = 'china'"
-              class="item"
-              :class="{ active: mapType == 'china' }"
-            >
-              <img src="/image/cvis/type_china.png" alt="" />
-              <span>中国</span>
+          <div class="left-2 part part-l">
+            <div class="part-title">
+              <span>资产安全态势</span>
+              <img src="/image/cvis/icon_title.png" alt="" class="underline" />
             </div>
-            <div
-              @click="mapType = 'world'"
-              class="item"
-              :class="{ active: mapType == 'world' }"
-            >
-              <img src="/image/cvis/type_world.png" alt="" />
-              <span>世界</span>
-            </div>
-          </div>
-          <div class="map_wrap">
-            <d-map :data="mapDataList" :mapType="mapType" />
-          </div>
-        </div>
-      </div>
-      <div class="right">
-        <div class="part">
-          <div class="part-title">
-            <span>网络安全事件类型</span>
-            <img src="/image/cvis/icon_title.png" alt="" class="underline" />
-          </div>
-          <div style="width: 100%; height: 300px">
-            <rose :data="safeEventDataList" />
-          </div>
-        </div>
-        <div class="part">
-          <div class="part-title">
-            <span>数据安全事件类型</span>
-            <img src="/image/cvis/icon_title.png" alt="" class="underline" />
-          </div>
-          <div style="width: 100%; height: 350px">
-            <rotate-pie :data="safeEventDataList" />
-          </div>
-        </div>
-      </div>
-    </div>
-    <div class="bottom">
-      <div class="left-3 part part-l">
-        <div class="part-title">
-          <span>漏洞态势 TOP10</span>
-          <img src="/image/cvis/icon_title.png" alt="" class="underline" />
-        </div>
-        <div class="left3List">
-          <div class="hd">
-            <div class="td">排名</div>
-            <div class="td">漏洞名称</div>
-            <div class="td">单位数</div>
-          </div>
-          <div class="bd">
-            <div v-for="(item, index) in left3List" :key="item.name" class="tr">
-              <div class="td">{{ ("0" + (index + 1)).substr(-2) }}</div>
-              <div class="td">{{ item.name }}</div>
-              <div class="td">{{ formatNumber(item.val) }}</div>
+            <ul class="left-2-list">
+              <li class="item" v-for="(item, index) in left2List" :key="index">
+                <div class="l">
+                  <img
+                    :src="`/image/cvis/icon_zcaqts_0${index + 1}.png`"
+                    alt=""
+                  />
+                </div>
+                <div class="r">
+                  <div class="name">{{ item.name }}</div>
+                  <div class="count">{{ formatNumber(item.val) }}</div>
+                </div>
+              </li>
+            </ul>
+            <div class="left-2-radar">
+              <radar :data="left2List" />
             </div>
           </div>
         </div>
-      </div>
-      <div class="safe_trend part">
-        <div class="part-title">
-          <span>安全趋势</span>
-          <img src="/image/cvis/icon_title.png" alt="" class="underline" />
-        </div>
-        <trend :data="trendDataList" />
-      </div>
-      <div class="part">
-        <div class="part-title">
-          <span>安全事件 TOP10</span>
-          <img src="/image/cvis/icon_title.png" alt="" class="underline" />
-        </div>
-        <div class="right3List">
-          <div class="hd">
-            <div class="td">业务系统</div>
-            <div class="td">业务IP</div>
-            <div class="td">攻击IP</div>
-            <div class="td">事件类型</div>
-            <div class="td">告警级别</div>
+        <div class="center">
+          <div class="marquee">
+            <marquee>
+              <span v-for="(item, index) in marqueeList" :key="index">
+                <span class="text">发现{{ item.ip }}遭受{{ item.lx }}</span>
+                <span class="time">{{ item.time }}</span>
+              </span>
+            </marquee>
           </div>
-          <div class="bd">
-            <div
-              v-for="(item, index) in safeEventDetailList"
-              :key="index"
-              class="tr"
-            >
-              <div class="td">{{ item.zcmc }}</div>
-              <div class="td">{{ item.assetip }}</div>
-              <div class="td">{{ item.gjip }}</div>
-              <div class="td">{{ item.lx }}</div>
+          <div class="map">
+            <div class="map-select">
               <div
-                class="td"
-                :class="{
-                  hight: item.level == '高',
-                  mediumn: item.level == '中',
-                  low: item.level == '低',
-                }"
+                @click="mapType = 'china'"
+                class="item"
+                :class="{ active: mapType == 'china' }"
               >
-                {{ item.level }}
+                <img src="/image/cvis/type_china.png" alt="" />
+                <span>中国</span>
               </div>
+              <div
+                @click="mapType = 'world'"
+                class="item"
+                :class="{ active: mapType == 'world' }"
+              >
+                <img src="/image/cvis/type_world.png" alt="" />
+                <span>世界</span>
+              </div>
+            </div>
+            <div class="map_wrap">
+              <d-map :data="mapDataList" :mapType="mapType" />
+            </div>
+          </div>
+        </div>
+        <div class="right">
+          <div class="part">
+            <div class="part-title">
+              <span>网络安全事件类型</span>
+              <img src="/image/cvis/icon_title.png" alt="" class="underline" />
+            </div>
+            <div style="width: 100%; height: 300px">
+              <rose :data="safeEventDataList" />
+            </div>
+          </div>
+          <div class="part">
+            <div class="part-title">
+              <span>数据安全事件类型</span>
+              <img src="/image/cvis/icon_title.png" alt="" class="underline" />
+            </div>
+            <div style="width: 100%; height: 350px">
+              <rotate-pie :data="safeEventDataList" />
             </div>
           </div>
         </div>
       </div>
+      <div class="bottom">
+        <div class="left-3 part part-l">
+          <div class="part-title">
+            <span>漏洞态势 TOP10</span>
+            <img src="/image/cvis/icon_title.png" alt="" class="underline" />
+          </div>
+          <div class="left3List">
+            <div class="hd">
+              <div class="td">排名</div>
+              <div class="td">漏洞名称</div>
+              <div class="td">单位数</div>
+            </div>
+            <div class="bd">
+              <div
+                v-for="(item, index) in left3List"
+                :key="item.name"
+                class="tr"
+              >
+                <div class="td">{{ ("0" + (index + 1)).substr(-2) }}</div>
+                <div class="td">{{ item.name }}</div>
+                <div class="td">{{ formatNumber(item.val) }}</div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="safe_trend part">
+          <div class="part-title">
+            <span>安全趋势</span>
+            <img src="/image/cvis/icon_title.png" alt="" class="underline" />
+          </div>
+          <trend :data="trendDataList" />
+        </div>
+        <div class="part">
+          <div class="part-title">
+            <span>安全事件</span>
+            <img src="/image/cvis/icon_title.png" alt="" class="underline" />
+          </div>
+          <div class="right3List">
+            <div class="hd">
+              <div class="td">业务系统</div>
+              <div class="td">业务IP</div>
+              <div class="td">攻击IP</div>
+              <div class="td">事件类型</div>
+            </div>
+            <vue-seamless-scroll
+              :data="safeEventDetailList"
+              class="seamless-warp"
+              style="height: 200px; overflow: hidden"
+            >
+              <div class="bd">
+                <div
+                  v-for="(item, index) in safeEventDetailList"
+                  :key="index"
+                  class="tr"
+                >
+                  <div class="td">{{ item.zcmc }}</div>
+                  <div class="td">{{ item.assetip }}</div>
+                  <div class="td">{{ item.gjip }}</div>
+                  <div class="td">{{ item.lx }}</div>
+                </div>
+              </div>
+            </vue-seamless-scroll>
+          </div>
+        </div>
+      </div>
     </div>
-  </div>
+  </zebra-auto-fullscreen-container>
 </template>
 
 <script>
@@ -173,9 +178,11 @@ import Trend from "../components/trend.vue";
 import Rose from "../components/rose.vue";
 import RotatePie from "../components/rotate-pie.vue";
 import Mock from "./mock";
+import vueSeamlessScroll from "vue-seamless-scroll";
+
 export default {
   name: "index",
-  components: { Radar, DMap, Trend, Rose, RotatePie },
+  components: { Radar, DMap, Trend, Rose, RotatePie, vueSeamlessScroll },
   data() {
     return {
       appTitle: window.VUE_CONFIG.appTitle,
@@ -205,19 +212,71 @@ export default {
   },
   created() {
     this.init();
+    setInterval(() => {
+      this.init(true);
+      console.log("自动随机增加数值");
+    }, 1000 * 6);
+    setInterval(() => {
+      this.mapType = this.mapType == "china" ? "world" : "china";
+    }, 1000 * 60);
+
+    window.onresize = () => {
+      this.adaptation();
+    };
   },
   methods: {
-    init() {
+    rndIncrease() {
+      return Math.ceil(Math.random() * 100);
+    },
+    handleAutoIncease(data) {
+      return data.map((item) => ({
+        ...item,
+        val: item.val + this.rndIncrease(),
+      }));
+    },
+    adaptation() {
+      var w = document.body.clientWidth;
+      var h = document.body.clientHeight;
+      var nw = 1920,
+        nh = 1080;
+      var left, top, scale;
+      if (w / h > nw / nh) {
+        scale = h / nh;
+        top = 0;
+        left = (w - nw * scale) / 2;
+      } else {
+        scale = w / nw;
+        left = 0;
+        top = (h - nh * scale) / 2;
+      }
+      document
+        .getElementById("main")
+        .setAttribute(
+          "style",
+          "transform: scale(" +
+            scale +
+            ");left:" +
+            left +
+            "px;top:" +
+            top +
+            "px;"
+        );
+      this.scale = scale;
+    },
+    init(auto) {
       this.getData("zcxx").then((data) => {
-        let num = data.find((item) => item.name === "资产总数").val;
+        let _data = auto ? this.handleAutoIncease(data) : data;
+        let num = _data.find((item) => item.name === "资产总数").val;
         this.scrollNum(num, "assetsCount");
+        // this.assetsCount = num;
 
         // 资产安全态势
-        this.left2List = data.filter((item) => item.name !== "资产总数");
+        this.left2List = _data.filter((item) => item.name !== "资产总数");
       });
 
       this.getData("ldts").then((data) => {
-        this.left3List = data;
+        let _data = auto ? this.handleAutoIncease(data) : data;
+        this.left3List = _data;
       });
 
       this.getData("gdbb").then((data) => {
@@ -229,15 +288,20 @@ export default {
       });
 
       this.getData("aqqs").then((data) => {
-        this.trendDataList = data;
+        let _data = auto ? this.handleAutoIncease(data) : data;
+        this.trendDataList = _data;
       });
 
       this.getData("aqsjlxtj").then((data) => {
-        this.safeEventDataList = data.slice(0, 6);
+        let _data = auto ? this.handleAutoIncease(data) : data;
+
+        this.safeEventDataList = _data
+          .sort(() => Math.random() - 0.5)
+          .slice(0, 6);
       });
 
       this.getData("aqsjxq").then((data) => {
-        this.safeEventDetailList = data.slice(0, 5);
+        this.safeEventDetailList = data;
       });
     },
     /**

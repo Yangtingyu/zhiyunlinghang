@@ -143,7 +143,7 @@
   }
 }
 .center {
-  width: 1200px;
+  flex: 1;
   position: relative;
   .marquee {
     width: 549px;
@@ -210,9 +210,9 @@
     }
 
     .map_wrap {
-      width: 1000px;
+      width: 100%;
       height: 800px;
-      margin: -100px auto 0;
+      margin-top: -100px;
     }
   }
 }
@@ -360,7 +360,7 @@
         .td {
           flex: 1;
           text-align: center;
-          font-size: 12px;
+          font-size: 14px;
           &:first-child {
             font-size: 14px;
             font-weight: 400;
@@ -382,51 +382,6 @@
             font-weight: 400;
             color: #31ddff;
             line-height: 33px;
-          }
-          &:last-child {
-            position: relative;
-            width: 52px;
-            height: 28px;
-            background: rgba(0, 145, 223, 0.2);
-            border: 1px solid #31ddff;
-            text-indent: 10px;
-
-            font-size: 14px;
-            font-weight: 400;
-            color: #f05045;
-            line-height: 28px;
-
-            &.high {
-              color: #f05045;
-              &::before {
-                border-color: transparent transparent transparent #f05045;
-              }
-            }
-            &.mediumn {
-              color: #f8b551;
-              &::before {
-                border-color: transparent transparent transparent #f8b551;
-              }
-            }
-            &.low {
-              color: #2a7fff;
-              &::before {
-                border-color: transparent transparent transparent #2a7fff;
-              }
-            }
-
-            &::before {
-              position: absolute;
-              left: 30%;
-              top: 50%;
-              margin-top: -5px;
-              content: "";
-              width: 0;
-              height: 0;
-              border-style: solid;
-              border-width: 5px 0 5px 10px;
-              border-color: transparent transparent transparent #f05045;
-            }
           }
         }
       }

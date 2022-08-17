@@ -17,15 +17,19 @@ export default {
   computed: {
     chartOption() {
       return {
+        grid: {
+          top: 0,
+          left: 0,
+        },
         legend: {
           show: true,
-          bottom: "0",
+          left: 0,
+          top: 0,
+          bottom: 0,
+
           textStyle: {
             color: "#fff",
           },
-        },
-        grid: {
-          y: -100,
         },
         tooltip: {
           show: true,
@@ -38,8 +42,8 @@ export default {
               type: "image",
               style: {
                 image: "https://oss.xiudo.cn/uPic/circle_pie_bg.png",
-                width: 200,
-                height: 200,
+                width: 250,
+                height: 250,
               },
               left: "center",
               top: "center",

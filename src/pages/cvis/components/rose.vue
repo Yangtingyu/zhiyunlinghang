@@ -19,7 +19,6 @@ export default {
       return {
         grid: {
           left: "5%",
-          right: "20%",
           top: "10%",
           bottom: 0,
           containLabel: true,
@@ -36,14 +35,15 @@ export default {
             center: ["50%", "50%"],
             roseType: "area",
             label: {
-              formatter: "{b}\n{d}% | {c}",
+              formatter: "{name|{b}}\n{d}% | {c}",
               textStyle: {
-                fontSize: 10,
-                color: "#fff",
+                fontSize: 14,
               },
               rich: {
-                b: {
-                  color: "#2A7FFF",
+                name: {
+                  fontSize: 14,
+                  height: 20,
+                  color: "#fff",
                 },
               },
             },
