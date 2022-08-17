@@ -1,9 +1,4 @@
-<!--/**
- * @name: index
- * @Author: xiao jun
- * @Date: 2022/8/8
- * @Description:
- */-->
+
 <template>
   <div class="gxb-container">
     <div class="top-title">
@@ -44,31 +39,6 @@
             <radar :data="left2List" />
           </div>
         </div>
-
-        <div class="left-3 part part-l">
-          <div class="part-title">
-            <span>漏洞态势 TOP10</span>
-            <img src="/image/cvis/icon_title.png" alt="" class="underline" />
-          </div>
-          <div class="left3List">
-            <div class="hd">
-              <div class="td">排名</div>
-              <div class="td">漏洞名称</div>
-              <div class="td">单位数</div>
-            </div>
-            <div class="bd">
-              <div
-                v-for="(item, index) in left3List"
-                :key="item.name"
-                class="tr"
-              >
-                <div class="td">{{ ("0" + (index + 1)).substr(-2) }}</div>
-                <div class="td">{{ item.name }}</div>
-                <div class="td">{{ formatNumber(item.val) }}</div>
-              </div>
-            </div>
-          </div>
-        </div>
       </div>
       <div class="center">
         <div class="marquee">
@@ -102,16 +72,93 @@
             <d-map :data="mapDataList" :mapType="mapType" />
           </div>
         </div>
-        <div class="safe_trend part">
-          <!-- <div class="part-title">
-              <span>安全趋势</span>
-              <img src="/image/cvis/icon_title.png" alt="" class="underline" />
-            </div> -->
-          <trend :data="trendDataList" />
+      </div>
+      <div class="right">
+        <div class="part">
+          <div class="part-title">
+            <span>网络安全事件类型</span>
+            <img src="/image/cvis/icon_title.png" alt="" class="underline" />
+          </div>
+          <div style="width: 100%; height: 300px">
+            <rose :data="safeEventDataList" />
+          </div>
+        </div>
+        <div class="part">
+          <div class="part-title">
+            <span>数据安全事件类型</span>
+            <img src="/image/cvis/icon_title.png" alt="" class="underline" />
+          </div>
+          <div style="width: 100%; height: 350px">
+            <rotate-pie :data="safeEventDataList" />
+          </div>
         </div>
       </div>
-      <div class="right"></div>
-      <div class="bottom"></div>
+    </div>
+    <div class="bottom">
+      <div class="left-3 part part-l">
+        <div class="part-title">
+          <span>漏洞态势 TOP10</span>
+          <img src="/image/cvis/icon_title.png" alt="" class="underline" />
+        </div>
+        <div class="left3List">
+          <div class="hd">
+            <div class="td">排名</div>
+            <div class="td">漏洞名称</div>
+            <div class="td">单位数</div>
+          </div>
+          <div class="bd">
+            <div v-for="(item, index) in left3List" :key="item.name" class="tr">
+              <div class="td">{{ ("0" + (index + 1)).substr(-2) }}</div>
+              <div class="td">{{ item.name }}</div>
+              <div class="td">{{ formatNumber(item.val) }}</div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="safe_trend part">
+        <div class="part-title">
+          <span>安全趋势</span>
+          <img src="/image/cvis/icon_title.png" alt="" class="underline" />
+        </div>
+        <trend :data="trendDataList" />
+      </div>
+      <div class="part">
+        <div class="part-title">
+          <span>安全事件 TOP10</span>
+          <img src="/image/cvis/icon_title.png" alt="" class="underline" />
+        </div>
+        <div class="right3List">
+          <div class="hd">
+            <div class="td">业务系统</div>
+            <div class="td">业务IP</div>
+            <div class="td">攻击IP</div>
+            <div class="td">事件类型</div>
+            <div class="td">告警级别</div>
+          </div>
+          <div class="bd">
+            <div
+              v-for="(item, index) in safeEventDetailList"
+              :key="index"
+              class="tr"
+            >
+              <div class="td">{{ item.zcmc }}</div>
+              <div class="td">{{ item.assetip }}</div>
+              <div class="td">{{ item.gjip }}</div>
+              <div class="td">{{ item.lx }}</div>
+              <div
+                class="td"
+                :class="{
+                  hight: item.level == '高',
+                  mediumn: item.level == '中',
+                  low: item.level == '低',
+                }"
+              >
+                {{ item.level }}
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
   </div>
 </template>
@@ -123,10 +170,12 @@ import { formatNumber } from "@/libs/commonUtil.js";
 import Radar from "../components/radar.vue";
 import DMap from "../components/map.vue";
 import Trend from "../components/trend.vue";
+import Rose from "../components/rose.vue";
+import RotatePie from "../components/rotate-pie.vue";
 import Mock from "./mock";
 export default {
   name: "index",
-  components: { Radar, DMap, Trend },
+  components: { Radar, DMap, Trend, Rose, RotatePie },
   data() {
     return {
       appTitle: window.VUE_CONFIG.appTitle,
@@ -139,6 +188,8 @@ export default {
       mapDataList: [],
       mapType: "china",
       trendDataList: [],
+      safeEventDataList: [],
+      safeEventDetailList: [],
     };
   },
   computed: {
@@ -179,6 +230,14 @@ export default {
 
       this.getData("aqqs").then((data) => {
         this.trendDataList = data;
+      });
+
+      this.getData("aqsjlxtj").then((data) => {
+        this.safeEventDataList = data.slice(0, 6);
+      });
+
+      this.getData("aqsjxq").then((data) => {
+        this.safeEventDetailList = data.slice(0, 5);
       });
     },
     /**

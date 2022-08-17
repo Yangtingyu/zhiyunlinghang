@@ -141,8 +141,91 @@
       }
     }
   }
+}
+.center {
+  width: 1200px;
+  position: relative;
+  .marquee {
+    width: 549px;
+    height: 38px;
+    line-height: 38px;
+    padding-left: 80px;
+    margin: 10px auto;
+    background: url("/image/cvis/marquee_bg.png") no-repeat;
+    white-space: nowrap;
+
+    .text {
+      font-size: 16px;
+      font-weight: 400;
+      color: #ffffff;
+    }
+    .time {
+      font-size: 14px;
+      font-weight: 400;
+      color: #f8b551;
+      margin-left: 20px;
+      margin-right: 60px;
+    }
+  }
+
+  .map {
+    .map-select {
+      position: relative;
+      z-index: 9;
+      margin-top: 30px;
+      display: flex;
+      justify-content: center;
+      .item {
+        width: 133px;
+        height: 40px;
+        margin-right: 20px;
+        background: rgba(0, 35, 125, 0.5);
+        border: 1px solid #34bdff;
+        opacity: 0.5;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        cursor: pointer;
+
+        &.active {
+          background: rgba(42, 127, 255, 0.5);
+          border: 1px solid #34bdff;
+          opacity: 0.8;
+          span {
+            color: #fefefe;
+          }
+        }
+        img {
+          height: 30px;
+          margin-right: 10px;
+        }
+        span {
+          font-size: 16px;
+          font-weight: 400;
+          color: #fefefe;
+          line-height: 40px;
+          opacity: 0.5;
+        }
+      }
+    }
+
+    .map_wrap {
+      width: 1000px;
+      height: 800px;
+      margin: -100px auto 0;
+    }
+  }
+}
+
+.bottom {
+  width: 100%;
+  position: absolute;
+  left: 0;
+  bottom: 20px;
+  display: flex;
 
   .left-3 {
+    width: 450px;
     .left3List {
       padding: 0 10px;
       .hd {
@@ -238,87 +321,122 @@
       }
     }
   }
-}
-.center {
-  width: 1200px;
-  position: relative;
-  .marquee {
-    width: 549px;
-    height: 38px;
-    line-height: 38px;
-    padding-left: 80px;
-    margin: 10px auto;
-    background: url("/image/cvis/marquee_bg.png") no-repeat;
-    white-space: nowrap;
 
-    .text {
-      font-size: 16px;
-      font-weight: 400;
-      color: #ffffff;
-    }
-    .time {
-      font-size: 14px;
-      font-weight: 400;
-      color: #f8b551;
-      margin-left: 20px;
-      margin-right: 60px;
-    }
+  .safe_trend {
+    flex: 1;
   }
 
-  .map {
-    .map-select {
-      position: relative;
-      z-index: 9;
-      margin-top: 30px;
-      display: flex;
-      justify-content: center;
-      .item {
-        width: 133px;
-        height: 40px;
-        margin-right: 20px;
-        background: rgba(0, 35, 125, 0.5);
-        border: 1px solid #34bdff;
-        opacity: 0.5;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        cursor: pointer;
+  .right3List {
+    padding: 0 10px;
+    width: 475px;
 
-        &.active {
-          background: rgba(42, 127, 255, 0.5);
-          border: 1px solid #34bdff;
-          opacity: 0.8;
-          span {
-            color: #fefefe;
+    .hd {
+      display: flex;
+      .td {
+        flex: 1;
+        text-align: center;
+        font-size: 14px;
+        font-weight: 400;
+        color: #feffff;
+        line-height: 33px;
+      }
+    }
+    .bd {
+      .tr {
+        display: flex;
+        position: relative;
+        margin-top: 5px;
+
+        &::before {
+          content: "";
+          position: absolute;
+          left: 0;
+          bottom: 0;
+          width: 1px;
+          height: 32px;
+          background: #2a7fff;
+        }
+
+        .td {
+          flex: 1;
+          text-align: center;
+          font-size: 12px;
+          &:first-child {
+            font-size: 14px;
+            font-weight: 400;
+            color: #feffff;
+            line-height: 33px;
+            opacity: 0.6;
           }
-        }
-        img {
-          height: 30px;
-          margin-right: 10px;
-        }
-        span {
-          font-size: 16px;
-          font-weight: 400;
-          color: #fefefe;
-          line-height: 40px;
-          opacity: 0.5;
+          &:nth-child(2) {
+            font-weight: 400;
+            color: #ffffff;
+            line-height: 33px;
+          }
+          &:nth-child(3) {
+            font-weight: 400;
+            color: #f05045;
+            line-height: 33px;
+          }
+          &:nth-child(4) {
+            font-weight: 400;
+            color: #31ddff;
+            line-height: 33px;
+          }
+          &:last-child {
+            position: relative;
+            width: 52px;
+            height: 28px;
+            background: rgba(0, 145, 223, 0.2);
+            border: 1px solid #31ddff;
+            text-indent: 10px;
+
+            font-size: 14px;
+            font-weight: 400;
+            color: #f05045;
+            line-height: 28px;
+
+            &.high {
+              color: #f05045;
+              &::before {
+                border-color: transparent transparent transparent #f05045;
+              }
+            }
+            &.mediumn {
+              color: #f8b551;
+              &::before {
+                border-color: transparent transparent transparent #f8b551;
+              }
+            }
+            &.low {
+              color: #2a7fff;
+              &::before {
+                border-color: transparent transparent transparent #2a7fff;
+              }
+            }
+
+            &::before {
+              position: absolute;
+              left: 30%;
+              top: 50%;
+              margin-top: -5px;
+              content: "";
+              width: 0;
+              height: 0;
+              border-style: solid;
+              border-width: 5px 0 5px 10px;
+              border-color: transparent transparent transparent #f05045;
+            }
+          }
         }
       }
     }
-
-    .map_wrap {
-      width: 1000px;
-      height: 800px;
-      margin: -100px auto 0;
-    }
   }
+}
 
-  .safe_trend {
-    position: absolute;
-    left: 0;
-    bottom: 0;
-    width: 100%;
-  }
+.right {
+  width: 450px;
+  position: relative;
 }
 .part {
   .part-title {

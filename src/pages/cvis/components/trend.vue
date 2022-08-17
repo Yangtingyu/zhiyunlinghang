@@ -24,10 +24,10 @@ export default {
       var fontColor = "#30eee9";
       return {
         grid: {
-          left: "5%",
-          right: "10%",
+          left: 0,
+          right: 0,
           top: "20%",
-          bottom: "15%",
+          bottom: 0,
           containLabel: true,
         },
         tooltip: {
@@ -36,8 +36,8 @@ export default {
         },
         legend: {
           show: true,
-          x: "center",
-          y: "35",
+          x: "right",
+          y: "25",
           icon: "stack",
           itemWidth: 10,
           itemHeight: 10,
