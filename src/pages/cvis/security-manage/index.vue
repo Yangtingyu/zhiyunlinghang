@@ -226,7 +226,7 @@ export default {
   },
   methods: {
     rndIncrease() {
-      return Math.ceil(Math.random() * 100);
+      return Math.ceil(Math.random() * 30);
     },
     handleAutoIncease(data) {
       return data.map((item) => ({

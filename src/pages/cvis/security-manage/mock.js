@@ -130,13 +130,13 @@ export default {
   ],
   //资产信息
   zcxx: [
-    { name: "资产总数", val: 24562 },
-    { name: "主机", val: 4768 },
-    { name: "网络设备", val: 7481 },
-    { name: "安全设备", val: 782 },
-    { name: "应用系统", val: 9824 },
-    { name: "数据库", val: 561 },
-    { name: "中间件", val: 1146 },
+    { name: "资产总数", val: 562 },
+    { name: "主机", val: 68 },
+    { name: "网络设备", val: 41 },
+    { name: "安全设备", val: 72 },
+    { name: "应用系统", val: 24 },
+    { name: "数据库", val: 51 },
+    { name: "中间件", val: 46 },
   ],
   //漏洞态势
   ldts: [

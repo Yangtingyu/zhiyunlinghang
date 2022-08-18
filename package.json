@@ -9,7 +9,8 @@
     "build": "vue-cli-service build",
     "lint": "vue-cli-service lint --fix",
     "test:unit": "vue-cli-service test:unit",
-    "json:server": "json-server --static ./public/jsonServer/public --watch public/jsonServer/db.json"
+    "json:server": "json-server --static ./public/jsonServer/public --watch public/jsonServer/db.json",
+    "zip": "npm run build && zip -r cvis.zip dist"
   },
   "dependencies": {
     "@form-create/element-ui": "^2.5.12",
