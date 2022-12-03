@@ -1,0 +1,92 @@
+[
+  {
+    "id": "c049bda35a02483fb103e326a02c0aa8",
+    "dicId": "eaf21afe6e814d67b5b08437b855fc99",
+    "pId": "-9",
+    "itemValue": "101",
+    "itemName": "敏感数据明文存储或传输 ",
+    "itemSort": 101,
+    "itemLevel": 1,
+    "isvalid": 1
+  },
+  {
+    "id": "903d9e3fc6e44e48b9557d59684e98a8",
+    "dicId": "eaf21afe6e814d67b5b08437b855fc99",
+    "pId": "-9",
+    "itemValue": "102",
+    "itemName": "未授权调用数据共享接口 ",
+    "itemSort": 102,
+    "itemLevel": 1,
+    "isvalid": 1
+  },
+  {
+    "id": "9b9e6100eacf4876a70f0132fd6313dd",
+    "dicId": "eaf21afe6e814d67b5b08437b855fc99",
+    "pId": "-9",
+    "itemValue": "103",
+    "itemName": "数据泄露",
+    "itemSort": 103,
+    "itemLevel": 1,
+    "isvalid": 1
+  },
+  {
+    "id": "14b446a5511747859b48720467d7ba83",
+    "dicId": "eaf21afe6e814d67b5b08437b855fc99",
+    "pId": "-9",
+    "itemValue": "104",
+    "itemName": "数据完整性非法篡改 ",
+    "itemSort": 104,
+    "itemLevel": 1,
+    "isvalid": 1
+  },
+  {
+    "id": "ebac246f60a54cb485bb6e586c0e24e2",
+    "dicId": "eaf21afe6e814d67b5b08437b855fc99",
+    "pId": "-9",
+    "itemValue": "105",
+    "itemName": "数据操作行为基线偏离",
+    "itemSort": 105,
+    "itemLevel": 1,
+    "isvalid": 1
+  },
+  {
+    "id": "fc132af70df14776ba9596e36372273c",
+    "dicId": "eaf21afe6e814d67b5b08437b855fc99",
+    "pId": "-9",
+    "itemValue": "106",
+    "itemName": "敏感数据未纳入金库管控",
+    "itemSort": 106,
+    "itemLevel": 1,
+    "isvalid": 1
+  },
+  {
+    "id": "d36511beefeb47b2ad9e0f5a0ae4e7bf",
+    "dicId": "eaf21afe6e814d67b5b08437b855fc99",
+    "pId": "-9",
+    "itemValue": "107",
+    "itemName": "数据共享接口未经备案",
+    "itemSort": 107,
+    "itemLevel": 1,
+    "isvalid": 1
+  },
+  {
+    "id": "6ff8295ec7ae479387fbe9002f485d0a",
+    "dicId": "eaf21afe6e814d67b5b08437b855fc99",
+    "pId": "-9",
+    "itemValue": "108",
+    "itemName": "数据所在资产脆弱性事件",
+    "itemSort": 108,
+    "itemLevel": 1,
+    "isvalid": 1
+  },
+  {
+    "id": "1e50497c436b4218920578003d1719d2",
+    "dicId": "eaf21afe6e814d67b5b08437b855fc99",
+    "pId": "-9",
+    "itemValue": "999",
+    "itemName": "其他",
+    "itemSort": 999,
+    "itemLevel": 1,
+    "isvalid": 1
+  }
+]

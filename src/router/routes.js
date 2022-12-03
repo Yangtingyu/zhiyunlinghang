@@ -43,28 +43,27 @@ const frameIn = [
             {
                 path: '/page3',
                 name: 'page3',
-                component: () => import('@/pages/cvis/pages/page3'),
+                component: () => import('@/pages/cvis/pages/network'),
                 meta: { meta, title: '网络安全事件类型' }
             },
             {
                 path: '/page4',
                 name: 'page4',
-                component: () => import('@/pages/cvis/pages/page1'),
+                component: () => import('@/pages/cvis/pages/data'),
                 meta: { meta, title: '数据安全事件类型' }
             },
             {
                 path: '/page5',
                 name: 'page5',
-                component: () => import('@/pages/cvis/pages/page1'),
+                component: () => import('@/pages/cvis/pages/event'),
                 meta: { meta, title: '安全事件' }
             },
-            {
-                path: '/page6',
-                name: 'page6',
-                component: () => import('@/pages/cvis/pages/page1'),
-                meta: { meta, title: '攻击地图' }
-            },
-
+            // {
+            //     path: '/page6',
+            //     name: 'page6',
+            //     component: () => import('@/pages/cvis/pages/page1'),
+            //     meta: { meta, title: '攻击地图' }
+            // },
         ]
     },
 

@@ -1,7 +1,6 @@
 <template>
   <d2-container>
     <div style="padding:20px">
-
       <div class="main-content">
         <div data-v-581b0279="" class="threat-analysis">
 
@@ -199,15 +198,17 @@
         </div>
       </div>
     </div>
+    <common-list typeName="network" />
   </d2-container>
 </template>
 
 <script>
 import * as echarts from 'echarts'
 import SearchForm from './searchForm.vue'
+import CommonList from './commonList.vue'
 export default {
-  name: 'page1',
   components: {
+    CommonList,
     SearchForm
   },
   data () {
@@ -769,7 +770,18 @@ export default {
             axisLine: {
               show: false
             },
-            axisLabel: {},
+            axisLabel: {
+              formatter: function (params, index) {
+                // 超出省略
+                params = params.toString()
+                var maxlength = 14
+                if (params.length > maxlength) {
+                  return params.substring(0, maxlength - 1) + '...'
+                } else {
+                  return params
+                }
+              }
+            },
             data: [
               'SSH协议登录行为检测',
               '[成功事件]Mysql数据库登录成功',

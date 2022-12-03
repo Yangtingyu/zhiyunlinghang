@@ -70,11 +70,11 @@ export const menuAside = [
         title: "安全事件",
         icon: "cube"
     },
-    {
-        path: '/page6',
-        title: "攻击地图",
-        icon: "cube"
-    },
+    // {
+    //     path: '/page6',
+    //     title: "攻击地图",
+    //     icon: "cube"
+    // },
 ]
 
 /**
