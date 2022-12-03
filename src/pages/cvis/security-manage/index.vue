@@ -1,10 +1,6 @@
 
 <template>
-  <zebra-auto-fullscreen-container
-    scaleMode="auto"
-    center
-    style="background-color: #081738"
-  >
+  <zebra-auto-fullscreen-container scaleMode="auto" center style="background-color: #081738">
     <div id="main" class="gxb-container">
       <div class="top-title">
         <div class="title-name">{{ appTitle }}</div>
@@ -23,16 +19,13 @@
 
           <div class="left-2 part part-l">
             <div class="part-title">
-              <span>资产安全态势</span>
+              <span class="cursor" @click="$router.push({name: 'page1'})">资产安全态势</span>
               <img src="/image/cvis/icon_title.png" alt="" class="underline" />
             </div>
             <ul class="left-2-list">
               <li class="item" v-for="(item, index) in left2List" :key="index">
                 <div class="l">
-                  <img
-                    :src="`/image/cvis/icon_zcaqts_0${index + 1}.png`"
-                    alt=""
-                  />
+                  <img :src="`/image/cvis/icon_zcaqts_0${index + 1}.png`" alt="" />
                 </div>
                 <div class="r">
                   <div class="name">{{ item.name }}</div>
@@ -56,19 +49,11 @@
           </div>
           <div class="map">
             <div class="map-select">
-              <div
-                @click="mapType = 'china'"
-                class="item"
-                :class="{ active: mapType == 'china' }"
-              >
+              <div @click="mapType = 'china'" class="item" :class="{ active: mapType == 'china' }">
                 <img src="/image/cvis/type_china.png" alt="" />
                 <span>中国</span>
               </div>
-              <div
-                @click="mapType = 'world'"
-                class="item"
-                :class="{ active: mapType == 'world' }"
-              >
+              <div @click="mapType = 'world'" class="item" :class="{ active: mapType == 'world' }">
                 <img src="/image/cvis/type_world.png" alt="" />
                 <span>世界</span>
               </div>
@@ -81,7 +66,7 @@
         <div class="right">
           <div class="part">
             <div class="part-title">
-              <span>网络安全事件类型</span>
+              <span class="cursor" @click="$router.push({name: 'page3'})">网络安全事件类型</span>
               <img src="/image/cvis/icon_title.png" alt="" class="underline" />
             </div>
             <div style="width: 100%; height: 300px">
@@ -90,7 +75,7 @@
           </div>
           <div class="part">
             <div class="part-title">
-              <span>数据安全事件类型</span>
+              <span class="cursor" @click="$router.push({name: 'page4'})">数据安全事件类型</span>
               <img src="/image/cvis/icon_title.png" alt="" class="underline" />
             </div>
             <div style="width: 100%; height: 350px">
@@ -102,7 +87,7 @@
       <div class="bottom">
         <div class="left-3 part part-l">
           <div class="part-title">
-            <span>漏洞态势 TOP10</span>
+            <span class="cursor" @click="$router.push({name: 'page2'})">漏洞态势 TOP10</span>
             <img src="/image/cvis/icon_title.png" alt="" class="underline" />
           </div>
           <div class="left3List">
@@ -112,11 +97,7 @@
               <div class="td">单位数</div>
             </div>
             <div class="bd">
-              <div
-                v-for="(item, index) in left3List"
-                :key="item.name"
-                class="tr"
-              >
+              <div v-for="(item, index) in left3List" :key="item.name" class="tr">
                 <div class="td">{{ ("0" + (index + 1)).substr(-2) }}</div>
                 <div class="td">{{ item.name }}</div>
                 <div class="td">{{ formatNumber(item.val) }}</div>
@@ -133,7 +114,7 @@
         </div>
         <div class="part">
           <div class="part-title">
-            <span>安全事件</span>
+            <span class="cursor" @click="$router.push({name: 'page5'})">安全事件</span>
             <img src="/image/cvis/icon_title.png" alt="" class="underline" />
           </div>
           <div class="right3List">
@@ -143,17 +124,10 @@
               <div class="td">攻击IP</div>
               <div class="td">事件类型</div>
             </div>
-            <vue-seamless-scroll
-              :data="safeEventDetailList"
-              class="seamless-warp"
-              style="height: 200px; overflow: hidden"
-            >
+            <vue-seamless-scroll :data="safeEventDetailList" class="seamless-warp"
+              style="height: 200px; overflow: hidden">
               <div class="bd">
-                <div
-                  v-for="(item, index) in safeEventDetailList"
-                  :key="index"
-                  class="tr"
-                >
+                <div v-for="(item, index) in safeEventDetailList" :key="index" class="tr">
                   <div class="td">{{ item.zcmc }}</div>
                   <div class="td">{{ item.assetip }}</div>
                   <div class="td">{{ item.gjip }}</div>
@@ -169,21 +143,21 @@
 </template>
 
 <script>
-import { toThousands } from "@/utils/base";
-import { customList, commonList } from "@/api";
-import { formatNumber } from "@/libs/commonUtil.js";
-import Radar from "../components/radar.vue";
-import DMap from "../components/map.vue";
-import Trend from "../components/trend.vue";
-import Rose from "../components/rose.vue";
-import RotatePie from "../components/rotate-pie.vue";
-import Mock from "./mock";
-import vueSeamlessScroll from "vue-seamless-scroll";
+import { toThousands } from '@/utils/base'
+import { customList, commonList } from '@/api'
+import { formatNumber } from '@/libs/commonUtil.js'
+import Radar from '../components/radar.vue'
+import DMap from '../components/map.vue'
+import Trend from '../components/trend.vue'
+import Rose from '../components/rose.vue'
+import RotatePie from '../components/rotate-pie.vue'
+import Mock from './mock'
+import vueSeamlessScroll from 'vue-seamless-scroll'
 
 export default {
-  name: "index",
+  name: 'index',
   components: { Radar, DMap, Trend, Rose, RotatePie, vueSeamlessScroll },
-  data() {
+  data () {
     return {
       appTitle: window.VUE_CONFIG.appTitle,
       formatNumber,
@@ -193,116 +167,116 @@ export default {
       left3List: [],
       marqueeList: [],
       mapDataList: [],
-      mapType: "china",
+      mapType: 'china',
       trendDataList: [],
       safeEventDataList: [],
-      safeEventDetailList: [],
-    };
+      safeEventDetailList: []
+    }
   },
   computed: {
     terminalCountText: function () {
       // console.log('terminalCountText computed ~', this.terminalCount)
-      let num = this.assetsCount.toString();
+      let num = this.assetsCount.toString()
       if (num.length > 6) {
-        num = "999999";
+        num = '999999'
       }
-      let numArr = toThousands(num).split("");
-      return numArr;
-    },
+      let numArr = toThousands(num).split('')
+      return numArr
+    }
   },
-  created() {
-    this.init();
+  created () {
+    this.init()
     setInterval(() => {
-      this.init(true);
-      console.log("自动随机增加数值");
-    }, 1000 * 6);
+      this.init(false)
+      console.log('自动随机增加数值')
+    }, 1000 * 6)
     setInterval(() => {
-      this.mapType = this.mapType == "china" ? "world" : "china";
-    }, 1000 * 60);
+      this.mapType = this.mapType == 'china' ? 'world' : 'china'
+    }, 1000 * 60)
 
     window.onresize = () => {
-      this.adaptation();
-    };
+      this.adaptation()
+    }
   },
   methods: {
-    rndIncrease() {
-      return Math.ceil(Math.random() * 30);
+    rndIncrease () {
+      return Math.ceil(Math.random() * 30)
     },
-    handleAutoIncease(data) {
+    handleAutoIncease (data) {
       return data.map((item) => ({
         ...item,
-        val: item.val + this.rndIncrease(),
-      }));
+        val: item.val + this.rndIncrease()
+      }))
     },
-    adaptation() {
-      var w = document.body.clientWidth;
-      var h = document.body.clientHeight;
+    adaptation () {
+      var w = document.body.clientWidth
+      var h = document.body.clientHeight
       var nw = 1920,
-        nh = 1080;
-      var left, top, scale;
+        nh = 1080
+      var left, top, scale
       if (w / h > nw / nh) {
-        scale = h / nh;
-        top = 0;
-        left = (w - nw * scale) / 2;
+        scale = h / nh
+        top = 0
+        left = (w - nw * scale) / 2
       } else {
-        scale = w / nw;
-        left = 0;
-        top = (h - nh * scale) / 2;
+        scale = w / nw
+        left = 0
+        top = (h - nh * scale) / 2
       }
       document
-        .getElementById("main")
+        .getElementById('main')
         .setAttribute(
-          "style",
-          "transform: scale(" +
+          'style',
+          'transform: scale(' +
             scale +
-            ");left:" +
+            ');left:' +
             left +
-            "px;top:" +
+            'px;top:' +
             top +
-            "px;"
-        );
-      this.scale = scale;
+            'px;'
+        )
+      this.scale = scale
     },
-    init(auto) {
-      this.getData("zcxx").then((data) => {
-        let _data = auto ? this.handleAutoIncease(data) : data;
-        let num = _data.find((item) => item.name === "资产总数").val;
-        this.scrollNum(num, "assetsCount");
+    init (auto) {
+      this.getData('zcxx').then((data) => {
+        let _data = auto ? this.handleAutoIncease(data) : data
+        let num = _data.find((item) => item.name === '资产总数').val
+        this.scrollNum(num, 'assetsCount')
         // this.assetsCount = num;
 
         // 资产安全态势
-        this.left2List = _data.filter((item) => item.name !== "资产总数");
-      });
+        this.left2List = _data.filter((item) => item.name !== '资产总数')
+      })
 
-      this.getData("ldts").then((data) => {
-        let _data = auto ? this.handleAutoIncease(data) : data;
-        this.left3List = _data;
-      });
+      this.getData('ldts').then((data) => {
+        let _data = auto ? this.handleAutoIncease(data) : data
+        this.left3List = _data
+      })
 
-      this.getData("gdbb").then((data) => {
-        this.marqueeList = data;
-      });
+      this.getData('gdbb').then((data) => {
+        this.marqueeList = data
+      })
 
-      this.getData("gjmap").then((data) => {
-        this.mapDataList = data;
-      });
+      this.getData('gjmap').then((data) => {
+        this.mapDataList = data
+      })
 
-      this.getData("aqqs").then((data) => {
-        let _data = auto ? this.handleAutoIncease(data) : data;
-        this.trendDataList = _data;
-      });
+      this.getData('aqqs').then((data) => {
+        let _data = auto ? this.handleAutoIncease(data) : data
+        this.trendDataList = _data
+      })
 
-      this.getData("aqsjlxtj").then((data) => {
-        let _data = auto ? this.handleAutoIncease(data) : data;
+      this.getData('aqsjlxtj').then((data) => {
+        let _data = auto ? this.handleAutoIncease(data) : data
 
         this.safeEventDataList = _data
           .sort(() => Math.random() - 0.5)
-          .slice(0, 6);
-      });
+          .slice(0, 6)
+      })
 
-      this.getData("aqsjxq").then((data) => {
-        this.safeEventDetailList = data;
-      });
+      this.getData('aqsjxq').then((data) => {
+        this.safeEventDetailList = data
+      })
     },
     /**
      * 数字滚动
@@ -311,74 +285,81 @@ export default {
      * @param {Number} time 动画时间
      * @return {void}
      * */
-    scrollNum(num, property, time = 1000) {
-      let subtract = num - this[property];
-      let count = time / 50;
-      let add = (subtract / count).toFixed(6) - 0;
+    scrollNum (num, property, time = 1000) {
+      let subtract = num - this[property]
+      let count = time / 50
+      let add = (subtract / count).toFixed(6) - 0
       // console.log(subtract,add)
-      let resultNum = this[property];
+      let resultNum = this[property]
       let timer = setInterval(() => {
-        resultNum += add;
-        this[property] = parseInt(resultNum);
+        resultNum += add
+        this[property] = parseInt(resultNum)
         // console.log(this[property])
-        count--;
+        count--
         if (count === 0) {
-          this[property] = num;
-          clearInterval(timer);
+          this[property] = num
+          clearInterval(timer)
         }
-      }, 50);
+      }, 50)
     },
-    getData(module) {
+    getData (module) {
       let commonParam = {
-        matchCondition: {},
-      };
+        matchCondition: {}
+      }
       let params = {
-        //滚动播报
+        // 滚动播报
         gdbb: commonParam,
-        //攻击地图
+        // 攻击地图
         gjmap: commonParam,
-        //资产信息
+        // 资产信息
         zcxx: commonParam,
-        //漏洞态势
+        // 漏洞态势
         ldts: commonParam,
-        //安全趋势
+        // 安全趋势
         aqqs: commonParam,
-        //安全事件类型统计
+        // 安全事件类型统计
         aqsjlxtj: commonParam,
-        //安全事件详情
-        aqsjxq: commonParam,
-      };
-      let param = { module: module, ...params[module] };
-      console.log("param---", param);
+        // 安全事件详情
+        aqsjxq: commonParam
+      }
+      let param = { module: module, ...params[module] }
+      console.log('param---', param)
       if (this.isMock) {
         return new Promise((resolve) => {
-          resolve(Mock[module]);
-        });
+          resolve(Mock[module])
+        })
       }
-      if (["ztts_clw_sxzc_list"].includes(module)) {
+      if (['ztts_clw_sxzc_list'].includes(module)) {
         return new Promise((resolve, reject) => {
           commonList(param)
             .then((res) => {
-              resolve(res);
+              resolve(res)
             })
             .catch((res) => {
-              reject(res);
-            });
-        });
+              reject(res)
+            })
+        })
       }
       return new Promise((resolve, reject) => {
         customList(param)
           .then((res) => {
-            resolve(res.rows || []);
+            resolve(res.rows || [])
           })
           .catch((res) => {
-            reject(res);
-          });
-      });
-    },
-  },
-};
+            reject(res)
+          })
+      })
+    }
+  }
+}
 </script>
 
 <style src="@/assets/gxb/css/gxb-all.scss" scoped lang="scss"></style>
 <style src="./index.scss" scoped lang="scss"></style>
+<style scoped>
+.cursor {
+  cursor: pointer;
+  position: relative;
+  z-index: 9;
+}
+</style>

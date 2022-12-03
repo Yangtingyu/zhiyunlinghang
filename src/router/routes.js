@@ -6,7 +6,7 @@ import setting from '@/setting.js'
  * 元数据
  * @type {{requiresAuth: boolean}} requiresAuth为true表示需要授权登录后访问
  */
-const meta = {requiresAuth: true}
+const meta = { requiresAuth: true }
 
 /**
  * 自动布局
@@ -20,7 +20,7 @@ const frameIn = [
     {
         path: '/',
         //redirect: {name: 'index'},
-        redirect: {name: 'security-manage'},
+        redirect: { name: 'security-manage' },
         // redirect: {name: 'iov-overall-situation'},
         // redirect: {name: VUE_CONFIG.defaultHomePage},
         // redirect: VUE_CONFIG.defaultHomePage,
@@ -28,25 +28,43 @@ const frameIn = [
         meta,
         component: layout,
         children: [
-
             {
                 path: '/page1',
                 name: 'page1',
-                component: () => import('@/pages/page1'),
-                meta: {meta, title: '页面 1'}
+                component: () => import('@/pages/cvis/pages/page1'),
+                meta: { meta, title: '资产安全态势' }
             },
             {
                 path: '/page2',
                 name: 'page2',
-                component: () => import('@/pages/page2'),
-                meta: {meta, title: '页面 2'}
+                component: () => import('@/pages/cvis/pages/page1'),
+                meta: { meta, title: '漏洞态势TOP10' }
             },
             {
                 path: '/page3',
                 name: 'page3',
-                component: () => import('@/pages/page3'),
-                meta: {meta, title: '页面 3'}
-            }
+                component: () => import('@/pages/cvis/pages/page3'),
+                meta: { meta, title: '网络安全事件类型' }
+            },
+            {
+                path: '/page4',
+                name: 'page4',
+                component: () => import('@/pages/cvis/pages/page1'),
+                meta: { meta, title: '数据安全事件类型' }
+            },
+            {
+                path: '/page5',
+                name: 'page5',
+                component: () => import('@/pages/cvis/pages/page1'),
+                meta: { meta, title: '安全事件' }
+            },
+            {
+                path: '/page6',
+                name: 'page6',
+                component: () => import('@/pages/cvis/pages/page1'),
+                meta: { meta, title: '攻击地图' }
+            },
+
         ]
     },
 
@@ -54,31 +72,31 @@ const frameIn = [
         path: '/gis-demo',
         name: 'gis-demo',
         component: () => import('@/pages/demo/gis-demo/index'),
-        meta: {meta, title: 'GIS测试'}
+        meta: { meta, title: 'GIS测试' }
     },
 
     {
         path: '/demo',
-        redirect: {name: 'demo'},
+        redirect: { name: 'demo' },
         component: layout,
         children: [
             {
                 path: 'demo1',
                 name: 'demo1',
                 component: () => import('@/pages/demo/demo1'),
-                meta: {meta, title: 'DEMO1'}
+                meta: { meta, title: 'DEMO1' }
             },
             {
                 path: 'demo2',
                 name: 'demo2',
                 component: () => import('@/pages/demo/demo2'),
-                meta: {meta, title: 'DEMO2'}
+                meta: { meta, title: 'DEMO2' }
             },
             {
                 path: 'iframe-demo',
                 name: 'iframe-demo',
                 component: () => import('@/pages/demo/iframe-demo'),
-                meta: {meta, title: 'iframe-demo'}
+                meta: { meta, title: 'iframe-demo' }
             }
         ]
     },
@@ -105,7 +123,7 @@ const frameOut = [
     {
         path: '/login',
         name: 'login',
-        redirect: {name: 'map-fight'},
+        redirect: { name: 'map-fight' },
         component: () => import('@/pages/login/smart-switch')
     }
 ]

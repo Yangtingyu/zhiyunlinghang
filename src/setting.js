@@ -13,7 +13,7 @@ export default {
         // 系统key值
         key: VUE_CONFIG.systemInfo.key,
         //新版大屏key
-        keyV6:VUE_CONFIG.systemInfo.keyV6,
+        keyV6: VUE_CONFIG.systemInfo.keyV6,
         // 福建版工业互联网
         keyFuJiaIIOT: VUE_CONFIG.systemInfo.keyFuJiaIIOT,
         // 应用ID，获取字典数据所需的参数
@@ -39,7 +39,7 @@ export default {
         layoutType: 6,
         // 默认主题：black、dark-blue、blue、green、d2等等
         // 更多主题值，详见"src/assets/style/theme/list.js"文件中的name值
-        defaultTheme: 'dream-blue',
+        defaultTheme: 'blue',
         // 是否开启VIP主题（默认关闭）
         isThemeVIP: true,
         // 面包屑

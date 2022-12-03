@@ -1,6 +1,6 @@
 <template>
   <div id="app">
-    <router-view/>
+    <router-view :key="$route.path" />
   </div>
 </template>
 
@@ -13,12 +13,11 @@ export default {
 <style lang="scss">
 @import '@zebra-projects/zebra-ui/src/assets/style/public-class.scss';
 // gxb项目全局样式，容器样式类名：gxb-container，全局样式尽量不要改变
-@import "./assets/gxb/css/gxb-all";
+@import './assets/gxb/css/gxb-all';
 // tailwind样式
 .tailwind {
-  @import "./assets/tailwind/tailwind.scss";
+  @import './assets/tailwind/tailwind.scss';
 }
-
 
 /**
  * element table 组件上使用 show-overflow-tooltip 来让超出列宽的文字隐藏
@@ -27,19 +26,27 @@ export default {
  * 提示弹框改为 el-popover 来实现
  */
 .theme-dark-blue .el-tooltip__popper {
-    display: none;
+  display: none;
 }
 
 .table-popover {
-    max-width: 900px;
+  max-width: 900px;
 }
 
 // element弹窗的滚动条样式美化
-.el-dialog.is-fullscreen, .el-dialog__wrapper{
-  &::-webkit-scrollbar{width: 5px;height: 5px;background: #fbfbfb1f;} /* 滚动条整体部分，可以设置宽度啥的 */
-  &::-webkit-scrollbar-corner{background: transparent;} /* 滚动条整体部分，可以设置宽度啥的 */
-  &::-webkit-scrollbar-thumb{background: #ffffff59;border-radius: 2px;} /* 滚动的滑块 */
+.el-dialog.is-fullscreen,
+.el-dialog__wrapper {
+  &::-webkit-scrollbar {
+    width: 5px;
+    height: 5px;
+    background: #fbfbfb1f;
+  } /* 滚动条整体部分，可以设置宽度啥的 */
+  &::-webkit-scrollbar-corner {
+    background: transparent;
+  } /* 滚动条整体部分，可以设置宽度啥的 */
+  &::-webkit-scrollbar-thumb {
+    background: #ffffff59;
+    border-radius: 2px;
+  } /* 滚动的滑块 */
 }
-
-
 </style>

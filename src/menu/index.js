@@ -7,7 +7,7 @@ import demo from './modules/demo'
 // 顶栏菜单
 export const menuHeader = [
     {
-        path: '/index',
+        path: '/cvis/security-manage',
         title: '主页',
         // 可使用font-awesome提供的图标
         icon: 'home',
@@ -30,21 +30,51 @@ export const menuHeader = [
         icon: 'cube'
     },*/
     //demoComponents,
-    {
-        title: '系统管理 & DEMO',
-        icon: 'cog',
-        children: [
-            system,
-            demo
-        ]
-    },
+    // {
+    //     title: '系统管理 & DEMO',
+    //     icon: 'cog',
+    //     children: [
+    //         system,
+    //         demo
+    //     ]
+    // },
     //demo
 ]
 
 // 侧边栏菜单
 export const menuAside = [
-    system,
-    demo,
+    // system,
+    // demo,
+    {
+        path: '/page1',
+        title: "资产安全态势",
+        icon: "cube"
+    },
+    {
+        path: '/page2',
+        title: "漏洞态势TOP10",
+        icon: "cube"
+    },
+    {
+        path: '/page3',
+        title: "网络安全事件类型",
+        icon: "cube"
+    },
+    {
+        path: '/page4',
+        title: "数据安全事件类型",
+        icon: "cube"
+    },
+    {
+        path: '/page5',
+        title: "安全事件",
+        icon: "cube"
+    },
+    {
+        path: '/page6',
+        title: "攻击地图",
+        icon: "cube"
+    },
 ]
 
 /**

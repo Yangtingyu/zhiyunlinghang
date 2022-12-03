@@ -47,27 +47,26 @@ export default {
       ],
       tableItems: {
         target: 'IP地址',
-        deviceName: '设备名称',
-        deviceClass: '设备类型',
-        mac: 'MAC地址',
-        osName: '操作系统',
-        portBanner: '端口banner信息',
+        deviceName: '操作系统',
+        deviceClass: '操作系统版本',
+        risk: '风险得分',
+        osName: '端口描述',
+        portBanner: '用户列表',
+        shareInfo: '共享列表信息',
+        protocol: '是否存活',
+        port: '端口号',
         serv: '服务',
         protocol: '协议',
-        product: '产品(组件)',
-        productVersion: '产品版本',
-        isp: '服务端',
-        port: '端口',
-        label: '标签',
-        title: '标题',
-        country: '国家',
-        province: '省份',
-        city: '市'
+        isp: '策略说明',
+        description: '漏洞说明',
+        poc: 'poc信息',
+        cve: 'cve编号',
+        insertTime: '发现时间'
       }
     }
   },
   mounted () {
-    api.getMockJson().then((res) => {
+    api.getMockJson(3).then((res) => {
       this.list0 = res.data.body.resultData
       this.list = res.data.body.resultData
     })
