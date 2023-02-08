@@ -1,52 +1,52 @@
 
 <template>
-  <zebra-auto-fullscreen-container scaleMode="auto" center style="background-color: #081738">
-    <div id="main" class="gxb-container">
+  <zebra-auto-fullscreen-container scaleMode="width" center style="background-color: #081738">
+    <div id="main" class="gxb-container" style="overflow:hidden;">
       <div class="top-title">
-        <div class="title-name">{{ appTitle }}</div>
+        <!-- <div class="title-name">{{ appTitle }}</div> -->
+        <el-date-picker v-model="daterangeValue" type="daterange" range-separator="至"
+          start-placeholder="开始日期" end-placeholder="结束日期" :picker-options="pickerOptions">
+        </el-date-picker>
       </div>
       <div class="main fr">
         <div class="left">
           <div class="left-1 part part-l">
-            <div class="name">资产总数</div>
-            <div class="value">
-              <span v-for="(item, index) in terminalCountText" :key="index">{{
-                item
-              }}</span>
-              <div class="footer"></div>
-            </div>
-          </div>
-
-          <div class="left-2 part part-l">
             <div class="part-title">
-              <span class="cursor" @click="$router.push({name: 'page1'})">资产安全态势</span>
+              <span class="cursor" @click="$router.push({name: 'page1'})">攻击趋势</span>
               <img src="/image/cvis/icon_title.png" alt="" class="underline" />
             </div>
-            <ul class="left-2-list">
-              <li class="item" v-for="(item, index) in left2List" :key="index">
-                <div class="l">
-                  <img :src="`/image/cvis/icon_zcaqts_0${index + 1}.png`" alt="" />
+            <trend :data="trendDataList" />
+          </div>
+          <div class="left-3 part part-l">
+            <div class="part-title">
+              <span class="cursor" @click="$router.push({name: 'page2'})">攻击源 TOP5</span>
+              <img src="/image/cvis/icon_title.png" alt="" class="underline" />
+            </div>
+            <div class="left3List">
+              <div class="hd">
+                <div class="td">城市</div>
+                <div class="td">源IP</div>
+                <div class="td">数量</div>
+              </div>
+              <div class="bd">
+                <div v-for="(item, index) in attackSourceList" :key="index" class="tr">
+                  <div class="td">{{ item.city }}</div>
+                  <div class="td">{{ item.ip }}</div>
+                  <div class="td">{{ formatNumber(item.val) }}</div>
                 </div>
-                <div class="r">
-                  <div class="name">{{ item.name }}</div>
-                  <div class="count">{{ formatNumber(item.val) }}</div>
-                </div>
-              </li>
-            </ul>
-            <div class="left-2-radar">
-              <radar :data="left2List" />
+              </div>
             </div>
           </div>
         </div>
         <div class="center">
-          <div class="marquee">
+          <!-- <div class="marquee">
             <marquee>
               <span v-for="(item, index) in marqueeList" :key="index">
                 <span class="text">发现{{ item.ip }}遭受{{ item.lx }}</span>
                 <span class="time">{{ item.time }}</span>
               </span>
             </marquee>
-          </div>
+          </div> -->
           <div class="map">
             <div class="map-select">
               <div @click="mapType = 'china'" class="item" :class="{ active: mapType == 'china' }">
@@ -63,58 +63,55 @@
             </div>
           </div>
         </div>
+
         <div class="right">
           <div class="part">
             <div class="part-title">
-              <span class="cursor" @click="$router.push({name: 'page3'})">网络安全事件类型</span>
+              <span class="cursor" @click="$router.push({name: 'page4'})">攻击类型分布</span>
               <img src="/image/cvis/icon_title.png" alt="" class="underline" />
             </div>
-            <div style="width: 100%; height: 300px">
-              <rose :data="safeEventDataList" />
+            <div style="width: 100%; height: 250px">
+              <zebra-echart :option="攻击类型分布option" />
             </div>
           </div>
-          <div class="part">
+
+          <div class="left-3 part part-l">
             <div class="part-title">
-              <span class="cursor" @click="$router.push({name: 'page4'})">数据安全事件类型</span>
+              <span class="cursor" @click="$router.push({name: 'page2'})">攻击目标 TOP5</span>
               <img src="/image/cvis/icon_title.png" alt="" class="underline" />
             </div>
-            <div style="width: 100%; height: 350px">
-              <rotate-pie :data="safeEventDataList" />
-            </div>
-          </div>
-        </div>
-      </div>
-      <div class="bottom">
-        <div class="left-3 part part-l">
-          <div class="part-title">
-            <span class="cursor" @click="$router.push({name: 'page2'})">漏洞态势 TOP10</span>
-            <img src="/image/cvis/icon_title.png" alt="" class="underline" />
-          </div>
-          <div class="left3List">
-            <div class="hd">
-              <div class="td">排名</div>
-              <div class="td">漏洞名称</div>
-              <div class="td">单位数</div>
-            </div>
-            <div class="bd">
-              <div v-for="(item, index) in left3List" :key="item.name" class="tr">
-                <div class="td">{{ ("0" + (index + 1)).substr(-2) }}</div>
-                <div class="td">{{ item.name }}</div>
-                <div class="td">{{ formatNumber(item.val) }}</div>
+            <div class="left3List">
+              <div class="hd">
+                <div class="td">序号</div>
+                <div class="td">攻击目标IP</div>
+                <div class="td">数量</div>
+              </div>
+              <div class="bd">
+                <div v-for="(item, index) in attackSourceList" :key="index" class="tr">
+                  <div class="td">{{ ("0" + (index + 1)).substr(-2) }}</div>
+                  <div class="td">{{ item.ip }}</div>
+                  <div class="td">{{ formatNumber(item.val) }}</div>
+                </div>
               </div>
             </div>
           </div>
+
         </div>
-        <div class="safe_trend part">
+      </div>
+      <div class="bottom">
+        <div class="part" style="width:400px">
           <div class="part-title">
-            <span>安全趋势</span>
+            <span class="cursor" @click="$router.push({name: 'page3'})">安全日志类型分布</span>
             <img src="/image/cvis/icon_title.png" alt="" class="underline" />
           </div>
-          <trend :data="trendDataList" />
+          <div style="width: 100%; height: 300px">
+            <rose :data="safeEventDataList" />
+          </div>
         </div>
-        <div class="part">
+
+        <div class="part" style="flex:1">
           <div class="part-title">
-            <span class="cursor" @click="$router.push({name: 'page5'})">安全事件</span>
+            <span class="cursor" @click="$router.push({name: 'page5'})">安全日志统计列表</span>
             <img src="/image/cvis/icon_title.png" alt="" class="underline" />
           </div>
           <div class="right3List">
@@ -137,6 +134,28 @@
             </vue-seamless-scroll>
           </div>
         </div>
+
+        <div class="left-3 part part-l" style="width:450px">
+          <div class="part-title">
+            <span class="cursor" @click="$router.push({name: 'page2'})">攻击端口 TOP5</span>
+            <img src="/image/cvis/icon_title.png" alt="" class="underline" />
+          </div>
+          <div class="left3List">
+            <div class="hd">
+              <div class="td">序号</div>
+              <div class="td">端口</div>
+              <div class="td">数量</div>
+            </div>
+            <div class="bd">
+              <div v-for="(item, index) in attackSourceList" :key="index" class="tr">
+                <div class="td">{{ ("0" + (index + 1)).substr(-2) }}</div>
+                <div class="td">{{ item.ip }}</div>
+                <div class="td">{{ formatNumber(item.val) }}</div>
+              </div>
+            </div>
+          </div>
+        </div>
+
       </div>
     </div>
   </zebra-auto-fullscreen-container>
@@ -153,18 +172,59 @@ import Rose from '../components/rose.vue'
 import RotatePie from '../components/rotate-pie.vue'
 import Mock from './mock'
 import vueSeamlessScroll from 'vue-seamless-scroll'
+import 攻击类型分布option from './攻击类型分布option'
 
 export default {
   name: 'index',
   components: { Radar, DMap, Trend, Rose, RotatePie, vueSeamlessScroll },
   data () {
     return {
+      daterangeValue: [Date.now() - 30 * 24 * 3600 * 1000, Date.now()],
+      pickerOptions: {
+        shortcuts: [
+          {
+            text: '最近一周',
+            onClick (picker) {
+              const end = new Date()
+              const start = new Date()
+              start.setTime(start.getTime() - 3600 * 1000 * 24 * 7)
+              picker.$emit('pick', [start, end])
+            }
+          },
+          {
+            text: '最近一个月',
+            onClick (picker) {
+              const end = new Date()
+              const start = new Date()
+              start.setTime(start.getTime() - 3600 * 1000 * 24 * 30)
+              picker.$emit('pick', [start, end])
+            }
+          },
+          {
+            text: '最近三个月',
+            onClick (picker) {
+              const end = new Date()
+              const start = new Date()
+              start.setTime(start.getTime() - 3600 * 1000 * 24 * 90)
+              picker.$emit('pick', [start, end])
+            }
+          }
+        ]
+      },
+
       appTitle: window.VUE_CONFIG.appTitle,
       formatNumber,
       isMock: window.VUE_CONFIG.isMockQuery,
       assetsCount: 0,
       left2List: [],
-      left3List: [],
+      attackSourceList: [
+        { ip: '12.21.12.123', city: '北京', val: 742 },
+        { ip: '12.21.12.122', city: '上海', val: 548 },
+        { ip: '12.21.12.212', city: '广州', val: 348 },
+        { ip: '12.21.12.142', city: '深圳', val: 197 },
+        { ip: '12.21.12.120', city: '重庆', val: 85 }
+      ],
+      攻击类型分布option,
       marqueeList: [],
       mapDataList: [],
       mapType: 'china',
