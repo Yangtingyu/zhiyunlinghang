@@ -21,46 +21,45 @@
 </template>
 
 <script>
-import api from '@/api/mock'
+import { getCommonList } from '@/api'
 import SearchForm from './searchForm.vue'
 
 const tableItemsObj = {
   page1: {
-    target: 'IP地址',
-    deviceName: '设备名称',
-    deviceClass: '设备类型',
-    mac: 'MAC地址',
-    osName: '操作系统',
-    portBanner: '端口banner信息',
-    serv: '服务',
-    protocol: '协议',
-    product: '产品(组件)',
-    productVersion: '产品版本',
-    isp: '服务端',
-    port: '端口',
-    label: '标签',
-    title: '标题',
-    country: '国家',
-    province: '省份',
-    city: '市'
-  },
-  page2: {
-    target: 'IP地址',
-    deviceName: '操作系统',
-    deviceClass: '操作系统版本',
-    risk: '风险得分',
-    osName: '端口描述',
-    portBanner: '用户列表',
-    shareInfo: '共享列表信息',
-    protocol: '是否存活',
-    port: '端口号',
-    serv: '服务',
-    protocol: '协议',
-    isp: '策略说明',
-    description: '漏洞说明',
-    poc: 'poc信息',
-    cve: 'cve编号',
-    insertTime: '发现时间'
+    // target: '安全日志类型',
+    // deviceName: '事件级别',
+    // deviceClass: '告警级别',
+    // risk: '攻击类型',
+    // osName: '开始时间',
+    // portBanner: '结束时间',
+    // shareInfo: '攻击源MAC地址',
+    // protocol: '攻击源IP',
+    // port: '攻击源端口',
+    // serv: '攻击源城市',
+    // protocol: '被攻击MAC地址',
+    // isp: '被攻击IP',
+    // description: '被攻击端口',
+    // poc: '被攻击城市',
+    // cve: '事件数据',
+    // insertTime: '事件消息'
+
+    catAttackType: '攻击类型',
+    currentTime: '时间',
+    destAddress: '目标地址',
+    destGeoCity: '目标城市',
+    destMacAddress: '目标mac地址',
+    destPort: '目标端口',
+    startTime: '开始时间',
+    endTime: '结束时间',
+    eventCount: '攻击次数',
+    message: '事件消息',
+    name: '事件名称',
+    severity: '事件级别',
+    srcAddress: '源地址',
+    srcGeoCity: '源城市',
+    srcMacAddress: '源mac地址',
+    srcPort: '源端口',
+    thresholdRange: '告警级别'
   }
 }
 export default {
@@ -79,7 +78,7 @@ export default {
       list: [],
       formItems: [
         {
-          label: 'IP地址',
+          label: '攻击类型',
           prop: 'target',
           type: 'input'
         },
@@ -92,11 +91,9 @@ export default {
     }
   },
   mounted () {
-    const index = this.$route.name.slice(-1)
-    api.getMockJson(index).then((res) => {
-      this.list0 = res.data.body.resultData
-      this.list = res.data.body.resultData
-    })
+    getCommonList({ module: 'tsgz5_dp' }).then(
+      (res) => (this.list = res.resultData)
+    )
   },
   methods: {
     handleSearch (e) {

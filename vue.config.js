@@ -30,10 +30,11 @@ module.exports = {
             '/service': {
                 // target: 'http://10.156.20.130:8001', // 山东线上
                 // target: 'http://192.168.200.136:20000', // 宁夏版、广电版、山东
-                target: 'http://192.168.200.136:1234', // 挂图作战
+                // target: 'http://192.168.200.136:1234', // 挂图作战
                 // target: 'http://cic-manage.ever-nssa.wh.everark.com.cn', // 挂图作战
                 // target: 'http://192.168.101.23:20001',
                 // target: 'http://192.168.200.60:20000',
+                target: "http://cm-iot-front.cm-iot.wh.everdevcloud.com/service", // ever cloud 中移物联
                 ws: true,
                 changeOrigin: true,
                 pathRewrite: {
@@ -98,7 +99,7 @@ module.exports = {
 
         // 重新设置 alias
         config.resolve.alias.set('@', resolve('src'))
-            // babel-polyfill 加入 entry
+        // babel-polyfill 加入 entry
         const entry = config.entry('app')
         entry.add('babel-polyfill').end()
     }

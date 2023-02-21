@@ -107,3 +107,75 @@ export const customJs = (opt) => {
     }
   });
 };
+
+
+export const getAttackPortTop5 = (params) => {
+  return httpRequest({
+    url: '/monitoring-query/tsgz5/dp/attackPortTop5',
+    method: "get",
+    params
+  });
+};
+
+export const getDestTop5 = (params) => {
+  return httpRequest({
+    url: '/monitoring-query/tsgz5/dp/destTop5',
+    method: "get",
+    params
+  });
+};
+
+export const getAttackType = (params) => {
+  return httpRequest({
+    url: '/monitoring-query/tsgz5/dp/attackType',
+    method: "get",
+    params
+  });
+};
+
+export const getSafeLogStatistics = (params) => {
+  return httpRequest({
+    url: '/monitoring-query/tsgz5/dp/safeLogStatistics',
+    method: "get",
+    params
+  });
+};
+
+export const getAttackTrend = (params) => {
+  return httpRequest({
+    url: '/monitoring-query/tsgz5/dp/attackTrend',
+    method: "get",
+    params
+  });
+};
+
+export const getSrcTop5 = (params) => {
+  return httpRequest({
+    url: '/monitoring-query/tsgz5/dp/srcTop5',
+    method: "get",
+    params
+  });
+};
+
+export const getSafeLogType = (params) => {
+  return httpRequest({
+    url: '/monitoring-query/tsgz5/dp/safeLogType',
+    method: "get",
+    params
+  });
+};
+
+export const getMap = (params) => {
+  return httpRequest({
+    url: '/monitoring-query/tsgz5/dp/map',
+    method: "get",
+    params
+  });
+};
+export const getCommonList = (data) => {
+  return httpRequest({
+    url: '/monitoring-query/dataanalysiscommon/list',
+    method: "post",
+    data
+  });
+};

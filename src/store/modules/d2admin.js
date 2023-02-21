@@ -310,61 +310,7 @@ export default {
             /*if(setting.menu.useMockMenu){
                 return
             }*/
-            vm.$axios.get('/service/sso/my', {
-                params: {
-                    all: setting.isIndependentApp,
-                    appKey: setting.systemInfo.key
-                }
-            }).then(res => {
-                if (res.code == 200) {
-                    // 模拟菜单时，不生成当前app信息，防止顶部菜单无法标识菜单选中
-                    if (!setting.menu.useMockMenu) {
-                        //设置当前APP信息
-                        let currentAppInfo = {}
-                        if (res.body.app) {
-                            currentAppInfo = {
-                                url: res.body.app.url,
-                                key: res.body.app.key,
-                                name: res.body.app.name
-                            }
-                        }
-                        commit('currentAppInfoSet', currentAppInfo)
-                    }
-
-                    // 这里暂时将cookie里是否存有token作为验证是否登录的条件
-                    const token = util.cookies.get('token')
-                    if (!token) {
-                        // vue中未登录时，获取登录后数据并执行登录成功逻辑
-                        this.dispatch('d2adminLoginSuccessHandler', { vm, res })
-                    }
-
-                    // 模拟菜单时，不生成菜单数据
-                    if (!setting.menu.useMockMenu) {
-                        // 运算生成菜单数据
-                        if (setting.isIndependentApp) {
-                            this.dispatch('initMenuForSingleApp', { resData: res.body })
-                        } else {
-                            this.dispatch('initMenuForApps', { resData: res.body })
-                        }
-                    }
-
-                    // 登录成功后，开始加载字典数据
-                    this.dispatch('initMyDictInfo', { vm })
-                } else {
-                    /*// 用户未登录时，执行退出动作
-                    // 删除cookie
-                    util.cookies.remove('token')
-                    util.cookies.remove('uuid')
-                    // 跳转路由
-                    vm.$router.push({
-                        name: 'login'
-                    })*/
-                }
-            }).catch(function (error) {
-                console.log(error)
-            }).then(() => {
-                this.loading = false
-            });
+            return;
         },
         /**
          * 存放记住密码信息
@@ -392,41 +338,7 @@ export default {
             /*if(setting.menu.useMockMenu){
                 return
             }*/
-            vm.$axios.get('/service/system/sys/cfg/dic', {
-                params: {
-                    appId: setting.systemInfo.appId, // 值32时为反诈app编号
-                    maxResult: 1000
-                }
-            }).then(res => {
-                if (res.code == 200) {
-                    let data = res.body.resultData
-                    /*
-                    "key": "110000",
-                        "value": "北京",
-                        "type": "province",
-                        "remark": "省份类型",
-                    */
-                    let dictInfo = dicUtils.config
-                    for (let i in data) {
-                        if (!dictInfo.hasOwnProperty(data[i]['type'])) {
-                            dictInfo[data[i]['type']] = []
-                        }
-                        dictInfo[data[i]['type']].push(
-                            {
-                                key: isNaN(data[i].key) ? data[i].key : (Number)(data[i].key),
-                                value: data[i].value
-                            }
-                        )
-                    }
-                    commit('dictInfoSet', dictInfo)
-                } else {
-                    console.log('获取字典数据失败！')
-                }
-            }).catch(function (error) {
-                console.log(error);
-            }).then(() => {
-                //this.loading = false
-            });
+            return
         },
 
         /**

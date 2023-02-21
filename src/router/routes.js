@@ -18,6 +18,12 @@ import layout from '@zebra-projects/zebra-ui/src/layout/header-aside/auto-layout
  */
 const frameIn = [
     {
+        path: '/login',
+        name: 'login',
+        component: () => import('@/pages/login/page.vue'),
+        meta: { meta, title: '登录' }
+    },
+    {
         path: '/',
         //redirect: {name: 'index'},
         redirect: { name: 'security-manage' },
@@ -34,30 +40,30 @@ const frameIn = [
                 component: () => import('@/pages/cvis/pages/page1'),
                 meta: { meta, title: '资产安全态势' }
             },
-            {
-                path: '/page2',
-                name: 'page2',
-                component: () => import('@/pages/cvis/pages/page1'),
-                meta: { meta, title: '漏洞态势TOP10' }
-            },
-            {
-                path: '/page3',
-                name: 'page3',
-                component: () => import('@/pages/cvis/pages/network'),
-                meta: { meta, title: '网络安全事件类型' }
-            },
-            {
-                path: '/page4',
-                name: 'page4',
-                component: () => import('@/pages/cvis/pages/data'),
-                meta: { meta, title: '数据安全事件类型' }
-            },
-            {
-                path: '/page5',
-                name: 'page5',
-                component: () => import('@/pages/cvis/pages/event'),
-                meta: { meta, title: '安全事件' }
-            },
+            // {
+            //     path: '/page2',
+            //     name: 'page2',
+            //     component: () => import('@/pages/cvis/pages/page1'),
+            //     meta: { meta, title: '漏洞态势TOP10' }
+            // },
+            // {
+            //     path: '/page3',
+            //     name: 'page3',
+            //     component: () => import('@/pages/cvis/pages/network'),
+            //     meta: { meta, title: '网络安全事件类型' }
+            // },
+            // {
+            //     path: '/page4',
+            //     name: 'page4',
+            //     component: () => import('@/pages/cvis/pages/data'),
+            //     meta: { meta, title: '数据安全事件类型' }
+            // },
+            // {
+            //     path: '/page5',
+            //     name: 'page5',
+            //     component: () => import('@/pages/cvis/pages/event'),
+            //     meta: { meta, title: '安全事件' }
+            // },
             // {
             //     path: '/page6',
             //     name: 'page6',
@@ -103,7 +109,7 @@ const frameIn = [
 
         path: '/cvis/security-manage',
         name: 'security-manage',
-        meta: { requiresAuth: false, title: '车路协同安全管理平台' },
+        meta: { requiresAuth: false, title: '业务安全态势' },
         component: () => import('@/pages/cvis/security-manage')
     },
 

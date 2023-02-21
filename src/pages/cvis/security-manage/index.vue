@@ -1,25 +1,26 @@
 
 <template>
-  <zebra-auto-fullscreen-container scaleMode="width" center style="background-color: #081738">
+  <zebra-auto-fullscreen-container scaleMode="auto" center style="background-color: #081738">
     <div id="main" class="gxb-container" style="overflow:hidden;">
       <div class="top-title">
         <!-- <div class="title-name">{{ appTitle }}</div> -->
-        <el-date-picker v-model="daterangeValue" type="daterange" range-separator="至"
-          start-placeholder="开始日期" end-placeholder="结束日期" :picker-options="pickerOptions">
+        <el-date-picker v-model="daterangeValue" @change="onDateChange" type="daterange"
+          value-format="yyyy-MM-dd" range-separator="至" start-placeholder="开始日期"
+          end-placeholder="结束日期" :picker-options="pickerOptions">
         </el-date-picker>
       </div>
       <div class="main fr">
         <div class="left">
-          <div class="left-1 part part-l">
+          <div class="left-1 part" style="width:100%">
             <div class="part-title">
               <span class="cursor" @click="$router.push({name: 'page1'})">攻击趋势</span>
               <img src="/image/cvis/icon_title.png" alt="" class="underline" />
             </div>
-            <trend :data="trendDataList" />
+            <trend :data="left1Data" />
           </div>
-          <div class="left-3 part part-l">
+          <div class="left-3 part">
             <div class="part-title">
-              <span class="cursor" @click="$router.push({name: 'page2'})">攻击源 TOP5</span>
+              <span class="cursor" @click="$router.push({name: 'page1'})">攻击源 TOP5</span>
               <img src="/image/cvis/icon_title.png" alt="" class="underline" />
             </div>
             <div class="left3List">
@@ -29,10 +30,11 @@
                 <div class="td">数量</div>
               </div>
               <div class="bd">
-                <div v-for="(item, index) in attackSourceList" :key="index" class="tr">
-                  <div class="td">{{ item.city }}</div>
-                  <div class="td">{{ item.ip }}</div>
-                  <div class="td">{{ formatNumber(item.val) }}</div>
+                <div v-for="(item, index) in left2Data" :key="index" class="tr"
+                  :style="{'--width': (item.eventCount/ left2Max)*100 + '%'}">
+                  <div class="td">{{ item.srcGeoCity }}</div>
+                  <div class="td">{{ item.srcAddress }}</div>
+                  <div class="td">{{ formatNumber(item.eventCount) }}</div>
                 </div>
               </div>
             </div>
@@ -59,7 +61,7 @@
               </div>
             </div>
             <div class="map_wrap">
-              <d-map :data="mapDataList" :mapType="mapType" />
+              <d-map :data="mid1Data" :mapType="mapType" />
             </div>
           </div>
         </div>
@@ -67,7 +69,7 @@
         <div class="right">
           <div class="part">
             <div class="part-title">
-              <span class="cursor" @click="$router.push({name: 'page4'})">攻击类型分布</span>
+              <span class="cursor" @click="$router.push({name: 'page1'})">攻击类型分布</span>
               <img src="/image/cvis/icon_title.png" alt="" class="underline" />
             </div>
             <div style="width: 100%; height: 250px">
@@ -75,9 +77,9 @@
             </div>
           </div>
 
-          <div class="left-3 part part-l">
+          <div class="left-3 part">
             <div class="part-title">
-              <span class="cursor" @click="$router.push({name: 'page2'})">攻击目标 TOP5</span>
+              <span class="cursor" @click="$router.push({name: 'page1'})">攻击目标 TOP5</span>
               <img src="/image/cvis/icon_title.png" alt="" class="underline" />
             </div>
             <div class="left3List">
@@ -87,10 +89,11 @@
                 <div class="td">数量</div>
               </div>
               <div class="bd">
-                <div v-for="(item, index) in attackSourceList" :key="index" class="tr">
+                <div v-for="(item, index) in right2Data" :key="index" class="tr"
+                  :style="{'--width': (item.eventCount/ right2Max)*100 + '%'}">
                   <div class="td">{{ ("0" + (index + 1)).substr(-2) }}</div>
-                  <div class="td">{{ item.ip }}</div>
-                  <div class="td">{{ formatNumber(item.val) }}</div>
+                  <div class="td">{{ item.destAddress }}</div>
+                  <div class="td">{{ formatNumber(item.eventCount) }}</div>
                 </div>
               </div>
             </div>
@@ -101,43 +104,49 @@
       <div class="bottom">
         <div class="part" style="width:400px">
           <div class="part-title">
-            <span class="cursor" @click="$router.push({name: 'page3'})">安全日志类型分布</span>
+            <span class="cursor" @click="$router.push({name: 'page1'})">安全日志类型分布</span>
             <img src="/image/cvis/icon_title.png" alt="" class="underline" />
           </div>
           <div style="width: 100%; height: 300px">
-            <rose :data="safeEventDataList" />
+            <rose :data="left3Data" />
           </div>
         </div>
 
         <div class="part" style="flex:1">
           <div class="part-title">
-            <span class="cursor" @click="$router.push({name: 'page5'})">安全日志统计列表</span>
+            <span class="cursor" @click="$router.push({name: 'page1'})">安全日志统计列表</span>
             <img src="/image/cvis/icon_title.png" alt="" class="underline" />
           </div>
           <div class="right3List">
             <div class="hd">
-              <div class="td">业务系统</div>
-              <div class="td">业务IP</div>
-              <div class="td">攻击IP</div>
-              <div class="td">事件类型</div>
+              <div class="td">攻击类型</div>
+              <div class="td">事件级别</div>
+              <div class="td">开始时间</div>
+              <div class="td">结束时间</div>
+              <div class="td">来源地址</div>
+              <div class="td">目的地址</div>
+              <div class="td">事件数量</div>
             </div>
-            <vue-seamless-scroll :data="safeEventDetailList" class="seamless-warp"
+            <vue-seamless-scroll :data="mid2Data" class="seamless-warp"
               style="height: 200px; overflow: hidden">
               <div class="bd">
-                <div v-for="(item, index) in safeEventDetailList" :key="index" class="tr">
-                  <div class="td">{{ item.zcmc }}</div>
-                  <div class="td">{{ item.assetip }}</div>
-                  <div class="td">{{ item.gjip }}</div>
-                  <div class="td">{{ item.lx }}</div>
+                <div v-for="(item, index) in mid2Data" :key="index" class="tr">
+                  <div class="td">{{ item.catAttackType }}</div>
+                  <div class="td">{{ item.thresholdRange }}</div>
+                  <div class="td">{{ item.startTime}}</div>
+                  <div class="td">{{ item.endTime}}</div>
+                  <div class="td">{{ item.srcAddress }}</div>
+                  <div class="td">{{ item.destAddress}}</div>
+                  <div class="td">{{ item.eventCount }}</div>
                 </div>
               </div>
             </vue-seamless-scroll>
           </div>
         </div>
 
-        <div class="left-3 part part-l" style="width:450px">
+        <div class="left-3 part" style="width:450px">
           <div class="part-title">
-            <span class="cursor" @click="$router.push({name: 'page2'})">攻击端口 TOP5</span>
+            <span class="cursor" @click="$router.push({name: 'page1'})">攻击端口 TOP5</span>
             <img src="/image/cvis/icon_title.png" alt="" class="underline" />
           </div>
           <div class="left3List">
@@ -147,10 +156,11 @@
               <div class="td">数量</div>
             </div>
             <div class="bd">
-              <div v-for="(item, index) in attackSourceList" :key="index" class="tr">
+              <div v-for="(item, index) in right3Data" :key="index" class="tr"
+                :style="{'--width': (item.eventCount/ right3Max)*100 + '%'}">
                 <div class="td">{{ ("0" + (index + 1)).substr(-2) }}</div>
-                <div class="td">{{ item.ip }}</div>
-                <div class="td">{{ formatNumber(item.val) }}</div>
+                <div class="td">{{ item.srcPort }}</div>
+                <div class="td">{{ formatNumber(item.eventCount) }}</div>
               </div>
             </div>
           </div>
@@ -173,15 +183,35 @@ import RotatePie from '../components/rotate-pie.vue'
 import Mock from './mock'
 import vueSeamlessScroll from 'vue-seamless-scroll'
 import 攻击类型分布option from './攻击类型分布option'
+import {
+  getAttackPortTop5,
+  getDestTop5,
+  getAttackType,
+  getSafeLogStatistics,
+  getAttackTrend,
+  getSrcTop5,
+  getSafeLogType,
+  getMap
+} from '@/api.js'
+import moment from 'moment'
 
 export default {
   name: 'index',
   components: { Radar, DMap, Trend, Rose, RotatePie, vueSeamlessScroll },
   data () {
     return {
-      daterangeValue: [Date.now() - 30 * 24 * 3600 * 1000, Date.now()],
+      daterangeValue: [],
       pickerOptions: {
         shortcuts: [
+          {
+            text: '今天',
+            onClick (picker) {
+              const end = new Date()
+              const start = new Date()
+              // start.setTime(start.getTime() - 3600 * 1000 * 24 * 7)
+              picker.$emit('pick', [start, end])
+            }
+          },
           {
             text: '最近一周',
             onClick (picker) {
@@ -224,13 +254,24 @@ export default {
         { ip: '12.21.12.142', city: '深圳', val: 197 },
         { ip: '12.21.12.120', city: '重庆', val: 85 }
       ],
-      攻击类型分布option,
+      攻击类型分布option: {},
       marqueeList: [],
       mapDataList: [],
       mapType: 'china',
       trendDataList: [],
       safeEventDataList: [],
-      safeEventDetailList: []
+      safeEventDetailList: [],
+      left2Max: 0,
+      right2Max: 0,
+      right3Max: 0,
+      left1Data: [],
+      left2Data: [],
+      left3Data: [],
+      mid1Data: [],
+      mid2Data: [],
+      right1Data: [],
+      right2Data: [],
+      right3Data: []
     }
   },
   computed: {
@@ -258,7 +299,96 @@ export default {
       this.adaptation()
     }
   },
+  mounted () {
+    this.daterangeValue = [
+      moment().subtract(3, 'months').format('YYYY-MM-DD'),
+      moment().format('YYYY-MM-DD')
+    ]
+    this.getAllData()
+  },
   methods: {
+    getAllData () {
+      this.getLeft1()
+      this.getLeft2()
+      this.getLeft3()
+      this.getMid1()
+      this.getMid2()
+      this.getRight1()
+      this.getRight2()
+      this.getRight3()
+    },
+    onDateChange (e) {
+      this.getAllData()
+    },
+    getLeft1 () {
+      getAttackTrend({
+        startTime: this.daterangeValue[0],
+        endTime: this.daterangeValue[1]
+      }).then((res) => (this.left1Data = res))
+    },
+    getLeft2 () {
+      getSrcTop5({
+        startTime: this.daterangeValue[0],
+        endTime: this.daterangeValue[1]
+      }).then((res) => {
+        this.left2Data = res
+        this.left2Max = Math.max(...res.map((item) => item.eventCount))
+      })
+    },
+    getLeft3 () {
+      getSafeLogType({
+        startTime: this.daterangeValue[0],
+        endTime: this.daterangeValue[1]
+      }).then((res) => (this.left3Data = res))
+    },
+
+    getMid1 () {
+      getMap({
+        startTime: this.daterangeValue[0],
+        endTime: this.daterangeValue[1]
+      }).then((res) => {
+        this.mid1Data = res
+      })
+    },
+
+    getMid2 () {
+      getSafeLogStatistics({
+        startTime: this.daterangeValue[0],
+        endTime: this.daterangeValue[1]
+      }).then((res) => {
+        this.mid2Data = res
+      })
+    },
+    getRight1 () {
+      getAttackType({
+        startTime: this.daterangeValue[0],
+        endTime: this.daterangeValue[1]
+      }).then((res) => {
+        const data = res.map((item) => ({
+          name: item.catAttackType,
+          value: item.eventCount
+        }))
+        this.攻击类型分布option = 攻击类型分布option(data)
+      })
+    },
+    getRight2 () {
+      getDestTop5({
+        startTime: this.daterangeValue[0],
+        endTime: this.daterangeValue[1]
+      }).then((res) => {
+        this.right2Data = res
+        this.right2Max = Math.max(...res.map((item) => item.eventCount))
+      })
+    },
+    getRight3 () {
+      getAttackPortTop5({
+        startTime: this.daterangeValue[0],
+        endTime: this.daterangeValue[1]
+      }).then((res) => {
+        this.right3Data = res
+        this.right3Max = Math.max(...res.map((item) => item.eventCount))
+      })
+    },
     rndIncrease () {
       return Math.ceil(Math.random() * 30)
     },
@@ -308,35 +438,35 @@ export default {
         this.left2List = _data.filter((item) => item.name !== '资产总数')
       })
 
-      this.getData('ldts').then((data) => {
-        let _data = auto ? this.handleAutoIncease(data) : data
-        this.left3List = _data
-      })
+      // this.getData('ldts').then((data) => {
+      //   let _data = auto ? this.handleAutoIncease(data) : data
+      //   this.left3List = _data
+      // })
 
-      this.getData('gdbb').then((data) => {
-        this.marqueeList = data
-      })
+      // this.getData('gdbb').then((data) => {
+      //   this.marqueeList = data
+      // })
 
-      this.getData('gjmap').then((data) => {
-        this.mapDataList = data
-      })
+      // this.getData('gjmap').then((data) => {
+      //   this.mapDataList = data
+      // })
 
-      this.getData('aqqs').then((data) => {
-        let _data = auto ? this.handleAutoIncease(data) : data
-        this.trendDataList = _data
-      })
+      // this.getData('aqqs').then((data) => {
+      //   let _data = auto ? this.handleAutoIncease(data) : data
+      //   this.trendDataList = _data
+      // })
 
-      this.getData('aqsjlxtj').then((data) => {
-        let _data = auto ? this.handleAutoIncease(data) : data
+      // this.getData('aqsjlxtj').then((data) => {
+      //   let _data = auto ? this.handleAutoIncease(data) : data
 
-        this.safeEventDataList = _data
-          .sort(() => Math.random() - 0.5)
-          .slice(0, 6)
-      })
+      //   this.safeEventDataList = _data
+      //     .sort(() => Math.random() - 0.5)
+      //     .slice(0, 6)
+      // })
 
-      this.getData('aqsjxq').then((data) => {
-        this.safeEventDetailList = data
-      })
+      // this.getData('aqsjxq').then((data) => {
+      //   this.safeEventDetailList = data
+      // })
     },
     /**
      * 数字滚动

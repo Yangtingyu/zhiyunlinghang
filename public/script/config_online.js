@@ -8,7 +8,7 @@ if (ENVIRONMENT_MODE == "dev") {
       // 默认主页名，用于登录默认页面（江西物联网：iot-jiangxi-overall-situation，车联网：iov-overall-situation)
       defaultHomePage: "/cvis/security-manage",
       // 应用标题（影响登录页、标题栏名称）
-      appTitle: "车路协同安全管理平台",
+      appTitle: "业务安全态势",
       // 应用描述
       appDesc: "重庆 车路协同",
       // 登录页风格类型（login-page-default：默认风格，login-page-type-1：数据安全新版风格）
@@ -16,7 +16,7 @@ if (ENVIRONMENT_MODE == "dev") {
       // 预览缩略图
       previewImg: "/image/app-list/iov.png",
       // 登录使用的应用Key
-      key: "caiot-manage-w7",
+      key: "monitoring-query",
       // 地图对应的省份名
       provinceName: "",
       // 大屏缩放模式(width:宽度撑满,auto:自适应,stretch:撑满屏幕，会变形)
@@ -34,7 +34,7 @@ if (ENVIRONMENT_MODE == "dev") {
       // 预览缩略图
       previewImg: "/image/app-list/iov.png",
       // 登录使用的应用Key
-      key: "caiot-manage-w7",
+      key: "monitoring-query",
       // 地图对应的省份名
       provinceName: "北京",
       // 大屏缩放模式(width:宽度撑满,auto:自适应,stretch:撑满屏幕，会变形)
@@ -52,7 +52,7 @@ if (ENVIRONMENT_MODE == "dev") {
       // 预览缩略图
       previewImg: "/image/app-list/iov.png",
       // 登录使用的应用Key
-      key: "caiot-manage-w7",
+      key: "monitoring-query",
       // 地图对应的省份名
       provinceName: "北京",
       // 大屏缩放模式(width:宽度撑满,auto:自适应,stretch:撑满屏幕，会变形)
@@ -111,7 +111,7 @@ if (ENVIRONMENT_MODE == "dev") {
       // 福建版工业互联网
       keyFuJiaIIOT: "gxbv5_core_fj",
       // W7-物联网项目服务key
-      keyW7Iot: "caiot-manage-w7",
+      keyW7Iot: "monitoring-query",
       // 金御挂图作战项目服务key
       keyJinyuCic: "./",
       // 应用ID，获取字典数据所需的参数

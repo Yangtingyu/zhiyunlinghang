@@ -50,26 +50,26 @@ export const menuAside = [
         title: "资产安全态势",
         icon: "cube"
     },
-    {
-        path: '/page2',
-        title: "漏洞态势TOP10",
-        icon: "cube"
-    },
-    {
-        path: '/page3',
-        title: "网络安全事件类型",
-        icon: "cube"
-    },
-    {
-        path: '/page4',
-        title: "数据安全事件类型",
-        icon: "cube"
-    },
-    {
-        path: '/page5',
-        title: "安全事件",
-        icon: "cube"
-    },
+    // {
+    //     path: '/page2',
+    //     title: "漏洞态势TOP10",
+    //     icon: "cube"
+    // },
+    // {
+    //     path: '/page3',
+    //     title: "网络安全事件类型",
+    //     icon: "cube"
+    // },
+    // {
+    //     path: '/page4',
+    //     title: "数据安全事件类型",
+    //     icon: "cube"
+    // },
+    // {
+    //     path: '/page5',
+    //     title: "安全事件",
+    //     icon: "cube"
+    // },
     // {
     //     path: '/page6',
     //     title: "攻击地图",
